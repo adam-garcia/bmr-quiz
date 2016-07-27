@@ -1,0 +1,9 @@
+div.deck-item {
+    display: none;
+}
+
+div.deck-active {
+    display: block;
+}
+
+
