@@ -6,4 +6,40 @@ div.deck-active {
     display: block;
 }
 
+input,
+input[type="button"] {
+    margin-bottom: 0.5em;
+    text-align: left;
+}
 
+input[type="text"] {
+    padding: 0 30px;
+}
+
+button {
+    color: white;
+    background-color: #f25b14;
+    border-color: #f25b14;
+}
+button:hover {
+    color: white;
+    background-color: #b03f0a;
+    border-color: #f25b14;
+}
+
+/*#other-text {
+    min-width: 80%;
+}
+#other-advance {
+    min-width: 15%;
+}*/
+
+.btn-disabled {
+    background:#efefef;
+    color: #555;
+    border-color: #ccc;
+    text-shadow:none;
+}
+.option-list {
+    margin-left: 0;
+}
