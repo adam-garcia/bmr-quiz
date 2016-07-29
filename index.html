@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Page Title</title>
+  <title>BMR Quizzard</title>
   <meta name="description" content="">
   <meta name="author" content="Adam Garcia">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,53 +12,58 @@
   <link rel="stylesheet" href="./style.css">
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="https://use.fontawesome.com/ff0a3f50a6.js"></script>
   <script src="./script.js"></script>
 </head>
 <body>
 
+  <div class="container">
 
-  <div class="container deck-item">
-    <div class="row">
-      <h4>1</h4>
-      <p>Content</p>
-      <button>Next</button>
+    <div class="row deck-item">
+      <h3>Landing Screen</h3>
+      <p>
+        Every new run club needs to think through some key decision points 
+        before starting. Our quiz will coach you through everything you need 
+        to know! We don’t expect you to have all the answers, 
+        just choose what feels right at this moment. 
+        Ready? Let’s do it!
+      </p>
+      <button id="init">Begin Quiz</button>
     </div>
-  </div>
 
-  <div class="container deck-item">
-    <div class="row">
-      <h4>2</h4>
-      <p>Additional</p>
-      <button>Next</button>
+    <div class="row deck-item">
+      <h5>What's your role?</h5>
+      <div class="twelve column option-list">
+        <input type="button" value="Parent">
+        <input type="button" value="Nurse">
+        <input type="button" value="PE Teacher">
+        <input type="button" value="Classroom Teacher">
+        <input type="button" value="Principal/Assistant Principal">
+        <div class="u-full-width">
+          <input type="text" placeholder="Other" id="other-text" class="ten columns"> 
+          <button disabled id="other-advance" class="two columns">
+            <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="container deck-item">
-    <div class="row">
-      <h4>3</h4>
-      <p>Testing more content</p>
-      <button>Next</button>
+    <div class="row deck-item">
+      <h5>Schools can implement run clubs throughout the year, for one semester, or for shorter durations. What do you think would work best for your school?</h5>
+      <div class="twelve column option-list">
+        <input type="button" value="Fall">
+        <input type="button" value="Spring">
+        <input type="button" value="Fall and Spring">
+        <input type="button" value="Whole School Year">
+        <input type="button" value="Hmm, I’m not quite sure yet…">
+      </div>
     </div>
-  </div>
 
-  <div class="container deck-item">
-    <div class="row">
-      <h4>4</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <button>Next</button>
-    </div>
-  </div>
-
-  <div class="container deck-item">
-    <div class="row">
-      <h4>5</h4>
+    <div class="row deck-item">
+      <h4>6</h4>
       <p>End</p>
     </div>
+
   </div>
 
 </body>
