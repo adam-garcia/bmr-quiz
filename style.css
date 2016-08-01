@@ -1,6 +1,13 @@
+html {
+    background-color: #f7f7f7;
+}
+
 body {
     max-width: 940px;
     margin: 0 auto;
+    background-color: #fff;
+    border-left: 1px solid lightblue;
+    border-right: 1px solid lightblue
 }
 
 div.deck-item {
