@@ -36,15 +36,19 @@ input[type="text"] {
     padding: 0 30px;
 }
 
+
+input[type="button"],
 button {
-    color: white;
-    background-color: #f25b14;
-    border-color: #f25b14;
+    color: white !important;
+    background-color: #f25b14 !important;
+    border-color: #f25b14 !important;
 }
+
+input[type="button"]:hover,
 button:hover {
-    color: white;
-    background-color: #b03f0a;
-    border-color: #f25b14;
+    color: #b03f0a !important;
+    background-color: #fff !important;
+    border-color: #f25b14 !important;
 }
 
 /*#other-text {
