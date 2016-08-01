@@ -1,3 +1,7 @@
+body {
+    max-width: 940px;
+}
+
 div.deck-item {
     display: none;
 }
