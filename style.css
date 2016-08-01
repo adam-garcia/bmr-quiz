@@ -20,6 +20,8 @@ div.deck-active {
 }
 
 input,
+input[type="button"],
+input[type="text"],
 button {
     border-radius: 0;
 }
