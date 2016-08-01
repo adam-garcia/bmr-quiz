@@ -20,6 +20,11 @@ div.deck-active {
 }
 
 input,
+button {
+    border-radius: 0;
+}
+
+input,
 input[type="button"] {
     margin-bottom: 0.5em;
     text-align: left;
@@ -42,10 +47,11 @@ button:hover {
 
 /*#other-text {
     min-width: 80%;
-}
-#other-advance {
-    min-width: 15%;
 }*/
+
+#other-advance {
+    margin-left: 0;
+}
 
 .btn-disabled {
     background:#efefef;
