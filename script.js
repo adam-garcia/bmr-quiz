@@ -10,18 +10,23 @@ $('#init').click(function(){
     });
 });
 
-$('.option-list').children()
-    .addClass("u-full-width");
+// $('.option-list').children()
+//     .addClass("u-full-width");
 
 $('.deck-item').find('button').click(function() {
     getNextSlide($(this));
 });
 
-
 $('.option-list').find('input').click(function() {
-    if (this.type == "text") {
-        $("#other-advance").prop('disabled', false);
-    } else if (this.type == "button") {
+    if (this.id == "other") {
+        // console.log('aaa');
+        $(this).fadeOut(delay/12)
+        $("#other-val").css("dipslay", "block")
+                       .fadeIn(delay/2)
+                       .focus();
+    } else if (this.type=="text") {
+        console.log("test");
+    } else {
         setResult($(this).parent(), this);
         getNextSlide($(this).parent());
     };

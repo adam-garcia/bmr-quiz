@@ -1,4 +1,4 @@
-html {
+/*html {
     background-color: #f7f7f7;
 }
 
@@ -9,6 +9,10 @@ body {
     border-left: 1px solid lightblue;
     border-right: 1px solid lightblue;
     height: 100vh;
+}*/
+
+.container {
+    max-width: 940px;
 }
 
 div.deck-item {
@@ -19,7 +23,29 @@ div.deck-active {
     display: block;
 }
 
-input,
+.option-list,
+.info-list {
+    padding: 0;
+    width: auto;
+}
+
+.btn-group-vertical * {
+    border-radius: 0;
+}
+
+.btn-group-vertical input {
+    text-align: left;
+}
+
+.btn-group-vertical input[type="text"] {
+    height: 38px;
+    width: 100%;
+    padding: 8px 16px;
+    display: none;
+}
+
+
+/*input,
 input[type="button"],
 input[type="text"],
 button {
@@ -49,7 +75,7 @@ button:hover {
     color: #b03f0a !important;
     background-color: #fff !important;
     border-color: #f25b14 !important;
-}
+}*/
 
 /*#other-text {
     min-width: 80%;
@@ -59,12 +85,12 @@ button:hover {
     margin-left: 0;
 }
 
-.btn-disabled {
+/*.btn-disabled {
     background:#efefef;
     color: #555;
     border-color: #ccc;
     text-shadow:none;
-}
+}*/
 .option-list {
     margin-left: 0;
 }

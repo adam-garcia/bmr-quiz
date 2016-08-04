@@ -7,19 +7,19 @@
   <meta name="author" content="Adam Garcia">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="./normalize.min.css">
-  <link rel="stylesheet" href="./skeleton.css">
+  <!-- <link rel="stylesheet" href="./normalize.min.css"> -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="./skeleton.css"> -->
   <link rel="stylesheet" href="./style.css">
-  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <!-- <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
   <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="https://use.fontawesome.com/ff0a3f50a6.js"></script>
-  <script src="./script.js"></script>
 </head>
 <body>
 
   <div class="container">
 
-    <div class="row deck-item">
+<!--     <div class="row deck-item">
       <h3>Landing Screen</h3>
       <p>
         Every new run club needs to think through some key decision points 
@@ -28,24 +28,42 @@
         just choose what feels right at this moment. 
         Ready? Let’s do it!
       </p>
-      <button id="init">Begin Quiz</button>
-    </div>
+      <button class="btn btn-primary" id="init">Begin Quiz</button>
+    </div> -->
 
     <div class="row deck-item">
       <h5>What's your role?</h5>
-      <div class="six columns option-list">
-        <input type="button" value="Parent">
-        <input type="button" value="Nurse">
-        <input type="button" value="PE Teacher">
-        <input type="button" value="Classroom Teacher">
-        <input type="button" value="Principal/Assistant Principal">
-        <div class="u-full-width">
+      <div class="btn-group-vertical option-list col-xs-6">
+        <input class="btn btn-primary" type="button" value="Parent">
+        <input class="btn btn-primary" type="button" value="Nurse">
+        <input class="btn btn-primary" type="button" value="PE Teacher">
+        <input class="btn btn-primary" type="button" value="Classroom Teacher">
+        <input class="btn btn-primary" type="button" value="Principal/Assistant Principal">
+        <input class="btn btn-primary" type="button" Value="Other" id="other">
+        <input type="text" placeholder="Tell us more!" id="other-val">
+        <!-- <input type="text" placeholder="Tell us more!"> -->
+<!--         <div id="other-val">
+          <button class='btn btn-primary'>hello</button>
+        </div> -->
+      </div>
+      <div class="btn-group-vertical info-list col-xs-6">
+        <input class="btn btn-primary" type="button" value="Parent">
+        <input class="btn btn-primary" type="button" value="Nurse">
+        <input class="btn btn-primary" type="button" value="PE Teacher">
+        <input class="btn btn-primary" type="button" value="Classroom Teacher">
+        <input class="btn btn-primary" type="button" value="Principal/Assistant Principal">
+        <input class="btn btn-primary" type="button" Value="Other" id="other">
+        <input type="text" placeholder="Tell us more!" id="other-val">
+        <!-- <input type="text" placeholder="Tell us more!"> -->
+<!--         <div id="other-val">
+          <button class='btn btn-primary'>hello</button>
+        </div> -->
+      </div>
+      <!--   <div class="u-full-width">
           <input type="text" placeholder="Other" id="other-text" class="ten columns"> 
-          <button disabled id="other-advance" class="two columns">
             <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
           </button>
-        </div>
-      </div>
+        </div> -->
     </div>
 
     <div class="row deck-item">
@@ -65,6 +83,13 @@
     </div>
 
   </div>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
 
 </body>
 </html>
