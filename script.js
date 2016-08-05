@@ -10,14 +10,17 @@ $('#init').click(function(){
     });
 });
 
+
 // $('.option-list').children()
 //     .addClass("u-full-width");
 
 $('.deck-item').find('button').click(function() {
-    getNextSlide($(this));
+    if ($(this).id == "init") {
+        getNextSlide($(this));
+    }
 });
 
-$('.option-list').find('input').click(function() {
+$('.deck-item').find('input').click(function() {
     if (this.id == "other") {
         // console.log('aaa');
         $(this).fadeOut(delay/12)
@@ -32,6 +35,28 @@ $('.option-list').find('input').click(function() {
     };
 });
 
+// 
+// 
+// 
+// 
+// 
+
+
+$('[data-toggle="popover"]')
+    .attr('type', 'button')
+    .attr('attr', 'value')
+    .attr('type', 'button')
+    .attr('class', 'btn btn-primary')
+    .attr('data-placement', 'right')
+    .attr('title', 'hello')
+    .attr('data-content', 'world')
+    .html('<i class="fa fa-info" aria-hidden="true"></i>')
+    .popover({
+        trigger: 'focus',
+        container: 'body'
+    }
+);
+
 $("#other-advance").click(function(e) {
     setResult($(this).parent(), $(this).siblings('input'));
     getNextSlide($(this).parent().parent());
@@ -39,7 +64,6 @@ $("#other-advance").click(function(e) {
 
 function startQuiz() {
     $('.deck-item').first().fadeIn();
-
 }
 
 function getNextSlide(t) {
@@ -54,7 +78,8 @@ function getNextSlide(t) {
 
 function setResult(field, option) {
     console.log(option);
-}
+};
+
 
 // TODO
 // ----------------------------------------------------------------------------
