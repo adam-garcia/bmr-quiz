@@ -1,15 +1,8 @@
 $(function() {
 
-var lipsum = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+var lipsum = "More info"
 
-$.ajax({
-    dataType: "json",
-    url: "quiz_data.json",
-    data: 
-})
-
-
-// window.qd = null;
+// var 
 
 startQuiz();
 
@@ -19,15 +12,9 @@ $('#init').click(function(){
     $(window).bind('beforeunload', function(){
         // return null;
     });
+    $("#progress").fadeIn(delay);
+    getNextSlide($(this));
 });
-
-
-$('.deck-item').find('button').click(function() {
-    if ($(this).id == "init") {
-        getNextSlide($(this));
-    }
-});
-
 
 $('.deck-item').find('input').click(function() {
     if (this.id == "other") {
@@ -50,15 +37,17 @@ function getPopoverBody(el) {
     return(el);
 }
 
+
+
 jQuery.fn.extend({
     setPOTitle: function() {
         return this.each(function() {
-            $(this).attr('title', getPopoverBody(this.id));
+            $(this).attr('title', lipsum);
         });
     },
     setPOBody: function() {
         return this.each(function() {
-            $(this).attr('data-content', lipsum)
+            $(this).attr('data-content', getPopoverBody(this.id))
         });
     }
 });
@@ -74,7 +63,7 @@ $('[data-toggle="popover"]')
     .popover({
         trigger: 'click',
         container: 'body',
-        placement: 'bottom'
+        placement: 'right'
     })
 ;
 
@@ -91,11 +80,20 @@ function startQuiz() {
 function getNextSlide(t) {
     var curr = t.parent();
     var next = curr.next();
-    curr.fadeOut(delay);
-    curr.hide();
-    curr.removeClass('deck-active');
+    
+    curr.replaceWith(next);
     next.fadeIn(delay);
-    next.addClass('deck-active');
+
+    // curr.fadeOut(delay);
+    // curr.hide();
+    // curr.removeClass('deck-active');
+
+    // next.fadeIn(delay);
+    // next.addClass('deck-active');
+    pval = $("#progress").val() + 100/11;
+    $("#progress").animate({
+      value: pval
+    }, delay);
 };
 
 function setResult(field, option) {

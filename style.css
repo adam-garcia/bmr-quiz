@@ -1,14 +1,30 @@
+html,
 body {
     font-family: 'Open Sans';
+    height: 100%;
 }
 
+/*body {
+    position: relative;
+    min-height: 100%;
+    margin: 0 0 30px;
+}*/
+
 .container {
-    max-width: 940px;
+    min-height: 95%;
+    position: relative;
+    padding-left: 30px;
     margin: 0 auto;
+    max-width: 940px;
+}
+
+#quiz {
+    padding-bottom: 20px;
 }
 
 div.deck-item {
     display: none;
+    margin-top: 5%;
 }
 
 div.deck-active {
@@ -42,8 +58,6 @@ button[data-toggle="popover"] {
     border-radius: 0;
     width: 50px;
     margin-left: 0;
-    /*color: #0275d8;
-    background-color: #fff;*/
 }
 
 button#other-adv {
@@ -51,53 +65,14 @@ button#other-adv {
     width: 50px;
 }
 
-
-/*input,
-input[type="button"],
-input[type="text"],
-button {
-    border-radius: 0 !important;
+progress {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    width: 100%;
+    height: 20px;
 }
-
-input,
-input[type="button"] {
-    margin-bottom: 0.5em;
-    text-align: left;
-}
-
-input[type="text"] {
-    padding: 0 30px;
-}
-
-
-input[type="button"],
-button {
-    color: white !important;
-    background-color: #f25b14 !important;
-    border-color: #f25b14 !important;
-}
-
-input[type="button"]:hover,
-button:hover {
-    color: #b03f0a !important;
-    background-color: #fff !important;
-    border-color: #f25b14 !important;
-}*/
-
-/*#other-text {
-    min-width: 80%;
-}*/
-
-#other-advance {
-    margin-left: 0;
-}
-
-/*.btn-disabled {
-    background:#efefef;
-    color: #555;
-    border-color: #ccc;
-    text-shadow:none;
-}*/
-.option-list {
-    margin-left: 0;
+#progress {
+    display: none;
 }

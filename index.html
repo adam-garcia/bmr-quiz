@@ -19,8 +19,10 @@
 
   <div class="container">
 
-<!--     <div class="row deck-item">
-      <h3>Landing Screen</h3>
+    <div id="quiz">
+
+    <div class="row deck-item">
+      <h3>New Here?</h3>
       <p>
         Every new run club needs to think through some key decision points 
         before starting. Our quiz will coach you through everything you need 
@@ -29,11 +31,11 @@
         Ready? Let’s do it!
       </p>
       <button class="btn btn-primary" id="init">Begin Quiz</button>
-    </div> -->
+    </div>
 
     <!-- Role Question - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <div class="row deck-item">
-      <h5>What’s your role?</h5>
+      <h4 class="row m-b-2">What’s your role?</h4>
       <div class="row btn-group">
         <input class="btn btn-primary" type="button" value="Parent">
         <button id="info-parent" data-toggle="popover"></button>
@@ -62,10 +64,8 @@
       </div>
     </div>
 
-    <!-- Year Time - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
     <div class="row deck-item">
-      <h5>Schools can implement run clubs throughout the year, for one semester, or for shorter durations. What do you think would work best for your school?</h5>
+      <h4 class="row m-b-2">Schools can implement run clubs throughout the year, for one semester, or for shorter durations. What do you think would work best for your school?</h4>
       <div class="row btn-group">
         <input class="btn btn-primary" type="button" value="Fall">
         <button id="info-fall" data-toggle="popover"></button>
@@ -88,9 +88,8 @@
       </div>
     </div>
 
-    <!-- Day Time - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <div class="row deck-item">
-      <h5>What times during your school day could kids be available to walk and run?</h5>
+      <h4 class="row m-b-2">What times during your school day could kids be available to walk and run?</h4>
       <div class="row btn-group">
         <input class="btn btn-primary" type="button" value="Before School">
         <button id="info-bschool" data-toggle="popover"></button>
@@ -117,9 +116,8 @@
       </div>
     </div>
 
-    <!-- Week Freq - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <div class="row deck-item">
-      <h5>How many days a week do you envision hosting the run club?</h5>
+      <h4 class="row m-b-2">How many days a week do you envision hosting the run club?</h4>
       <div class="row btn-group">
         <input class="btn btn-primary" type="button" value="Once a week">
         <button id="info-fall" data-toggle="popover"></button>
@@ -149,7 +147,7 @@
     </div>
 
     <div class="row deck-item">
-      <h5>How much time per day can you dedicate?</h5>
+      <h4 class="row m-b-2">How much time per day can you dedicate?</h4>
       <div class="row btn-group">
         <input class="btn btn-primary" type="button" value="15 minutes">
         <button id="info-fall" data-toggle="popover"></button>
@@ -182,7 +180,7 @@
 
 
     <div class="row deck-item">
-      <h5>Where do you envision the run club meeting?</h5>
+      <h4 class="row m-b-2">Where do you envision the run club meeting?</h4>
       <div class="row btn-group">
         <input class="btn btn-primary" type="button" value="Inside  (Gym, Hallways)">
         <button id="info-fall" data-toggle="popover"></button>
@@ -211,13 +209,13 @@
 
 
     <div class="row deck-item">
-      <h5>Some run clubs track individual miles while others estimate miles run by a group. How do you want to track your students’ miles?</h5>
+      <h4 class="row m-b-2">Some run clubs track individual miles while others estimate miles run by a group. How do you want to track your students’ miles?</h4>
       <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Steps (pedometer)">
+        <input class="btn btn-primary" type="button" value="Steps">
         <button id="info-fall" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Laps (popsicle sticks, punch cards, lap tracker)">
+        <input class="btn btn-primary" type="button" value="Laps">
         <button id="info-spring" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
@@ -244,7 +242,7 @@
 
 
     <div class="row deck-item">
-      <h5>Ideally, run clubs have several leaders at the school. How many leaders will take part in your rub club?</h5>
+      <h4 class="row m-b-2">Ideally, run clubs have several leaders at the school. How many leaders will take part in your rub club?</h4>
       <div class="row btn-group">
         <input class="btn btn-primary" type="button" value="2">
         <button id="info-fall" data-toggle="popover"></button>
@@ -273,7 +271,7 @@
 
 
     <div class="row deck-item">
-      <h5>How many students do you want participating  in your running club? </h5>
+      <h4 class="row m-b-2">How many students do you want participating  in your running club? </h4>
       <div class="row btn-group">
         <input class="btn btn-primary" type="button" value="1-30 students">
         <button id="info-fall" data-toggle="popover"></button>
@@ -310,13 +308,13 @@
 
 
     <div class="row deck-item">
-      <h5>How are you going to make your program fun for your students?</h5>
+      <h4 class="row m-b-2">How are you going to make your program fun for your students?</h4>
       <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Incentives (T-shirts, tokens for miles earned, etc.) ">
+        <input class="btn btn-primary" type="button" value="Incentives">
         <button id="info-fall" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Recognition (Announcement on loud speaker, posters, etc.)">
+        <input class="btn btn-primary" type="button" value="Recognition">
         <button id="info-spring" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
@@ -327,7 +325,7 @@
         <input class="btn btn-primary" type="button" value="Other ideas">
         <button id="info-year" data-toggle="popover"></button>
       </div>
-    </div>
+    </div> 
 
     <div class="row deck-item">
       <h4>6</h4>
@@ -336,6 +334,9 @@
 
   </div>
 
+  <progress class="progress progress-success" value="0" max="100" id="progress"></progress>
+
+  </div>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
