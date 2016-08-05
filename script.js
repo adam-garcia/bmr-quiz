@@ -35,27 +35,36 @@ $('.deck-item').find('input').click(function() {
     };
 });
 
-// 
-// 
-// 
-// 
-// 
 
+function getPopoverBody(el) {
+    return(el);
+}
+
+jQuery.fn.extend({
+    setPOBody: function() {
+        return this.each(function() {
+            $(this).attr('data-content', getPopoverBody(this.id));
+        });
+    }
+});
 
 $('[data-toggle="popover"]')
     .attr('type', 'button')
     .attr('attr', 'value')
     .attr('type', 'button')
-    .attr('class', 'btn btn-primary')
+    .attr('class', 'btn btn-info')
     .attr('data-placement', 'right')
     .attr('title', 'hello')
-    .attr('data-content', 'world')
+    .setPOBody()
     .html('<i class="fa fa-info" aria-hidden="true"></i>')
     .popover({
         trigger: 'focus',
         container: 'body'
-    }
-);
+    })
+;
+
+
+
 
 $("#other-advance").click(function(e) {
     setResult($(this).parent(), $(this).siblings('input'));
@@ -64,6 +73,7 @@ $("#other-advance").click(function(e) {
 
 function startQuiz() {
     $('.deck-item').first().fadeIn();
+    
 }
 
 function getNextSlide(t) {
