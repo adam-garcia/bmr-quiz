@@ -1,5 +1,16 @@
 $(function() {
 
+var lipsum = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+$.ajax({
+    dataType: "json",
+    url: "quiz_data.json",
+    data: 
+})
+
+
+// window.qd = null;
+
 startQuiz();
 
 var delay = 800;
@@ -11,22 +22,21 @@ $('#init').click(function(){
 });
 
 
-// $('.option-list').children()
-//     .addClass("u-full-width");
-
 $('.deck-item').find('button').click(function() {
     if ($(this).id == "init") {
         getNextSlide($(this));
     }
 });
 
+
 $('.deck-item').find('input').click(function() {
     if (this.id == "other") {
         // console.log('aaa');
-        $(this).fadeOut(delay/12)
-        $("#other-val").css("dipslay", "block")
-                       .fadeIn(delay/2)
-                       .focus();
+        var txt = $("<input type='text' placeholder='Tell us more!' id='other'>").hide();
+        $(this).replaceWith(txt);
+        $("#other").fadeIn("slow")
+                   .focus();
+        $("#other-adv").prop("disabled", false);
     } else if (this.type=="text") {
         console.log("test");
     } else {
@@ -41,9 +51,14 @@ function getPopoverBody(el) {
 }
 
 jQuery.fn.extend({
+    setPOTitle: function() {
+        return this.each(function() {
+            $(this).attr('title', getPopoverBody(this.id));
+        });
+    },
     setPOBody: function() {
         return this.each(function() {
-            $(this).attr('data-content', getPopoverBody(this.id));
+            $(this).attr('data-content', lipsum)
         });
     }
 });
@@ -53,28 +68,23 @@ $('[data-toggle="popover"]')
     .attr('attr', 'value')
     .attr('type', 'button')
     .attr('class', 'btn btn-info')
-    .attr('data-placement', 'right')
-    .attr('title', 'hello')
+    .setPOTitle()
     .setPOBody()
     .html('<i class="fa fa-info" aria-hidden="true"></i>')
     .popover({
-        trigger: 'focus',
-        container: 'body'
+        trigger: 'click',
+        container: 'body',
+        placement: 'bottom'
     })
 ;
 
 
-
-
-$("#other-advance").click(function(e) {
-    setResult($(this).parent(), $(this).siblings('input'));
-    getNextSlide($(this).parent().parent());
-});
-
 function startQuiz() {
     $('.deck-item').first().fadeIn();
-    $.getJSON('quiz_data.json', function(d) {
-        window.qd = d;
+    $('blockquote').each(function() {
+        $(this).matchHeight({
+            target: $(this).parents('.team-quote').find('img')
+        });
     });
 }
 
