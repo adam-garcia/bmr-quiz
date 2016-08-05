@@ -31,58 +31,301 @@
       <button class="btn btn-primary" id="init">Begin Quiz</button>
     </div> -->
 
+    <!-- Role Question - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <div class="row deck-item">
-      <h5>What's your role?</h5>
+      <h5>What’s your role?</h5>
       <div class="row btn-group">
         <input class="btn btn-primary" type="button" value="Parent">
-        <button id="info-parent" data-toggle="popover">
+        <button id="info-parent" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Nurse">
+        <button id="info-nurse" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="PE Teacher">
+        <button id="info-pe" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Classroom Teacher">
+        <button id="info-teach" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Principal/Assistant Principal">
+        <button id="info-admin" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" Value="Other" id="other">
+        <button class="btn btn-warning pull-xs-right" id="other-adv" disabled>
+          <i class="fa fa-arrow-right" aria-hidden="true"></i>
         </button>
       </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Nurse">
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="PE Teacher">
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Classroom Teacher">
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Principal/Assistant Principal">
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" Value="Other" id="other">
-        <input type="text" placeholder="Tell us more!" id="other-val">
-      </div>
-      
-<!--       <div class="btn-group-vertical info-list col-xs-6">
-        <input class="btn btn-primary" type="button" value="Parent">
-        <input class="btn btn-primary" type="button" value="Nurse">
-        <input class="btn btn-primary" type="button" value="PE Teacher">
-        <input class="btn btn-primary" type="button" value="Classroom Teacher">
-        <input class="btn btn-primary" type="button" value="Principal/Assistant Principal">
-        <input class="btn btn-primary" type="button" Value="Other" id="other">
-        <input type="text" placeholder="Tell us more!" id="other-val">
-        <input type="text" placeholder="Tell us more!">
-        <div id="other-val">
-          <button class='btn btn-primary'>hello</button>
-        </div>
-      </div> -->
-      <!--   <div class="u-full-width">
-          <input type="text" placeholder="Other" id="other-text" class="ten columns"> 
-            <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
-          </button>
-        </div> -->
     </div>
+
+    <!-- Year Time - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
     <div class="row deck-item">
       <h5>Schools can implement run clubs throughout the year, for one semester, or for shorter durations. What do you think would work best for your school?</h5>
-      <div class="six columns option-list">
-        <input type="button" value="Fall">
-        <input type="button" value="Spring">
-        <input type="button" value="Fall and Spring">
-        <input type="button" value="Whole School Year">
-        <input type="button" value="Hmm, I’m not quite sure yet…">
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Fall">
+        <button id="info-fall" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Spring">
+        <button id="info-spring" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Fall and Spring">
+        <button id="info-fallspring" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Whole School Year">
+        <button id="info-year" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Hmm, I’m not quite sure yet…">
+        <button id="info-unsure" data-toggle="popover"></button>
+      </div>
+    </div>
+
+    <!-- Day Time - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <div class="row deck-item">
+      <h5>What times during your school day could kids be available to walk and run?</h5>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Before School">
+        <button id="info-bschool" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="After School">
+        <button id="info-aschool" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Recess">
+        <button id="info-recess" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="In Class Activity">
+        <button id="info-class" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="During PE Class">
+        <button id="info-peclass" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Let me get back to you on this one!">
+        <button id="info-getback" data-toggle="popover"></button>
+      </div>
+    </div>
+
+    <!-- Week Freq - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <div class="row deck-item">
+      <h5>How many days a week do you envision hosting the run club?</h5>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Once a week">
+        <button id="info-fall" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Twice a week ">
+        <button id="info-spring" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Three times a week">
+        <button id="info-fallspring" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Four Times a week">
+        <button id="info-year" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Every school day ">
+        <button id="info-unsure" data-toggle="popover"></button>
+      </div>
+
+      <div class="row m-t-2 team-quote">
+        <blockquote class="blockquote">
+          <p class="m-b-0">The Haley School meets Mondays, Wednesdays and Friday mornings from 7:20-7:50am for a total of 90 minutes per week.</p>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="row deck-item">
+      <h5>How much time per day can you dedicate?</h5>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="15 minutes">
+        <button id="info-fall" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="15-30 minutes">
+        <button id="info-spring" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="30-45 minutes">
+        <button id="info-fallspring" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="45-60 minutes">
+        <button id="info-year" data-toggle="popover"></button>
+      </div>
+
+      <div class="row m-t-2 team-quote">
+        <div class="col-xs-3">
+          <img src="img/dan-min-sq.jpg" class="img-fluid img-circle">
+        </div>
+        <div class="col-xs-9">
+          <blockquote class="blockquote">
+            <p class="m-b-0">The recommended amount of physical activity is 60 minutes/day, with 30 minutes recommended happening at school. Consider this when planning your program!</p>
+            <footer class="blockquote-footer">Dan, <cite title="Source Title">BMR Team</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row deck-item">
+      <h5>Where do you envision the run club meeting?</h5>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Inside  (Gym, Hallways)">
+        <button id="info-fall" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Outside (Playground, track, etc.)">
+        <button id="info-spring" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Both">
+        <button id="info-fallspring" data-toggle="popover"></button>
+      </div>
+
+      <div class="row m-t-2 team-quote">
+        <div class="col-xs-3">
+          <img src="//placehold.it/350x350" class="img-fluid img-circle">
+        </div>
+        <div class="col-xs-9">
+          <blockquote class="blockquote">
+            <p class="m-b-0">Don’t worry if you don’t have dedicated gym space! We work with many schools in Boston who utilize hallways to get their activity in!</p>
+            <footer class="blockquote-footer">Daniel, <cite title="Source Title">BMR Team</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row deck-item">
+      <h5>Some run clubs track individual miles while others estimate miles run by a group. How do you want to track your students’ miles?</h5>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Steps (pedometer)">
+        <button id="info-fall" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Laps (popsicle sticks, punch cards, lap tracker)">
+        <button id="info-spring" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Distance">
+        <button id="info-fallspring" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="I’ll just keep track of time! ">
+        <button id="info-year" data-toggle="popover"></button>
+      </div>
+
+      <div class="row m-t-2 team-quote">
+        <div class="col-xs-3">
+          <img src="//placehold.it/350x350" class="img-fluid img-circle">
+        </div>
+        <div class="col-xs-9">
+          <blockquote class="blockquote">
+            <p class="m-b-0">When tracking by time you can use our <a href="http://BillionMileRace.org/calculator">BMR calculator</a> to easily upload miles and continue working toward your goals!</p>
+            <footer class="blockquote-footer">Emily, <cite title="Source Title">BMR Team</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row deck-item">
+      <h5>Ideally, run clubs have several leaders at the school. How many leaders will take part in your rub club?</h5>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="2">
+        <button id="info-fall" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="3">
+        <button id="info-spring" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="4+">
+        <button id="info-fallspring" data-toggle="popover"></button>
+      </div>
+
+      <div class="row m-t-2 team-quote">
+        <div class="col-xs-3">
+          <img src="//placehold.it/350x350" class="img-fluid img-circle">
+        </div>
+        <div class="col-xs-9">
+          <blockquote class="blockquote">
+            <p class="m-b-0">It’s important to partner up with another champion at your school to make sure the program is sustainable!</p>
+            <footer class="blockquote-footer">Lauren, <cite title="Source Title">BMR Team</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row deck-item">
+      <h5>How many students do you want participating  in your running club? </h5>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="1-30 students">
+        <button id="info-fall" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="31-51 students">
+        <button id="info-spring" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="51 -100 students">
+        <button id="info-fallspring" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="101-200 students">
+        <button id="info-year" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Entire School">
+        <button id="info-unsure" data-toggle="popover"></button>
+      </div>
+
+      <div class="row m-t-2 team-quote">
+        <div class="col-xs-3">
+          <img src="//placehold.it/350x350" class="img-fluid img-circle">
+        </div>
+        <div class="col-xs-9">
+          <blockquote class="blockquote">
+            <p class="m-b-0">Consider limiting your run club to certain grade levels and think about any space constraints you may have! </p>
+            <footer class="blockquote-footer">Nate, <cite title="Source Title">BMR Team</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row deck-item">
+      <h5>How are you going to make your program fun for your students?</h5>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Incentives (T-shirts, tokens for miles earned, etc.) ">
+        <button id="info-fall" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Recognition (Announcement on loud speaker, posters, etc.)">
+        <button id="info-spring" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Playing music during run club ">
+        <button id="info-fallspring" data-toggle="popover"></button>
+      </div>
+      <div class="row btn-group">
+        <input class="btn btn-primary" type="button" value="Other ideas">
+        <button id="info-year" data-toggle="popover"></button>
       </div>
     </div>
 
@@ -98,6 +341,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js" type="text/javascript"></script>
   <script src="./script.js"></script>
 
 </body>
