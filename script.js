@@ -73,7 +73,9 @@ $("#other-advance").click(function(e) {
 
 function startQuiz() {
     $('.deck-item').first().fadeIn();
-    
+    $.getJSON('quiz_data.json', function(d) {
+        window.qd = d;
+    });
 }
 
 function getNextSlide(t) {
@@ -89,6 +91,7 @@ function getNextSlide(t) {
 function setResult(field, option) {
     console.log(option);
 };
+
 
 
 // TODO
