@@ -12,9 +12,9 @@ $('#init').click(function(){
     $(window).bind('beforeunload', function(){
         return null;
     });
-    $("#progress").fadeIn(delay);
     getNextSlide($(this));
 });
+
 
 $('.deck-item').find('input').click(function() {
     if (this.id == "other-role") {
@@ -33,7 +33,8 @@ $('.deck-item').find('input').click(function() {
 });
 
 $('#other-adv').click(function(){
-        setResult($(this).parent(), $(this));
+    // setResult($(this).parent(), $(this));
+    setResult($("#other-role").parent(), $("#other-role"));
     getNextSlide($("#other-role").parent());
 });
 
@@ -44,7 +45,7 @@ function getPopoverBody(el) {
 
 
 
-jQuery.fn.extend({
+$.fn.extend({
     setPOTitle: function() {
         return this.each(function() {
             $(this).attr('title', lipsum);
@@ -66,7 +67,7 @@ $('[data-toggle="popover"]')
     .setPOBody()
     .html('<i class="fa fa-info" aria-hidden="true"></i>')
     .popover({
-        trigger: 'click',
+        trigger: 'focus',
         container: 'body',
         placement: 'right'
     })
@@ -85,6 +86,7 @@ function startQuiz() {
 function getNextSlide(t) {
     var curr = t.parent();
     var next = curr.next();
+    $('[data-toggle="popover"]').popover("hide");
     
     curr.replaceWith(next);
     next.fadeIn(delay);
@@ -97,7 +99,7 @@ function getNextSlide(t) {
     // next.addClass('deck-active');
     pval = $("#progress").val() + 100/11;
     $("#progress").animate({
-      value: pval
+      value: $("#progress").val() + 100/11
     }, delay);
 };
 
