@@ -27,12 +27,13 @@ $('.deck-item').find('input').click(function() {
     } else if (this.type=="text") {
         console.log("test");
     } else {
-        setResult($(this).parent(), this);
+        setResult($("#other-role").parent(), $(this));
         getNextSlide($(this).parent());
     };
 });
 
 $('#other-adv').click(function(){
+        setResult($(this).parent(), $(this));
     getNextSlide($("#other-role").parent());
 });
 
