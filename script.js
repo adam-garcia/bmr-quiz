@@ -10,18 +10,18 @@ var delay = 800;
 
 $('#init').click(function(){
     $(window).bind('beforeunload', function(){
-        // return null;
+        return null;
     });
     $("#progress").fadeIn(delay);
     getNextSlide($(this));
 });
 
 $('.deck-item').find('input').click(function() {
-    if (this.id == "other") {
+    if (this.id == "other-role") {
         // console.log('aaa');
-        var txt = $("<input type='text' placeholder='Tell us more!' id='other'>").hide();
+        var txt = $("<input type='text' placeholder='Tell us more!' id='other-role'>").hide();
         $(this).replaceWith(txt);
-        $("#other").fadeIn("slow")
+        $("#other-role").fadeIn("slow")
                    .focus();
         $("#other-adv").prop("disabled", false);
     } else if (this.type=="text") {
@@ -30,6 +30,10 @@ $('.deck-item').find('input').click(function() {
         setResult($(this).parent(), this);
         getNextSlide($(this).parent());
     };
+});
+
+$('#other-adv').click(function(){
+    getNextSlide($("#other-role").parent());
 });
 
 
@@ -56,7 +60,7 @@ $('[data-toggle="popover"]')
     .attr('type', 'button')
     .attr('attr', 'value')
     .attr('type', 'button')
-    .attr('class', 'btn btn-info')
+    .attr('class', 'btn btn-warning')
     .setPOTitle()
     .setPOBody()
     .html('<i class="fa fa-info" aria-hidden="true"></i>')
