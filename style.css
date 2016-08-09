@@ -19,12 +19,12 @@ body {
 }
 
 #quiz {
-    padding-bottom: 20px;
+    padding-bottom: 8%;
 }
 
 div.deck-item {
     display: none;
-    margin-top: 5%;
+    padding-top: 8%;
 }
 
 div.deck-active {
@@ -64,17 +64,47 @@ button[data-toggle="popover"] {
     margin-left: 0;
 }
 
-button#other-adv {
+button#other-role-adv,
+button#other-motiv-adv {
     border-radius: 0;
     width: 50px;
 }
 
-progress {
+.popover {
+    max-width: 500px;
+}
+
+blockquote {
+    position: relative;
+    border-left: 0 !important;
+}
+
+blockquote > div {
+    font-size: 1rem;
+    position: absolute;
+    /*bottom: 0;*/
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.progress {
     position: absolute;
     left: 0;
     bottom: 0;
     margin-bottom: 0;
     width: 100%;
-    height: 20px;
 }
 
+.progress * {
+    position: relative;
+}
+
+.btn-link {
+}
+
+.btn-link:disabled,
+.btn-link:disabled:hover {
+    cursor: default;
+    color: #373a3c !important;
+}
