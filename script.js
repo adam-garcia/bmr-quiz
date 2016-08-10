@@ -4,13 +4,17 @@ startQuiz();
 
 var delay = 800;
 var quizN = 0;
+var totalN = 10;
+var slides = [];
 
 $('#init').click(function(){
     $(window).bind('beforeunload', function(){
         // return null;
     });
-    quizN = 1;
     getNextSlide($(this));
+    $("#go-back").click(function(){
+        getPrevSlide();
+    })
 });
 
 
@@ -37,6 +41,7 @@ $(".adv").click(function(){
     setResult($(this).parent(), $(this).parent().find("input"));
     getNextSlide($(this).parent());
 });
+
 
 
 function getPopoverTitle(el) {
@@ -68,7 +73,7 @@ $('[data-toggle="popover"]')
     .attr('type', 'button')
     .attr('attr', 'value')
     .attr('type', 'button')
-    .attr('class', 'btn btn-warning')
+    .attr('class', 'btn btn-outline-primary')
     .setPOTitle()
     .setPOBody()
     .html('<i class="fa fa-info" aria-hidden="true"></i>')
@@ -90,28 +95,37 @@ function startQuiz() {
 }
 
 function getNextSlide(t) {
-    var curr = t.parent();
+    curr = t.parent();
     var next = curr.next();
+    slides.push(curr);
+    console.log(slides);
     $('[data-toggle="popover"]').popover("hide");
     curr.replaceWith(next);
     next.fadeIn(delay);
-    quizN += 1;
-    updateProgress();
+    if (next.attr("id") != "final") {
+        updateProgress();
+    } else if (next.attr("id") == "final") {
+        console.log('hello');
+        $("#progress").animate({
+          value: 100,
+          easing: 'swing'
+        }, delay/1.5);
+    }
 };
 
 function updateProgress() {
     quizN += 1;
     $("#progress").animate({
-      value: $("#progress").val() + 100/11,
+      value: $("#progress").val() + 100/(totalN + 1),
       easing: 'swing'
     }, delay/1.5);
+    $("#iter-progress").text("Question " + quizN + " of " + totalN);
 }
 
-function back(t) {
-    var curr = t.parent();
-    var prev = curr.prev();
+function getPrevSlide() {
+    var prev = slides.pop();
+    curr = prev.next();
     $('[data-toggle="popover"]').popover("hide");
-
     curr.replaceWith(prev);
     prev.fadeIn(delay);
     $("#progress").animate({
