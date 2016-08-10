@@ -123,15 +123,16 @@ function updateProgress() {
 }
 
 function getPrevSlide() {
-    var prev = slides.pop();
-    curr = prev.next();
-    $('[data-toggle="popover"]').popover("hide");
-    curr.replaceWith(prev);
-    prev.fadeIn(delay);
-    $("#progress").animate({
-      value: $("#progress").val() - 100/11,
-      easing: 'swing'
-    }, delay/1.5);
+    alert("Go back a slide to " + slides.pop().attr('id') );
+    // var prev = slides.pop();
+    // curr = prev.next();
+    // $('[data-toggle="popover"]').popover("hide");
+    // curr.replaceWith(prev);
+    // prev.fadeIn(delay);
+    // $("#progress").animate({
+    //   value: $("#progress").val() - 100/11,
+    //   easing: 'swing'
+    // }, delay/1.5);
 }
 
 function setResult(field, option) {
