@@ -49,7 +49,7 @@ function getPopoverTitle(el) {
 
 }
 function getPopoverBody(el) {
-    return "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+    return "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 }
 
 
@@ -74,8 +74,8 @@ $('[data-toggle="popover"]')
     .attr('class', 'btn btn-primary')
     .setPOTitle(this)
     .setPOBody()
-    // .html('<i class="fa fa-info" aria-hidden="true"></i>')
-    .html('<div style="width: 20px; height: 20px; border-radius: 100%; border: 1px solid #fff; text-align: center;">i</div>')
+    .html('<i class="fa fa-question-circle-o fa-lg" aria-hidden="true"></i>')
+    // .html('<div>?</div>')
     .popover({
         trigger: 'focus',
         container: 'body',
@@ -94,7 +94,7 @@ function startQuiz() {
 }
 
 function getNextSlide(t) {
-    curr = t.parent();
+    curr = t.parent().parent();
     var next = curr.next();
     slides.push(curr);
     console.log(slides);
@@ -138,9 +138,11 @@ function setResult(field, option) {
     console.log(option);
     // Show Encouraging Message
     // http://stackoverflow.com/questions/15066882/make-toastr-alerts-look-like-bootstrap-alerts
-    $("#post-msg").html('hello')
-                  .delay(1000)
-                  .replaceWith('<h3 id="post-msg">&nbsp;</h3>');
+    $("#post-msg").html('<h3>hello</h3>');
+                  
+    $("#post-msg").delay(1000)
+                  .replaceWith('<h3>&nbsp;</h3>')
+                  .fadeIn();
 };
 
 

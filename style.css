@@ -50,10 +50,28 @@ div.btn-group {
 }
 
 .deck-item input[type="text"] {
-    height: 38px;
+    height: 40px;
     padding: 8px 16px;
     display: none;
 }
+
+
+.btn-primary {
+    background: #12a8dd;
+    color: #fff;
+    border: 2px solid #12a8dd;
+}
+
+.btn-primary:hover {
+    background: #fff;
+    color: #12a8dd;
+    border: 2px solid #12a8dd;
+}
+
+.btn-primary:hover i {
+    color: #12a8dd;
+}
+
 
 button#init {
     border-radius: 0;
@@ -65,10 +83,19 @@ button[data-toggle="popover"] {
     margin-left: 0;
 }
 
+button[data-toggle="popover"] > div {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    /*border: 1px solid #fff;*/
+    text-align: center;
+ }
+
 button#role-other-adv,
 button#other-motiv-adv {
     border-radius: 0;
     width: 50px;
+    /*border: none;*/
 }
 
 .popover {
