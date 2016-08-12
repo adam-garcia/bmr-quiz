@@ -45,12 +45,10 @@ $(".adv").click(function(){
 
 
 function getPopoverTitle(el) {
-    // return(el);
-    return "Placeholder Title";
+    return(el);
 
 }
 function getPopoverBody(el) {
-    // return(el);
     return "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 }
 
@@ -73,10 +71,11 @@ $('[data-toggle="popover"]')
     .attr('type', 'button')
     .attr('attr', 'value')
     .attr('type', 'button')
-    .attr('class', 'btn btn-outline-primary')
-    .setPOTitle()
+    .attr('class', 'btn btn-primary')
+    .setPOTitle(this)
     .setPOBody()
-    .html('<i class="fa fa-info" aria-hidden="true"></i>')
+    // .html('<i class="fa fa-info" aria-hidden="true"></i>')
+    .html('<div style="width: 20px; height: 20px; border-radius: 100%; border: 1px solid #fff; text-align: center;">i</div>')
     .popover({
         trigger: 'focus',
         container: 'body',
@@ -105,11 +104,11 @@ function getNextSlide(t) {
     if (next.attr("id") != "final") {
         updateProgress();
     } else if (next.attr("id") == "final") {
-        console.log('hello');
         $("#progress").animate({
           value: 100,
           easing: 'swing'
         }, delay/1.5);
+        $("#iter-progress").text("Done!");
     }
 };
 
@@ -137,6 +136,11 @@ function getPrevSlide() {
 
 function setResult(field, option) {
     console.log(option);
+    // Show Encouraging Message
+    // http://stackoverflow.com/questions/15066882/make-toastr-alerts-look-like-bootstrap-alerts
+    $("#post-msg").html('hello')
+                  .delay(1000)
+                  .replaceWith('<h3 id="post-msg">&nbsp;</h3>');
 };
 
 
