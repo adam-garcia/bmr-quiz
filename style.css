@@ -11,7 +11,7 @@ body {
 }*/
 
 .container {
-    min-height: 95%;
+    min-height: 95vh;
     position: relative;
     padding-left: 30px;
     margin: 0 auto;
@@ -19,7 +19,7 @@ body {
 }
 
 #quiz {
-    padding-bottom: 8%;
+    padding-bottom: 5vh;
 }
 
 div.deck-item {
@@ -40,7 +40,7 @@ div.deck-active {
 div.btn-group {
     display: block !important;
     width: 350px;
-    margin-bottom: 1%;
+    margin-bottom: 1vh;
 }
 
 .deck-item input {
