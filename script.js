@@ -32,7 +32,7 @@ $('.deck-item').find('input').click(function() {
     } else if (this.type=="text") {
         console.log("test");
     } else {
-        setResult($("#role-other").parent(), $(this));
+        setResult($(this));
         getNextSlide($(this).parent());
     };
 });
@@ -94,10 +94,10 @@ function startQuiz() {
 }
 
 function getNextSlide(t) {
-    curr = t.parent().parent();
+    curr = t.parents(".deck-item");
     var next = curr.next();
     slides.push(curr);
-    console.log(slides);
+    // console.log(slides);
     $('[data-toggle="popover"]').popover("hide");
     curr.replaceWith(next);
     next.fadeIn(delay);
@@ -121,21 +121,10 @@ function updateProgress() {
     $("#iter-progress").text("Question " + quizN + " of " + totalN);
 }
 
-function getPrevSlide() {
-    alert("Go back a slide to " + slides.pop().attr('id') );
-    // var prev = slides.pop();
-    // curr = prev.next();
-    // $('[data-toggle="popover"]').popover("hide");
-    // curr.replaceWith(prev);
-    // prev.fadeIn(delay);
-    // $("#progress").animate({
-    //   value: $("#progress").val() - 100/11,
-    //   easing: 'swing'
-    // }, delay/1.5);
-}
 
-function setResult(field, option) {
-    console.log(option);
+function setResult(option) {
+    console.log(option.attr('id'));
+    // console.log(option);
     // Show Encouraging Message
     // http://stackoverflow.com/questions/15066882/make-toastr-alerts-look-like-bootstrap-alerts
     $("#post-msg").html('<h3>hello</h3>');

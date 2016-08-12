@@ -42,111 +42,133 @@
     <!-- Role Question - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <div class="row deck-item" id="q-role">
       <h4 class="row m-b-2">What’s your role?</h4>
-      <div class="col-xs-6">
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" id="role-parent" value="Parent">
-        <button id="info-parent" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" id="role-nurse" value="Nurse">
-        <button id="info-nurse" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" id="role-pe" value="PE Teacher">
-        <button id="info-pe" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" id="role-class" value="Classroom Teacher">
-        <button id="info-teach" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" id="role-admin" value="Principal/Assistant Principal">
-        <button id="info-admin" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" Value="Other" id="role-other">
-        <button class="btn btn-primary pull-xs-right adv" id="role-other-adv" disabled>
-          <i class="fa fa-arrow-right" aria-hidden="true"></i>
-        </button>
-      </div>
-      </div>
-      test
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" id="role-parent" value="Parent">
+            <button id="info-parent" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" id="role-nurse" value="Nurse">
+            <button id="info-nurse" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" id="role-pe" value="PE Teacher">
+            <button id="info-pe" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" id="role-class" value="Classroom Teacher">
+            <button id="info-teach" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" id="role-admin" value="Principal/Assistant Principal">
+            <button id="info-admin" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" Value="Other" id="role-other">
+            <button class="btn btn-primary pull-xs-right adv" id="role-other-adv" disabled>
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-xs-6 alert alert-success invisible" id="role-msg">
+          Response message
+        </div>
+      </div> 
     </div>
 
     <div class="row deck-item"  id="q-year">
       <h4 class="row m-b-2">Schools can implement run clubs throughout the year, for one semester, or for shorter durations. What do you think would work best for your school?</h4>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Fall">
-        <button id="info-fall" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Spring">
-        <button id="info-spring" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Fall and Spring">
-        <button id="info-fallspring" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Whole School Year">
-        <button id="info-year" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Hmm, I’m not quite sure yet…">
-        <button id="info-unsure" data-toggle="popover"></button>
-      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Fall">
+            <button id="info-fall" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Spring">
+            <button id="info-spring" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Fall and Spring">
+            <button id="info-fallspring" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Whole School Year">
+            <button id="info-year" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Hmm, I’m not quite sure yet…">
+            <button id="info-unsure" data-toggle="popover"></button>
+          </div>
+        </div>
+        <div class="col-xs-6">
+        </div> 
+      </div> 
     </div>
 
     <div class="row deck-item" id="q-time">
       <h4 class="row m-b-2">What times during your school day could kids be available to walk and run?</h4>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Before School">
-        <button id="info-bschool" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="After School">
-        <button id="info-aschool" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Recess">
-        <button id="info-recess" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="In Class Activity">
-        <button id="info-class" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="During PE Class">
-        <button id="info-peclass" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Let me get back to you on this one!">
-        <button id="info-getback" data-toggle="popover"></button>
-      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Before School">
+            <button id="info-bschool" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="After School">
+            <button id="info-aschool" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Recess">
+            <button id="info-recess" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="In Class Activity">
+            <button id="info-class" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="During PE Class">
+            <button id="info-peclass" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Let me get back to you on this one!">
+            <button id="info-getback" data-toggle="popover"></button>
+          </div>
+        </div>
+        <div class="col-xs-6">
+        </div> 
+      </div> 
     </div>
 
     <div class="row deck-item" id="q-frequency">
       <h4 class="row m-b-2">How many days a week do you envision hosting the run club?</h4>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Once a week">
-        <button id="info-fall" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Twice a week ">
-        <button id="info-spring" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Three times a week">
-        <button id="info-fallspring" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Four Times a week">
-        <button id="info-year" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Every school day ">
-        <button id="info-unsure" data-toggle="popover"></button>
-      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Once a week">
+            <button id="info-fall" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Twice a week ">
+            <button id="info-spring" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Three times a week">
+            <button id="info-fallspring" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Four Times a week">
+            <button id="info-year" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Every school day ">
+            <button id="info-unsure" data-toggle="popover"></button>
+          </div>
+        </div>
+        <div class="col-xs-6">
+        </div> 
+      </div> 
 
       <div class="row m-t-2 team-quote">
         <blockquote class="blockquote">
@@ -159,22 +181,28 @@
 
     <div class="row deck-item" id="q-duration">
       <h4 class="row m-b-2">How much time per day can you dedicate?</h4>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="15 minutes">
-        <button id="info-fall" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="15-30 minutes">
-        <button id="info-spring" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="30-45 minutes">
-        <button id="info-fallspring" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="45-60 minutes">
-        <button id="info-year" data-toggle="popover"></button>
-      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="15 minutes">
+            <button id="info-fall" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="15-30 minutes">
+            <button id="info-spring" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="30-45 minutes">
+            <button id="info-fallspring" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="45-60 minutes">
+            <button id="info-year" data-toggle="popover"></button>
+          </div>
+        </div>
+        <div class="col-xs-6">
+        </div> 
+      </div> 
 
       <div class="row m-t-2 team-quote">
         <div class="col-xs-2">
@@ -194,18 +222,24 @@
 
     <div class="row deck-item" id="q-where">
       <h4 class="row m-b-2">Where do you envision the run club meeting?</h4>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Inside  (Gym, Hallways)">
-        <button id="info-fall" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Outside (Playground, track, etc.)">
-        <button id="info-spring" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Both">
-        <button id="info-fallspring" data-toggle="popover"></button>
-      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Inside  (Gym, Hallways)">
+            <button id="info-fall" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Outside (Playground, track, etc.)">
+            <button id="info-spring" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Both">
+            <button id="info-fallspring" data-toggle="popover"></button>
+          </div>
+        </div>
+        <div class="col-xs-6">
+        </div> 
+      </div> 
 
       <div class="row m-t-2 team-quote">
         <div class="col-xs-2">
@@ -225,22 +259,28 @@
 
     <div class="row deck-item" id="q-track">
       <h4 class="row m-b-2">Some run clubs track individual miles while others estimate miles run by a group. How do you want to track your students’ miles?</h4>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Steps">
-        <button id="info-fall" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Laps">
-        <button id="info-spring" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Distance">
-        <button id="info-fallspring" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="I’ll just keep track of time! ">
-        <button id="info-year" data-toggle="popover"></button>
-      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Steps">
+            <button id="info-fall" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Laps">
+            <button id="info-spring" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Distance">
+            <button id="info-fallspring" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="I’ll just keep track of time! ">
+            <button id="info-year" data-toggle="popover"></button>
+          </div>
+        </div>
+        <div class="col-xs-6">
+        </div> 
+      </div> 
 
       <div class="row m-t-2 team-quote">
         <div class="col-xs-2">
@@ -260,18 +300,24 @@
 
     <div class="row deck-item" id="q-leaders">
       <h4 class="row m-b-2">Ideally, run clubs have several leaders at the school. How many leaders will take part in your rub club?</h4>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="2">
-        <button id="info-fall" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="3">
-        <button id="info-spring" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="4+">
-        <button id="info-fallspring" data-toggle="popover"></button>
-      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="2">
+            <button id="info-fall" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="3">
+            <button id="info-spring" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="4+">
+            <button id="info-fallspring" data-toggle="popover"></button>
+          </div>
+        </div>
+        <div class="col-xs-6">
+        </div> 
+      </div> 
 
       <div class="row m-t-2 team-quote">
         <div class="col-xs-2">
@@ -291,26 +337,32 @@
 
     <div class="row deck-item" id="q-students">
       <h4 class="row m-b-2">How many students do you want participating  in your running club? </h4>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="1-30 students">
-        <button id="info-fall" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="31-51 students">
-        <button id="info-spring" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="51 -100 students">
-        <button id="info-fallspring" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="101-200 students">
-        <button id="info-year" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Entire School">
-        <button id="info-unsure" data-toggle="popover"></button>
-      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="1-30 students">
+            <button id="info-fall" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="31-51 students">
+            <button id="info-spring" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="51 -100 students">
+            <button id="info-fallspring" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="101-200 students">
+            <button id="info-year" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Entire School">
+            <button id="info-unsure" data-toggle="popover"></button>
+          </div>
+        </div>
+        <div class="col-xs-6">
+        </div> 
+      </div> 
 
       <div class="row m-t-2 team-quote">
         <div class="col-xs-2">
@@ -330,34 +382,42 @@
 
     <div class="row deck-item" id="q-fun">
       <h4 class="row m-b-2">How are you going to make your program fun for your students?</h4>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Incentives">
-        <button id="info-fall" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Recognition">
-        <button id="info-spring" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" value="Playing music during run club ">
-        <button id="info-fallspring" data-toggle="popover"></button>
-      </div>
-      <div class="row btn-group">
-        <input class="btn btn-primary" type="button" Value="Other ideas" id="other-motiv">
-        <button class="btn btn-primary pull-xs-right adv" id="other-motiv-adv" disabled>
-          <i class="fa fa-arrow-right" aria-hidden="true"></i>
-        </button>
-      </div>
-    </div> 
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Incentives">
+            <button id="info-fall" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Recognition">
+            <button id="info-spring" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" value="Playing music during run club ">
+            <button id="info-fallspring" data-toggle="popover"></button>
+          </div>
+          <div class="row btn-group">
+            <input class="btn btn-primary" type="button" Value="Other ideas" id="other-motiv">
+            <button class="btn btn-primary pull-xs-right adv" id="other-motiv-adv" disabled>
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div> 
+        <div class="col-xs-6">
+        </div> 
+        </div> 
+    </div>
+        
 
     <div class="row deck-item" id="final">
       <h4>Awesome!</h4>
       <p>We have a customized toolkit to help get your school up and running! <em>link to toolkit</em> to get you started and be sure to <a href="http://BillionMileRace.org/register" target="_blank">register</a> with the Billion Mile Race! </p>
     </div>
 
+
   </div>
 
-  <div id="post-msg"></div>
+
 
   <div class="progress">
     <div>

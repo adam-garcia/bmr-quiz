@@ -62,7 +62,9 @@ div.btn-group {
     border: 2px solid #12a8dd;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
     background: #fff;
     color: #12a8dd;
     border: 2px solid #12a8dd;
