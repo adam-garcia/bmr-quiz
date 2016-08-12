@@ -65,7 +65,7 @@ button[data-toggle="popover"] {
     margin-left: 0;
 }
 
-button#other-role-adv,
+button#role-other-adv,
 button#other-motiv-adv {
     border-radius: 0;
     width: 50px;

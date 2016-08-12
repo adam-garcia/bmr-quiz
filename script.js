@@ -19,11 +19,11 @@ $('#init').click(function(){
 
 
 $('.deck-item').find('input').click(function() {
-    if (this.id == "other-role") {
-        var txt = $("<input type='text' placeholder='Tell us more!' id='other-role'>").hide();
+    if (this.id == "role-other") {
+        var txt = $("<input type='text' placeholder='Tell us more!' id='role-other'>").hide();
         $(this).replaceWith(txt);
-        $("#other-role").fadeIn("slow").focus();
-        $("#other-role-adv").prop("disabled", false);
+        $("#role-other").fadeIn("slow").focus();
+        $("#role-other-adv").prop("disabled", false);
     } else if (this.id=="other-motiv") {
         var txt = $("<input type='text' placeholder='Tell us about them!' id='other-motiv'>").hide();
         $(this).replaceWith(txt);
@@ -32,7 +32,7 @@ $('.deck-item').find('input').click(function() {
     } else if (this.type=="text") {
         console.log("test");
     } else {
-        setResult($("#other-role").parent(), $(this));
+        setResult($("#role-other").parent(), $(this));
         getNextSlide($(this).parent());
     };
 });
