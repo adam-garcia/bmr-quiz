@@ -9,6 +9,8 @@
   <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
   <!-- <link rel="stylesheet" href="./normalize.min.css"> -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet"/>
+
   <!-- <link rel="stylesheet" href="./skeleton.css"> -->
   <link rel="stylesheet" href="./style.css">
   <!-- <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
@@ -30,35 +32,35 @@
         just choose what feels right at this moment. 
         Ready? Let’s do it!
       </p>
-      <button class="btn btn-outline-primary" id="init">Begin Quiz</button>
+      <button class="btn btn-primary" id="init">Begin Quiz</button>
     </div>
 
     <!-- Role Question - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <div class="row deck-item" id="q-role">
       <h4 class="row m-b-2">What’s your role?</h4>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Parent">
+        <input class="btn btn-primary" type="button" value="Parent">
         <button id="info-parent" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Nurse">
+        <input class="btn btn-primary" type="button" value="Nurse">
         <button id="info-nurse" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="PE Teacher">
+        <input class="btn btn-primary" type="button" value="PE Teacher">
         <button id="info-pe" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Classroom Teacher">
+        <input class="btn btn-primary" type="button" value="Classroom Teacher">
         <button id="info-teach" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Principal/Assistant Principal">
+        <input class="btn btn-primary" type="button" value="Principal/Assistant Principal">
         <button id="info-admin" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" Value="Other" id="other-role">
-        <button class="btn btn-outline-info pull-xs-right adv" id="other-role-adv" disabled>
+        <input class="btn btn-primary" type="button" Value="Other" id="other-role">
+        <button class="btn btn-info pull-xs-right adv" id="other-role-adv" disabled>
           <i class="fa fa-arrow-right" aria-hidden="true"></i>
         </button>
       </div>
@@ -67,23 +69,23 @@
     <div class="row deck-item"  id="q-year">
       <h4 class="row m-b-2">Schools can implement run clubs throughout the year, for one semester, or for shorter durations. What do you think would work best for your school?</h4>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Fall">
+        <input class="btn btn-primary" type="button" value="Fall">
         <button id="info-fall" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Spring">
+        <input class="btn btn-primary" type="button" value="Spring">
         <button id="info-spring" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Fall and Spring">
+        <input class="btn btn-primary" type="button" value="Fall and Spring">
         <button id="info-fallspring" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Whole School Year">
+        <input class="btn btn-primary" type="button" value="Whole School Year">
         <button id="info-year" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Hmm, I’m not quite sure yet…">
+        <input class="btn btn-primary" type="button" value="Hmm, I’m not quite sure yet…">
         <button id="info-unsure" data-toggle="popover"></button>
       </div>
     </div>
@@ -91,27 +93,27 @@
     <div class="row deck-item" id="q-time">
       <h4 class="row m-b-2">What times during your school day could kids be available to walk and run?</h4>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Before School">
+        <input class="btn btn-primary" type="button" value="Before School">
         <button id="info-bschool" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="After School">
+        <input class="btn btn-primary" type="button" value="After School">
         <button id="info-aschool" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Recess">
+        <input class="btn btn-primary" type="button" value="Recess">
         <button id="info-recess" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="In Class Activity">
+        <input class="btn btn-primary" type="button" value="In Class Activity">
         <button id="info-class" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="During PE Class">
+        <input class="btn btn-primary" type="button" value="During PE Class">
         <button id="info-peclass" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Let me get back to you on this one!">
+        <input class="btn btn-primary" type="button" value="Let me get back to you on this one!">
         <button id="info-getback" data-toggle="popover"></button>
       </div>
     </div>
@@ -119,23 +121,23 @@
     <div class="row deck-item" id="q-frequency">
       <h4 class="row m-b-2">How many days a week do you envision hosting the run club?</h4>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Once a week">
+        <input class="btn btn-primary" type="button" value="Once a week">
         <button id="info-fall" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Twice a week ">
+        <input class="btn btn-primary" type="button" value="Twice a week ">
         <button id="info-spring" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Three times a week">
+        <input class="btn btn-primary" type="button" value="Three times a week">
         <button id="info-fallspring" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Four Times a week">
+        <input class="btn btn-primary" type="button" value="Four Times a week">
         <button id="info-year" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Every school day ">
+        <input class="btn btn-primary" type="button" value="Every school day ">
         <button id="info-unsure" data-toggle="popover"></button>
       </div>
 
@@ -151,25 +153,25 @@
     <div class="row deck-item" id="q-duration">
       <h4 class="row m-b-2">How much time per day can you dedicate?</h4>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="15 minutes">
+        <input class="btn btn-primary" type="button" value="15 minutes">
         <button id="info-fall" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="15-30 minutes">
+        <input class="btn btn-primary" type="button" value="15-30 minutes">
         <button id="info-spring" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="30-45 minutes">
+        <input class="btn btn-primary" type="button" value="30-45 minutes">
         <button id="info-fallspring" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="45-60 minutes">
+        <input class="btn btn-primary" type="button" value="45-60 minutes">
         <button id="info-year" data-toggle="popover"></button>
       </div>
 
       <div class="row m-t-2 team-quote">
         <div class="col-xs-2">
-          <img src="dan-min-sq.jpg" class="img-fluid img-circle">
+          <img src="dan-min-sq.png" class="img-fluid img-circle">
         </div>
         <div class="col-xs-10">
           <blockquote class="blockquote">
@@ -186,15 +188,15 @@
     <div class="row deck-item" id="q-where">
       <h4 class="row m-b-2">Where do you envision the run club meeting?</h4>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Inside  (Gym, Hallways)">
+        <input class="btn btn-primary" type="button" value="Inside  (Gym, Hallways)">
         <button id="info-fall" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Outside (Playground, track, etc.)">
+        <input class="btn btn-primary" type="button" value="Outside (Playground, track, etc.)">
         <button id="info-spring" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Both">
+        <input class="btn btn-primary" type="button" value="Both">
         <button id="info-fallspring" data-toggle="popover"></button>
       </div>
 
@@ -217,19 +219,19 @@
     <div class="row deck-item" id="q-track">
       <h4 class="row m-b-2">Some run clubs track individual miles while others estimate miles run by a group. How do you want to track your students’ miles?</h4>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Steps">
+        <input class="btn btn-primary" type="button" value="Steps">
         <button id="info-fall" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Laps">
+        <input class="btn btn-primary" type="button" value="Laps">
         <button id="info-spring" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Distance">
+        <input class="btn btn-primary" type="button" value="Distance">
         <button id="info-fallspring" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="I’ll just keep track of time! ">
+        <input class="btn btn-primary" type="button" value="I’ll just keep track of time! ">
         <button id="info-year" data-toggle="popover"></button>
       </div>
 
@@ -252,15 +254,15 @@
     <div class="row deck-item" id="q-leaders">
       <h4 class="row m-b-2">Ideally, run clubs have several leaders at the school. How many leaders will take part in your rub club?</h4>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="2">
+        <input class="btn btn-primary" type="button" value="2">
         <button id="info-fall" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="3">
+        <input class="btn btn-primary" type="button" value="3">
         <button id="info-spring" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="4+">
+        <input class="btn btn-primary" type="button" value="4+">
         <button id="info-fallspring" data-toggle="popover"></button>
       </div>
 
@@ -283,23 +285,23 @@
     <div class="row deck-item" id="q-students">
       <h4 class="row m-b-2">How many students do you want participating  in your running club? </h4>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="1-30 students">
+        <input class="btn btn-primary" type="button" value="1-30 students">
         <button id="info-fall" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="31-51 students">
+        <input class="btn btn-primary" type="button" value="31-51 students">
         <button id="info-spring" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="51 -100 students">
+        <input class="btn btn-primary" type="button" value="51 -100 students">
         <button id="info-fallspring" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="101-200 students">
+        <input class="btn btn-primary" type="button" value="101-200 students">
         <button id="info-year" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Entire School">
+        <input class="btn btn-primary" type="button" value="Entire School">
         <button id="info-unsure" data-toggle="popover"></button>
       </div>
 
@@ -322,20 +324,20 @@
     <div class="row deck-item" id="q-fun">
       <h4 class="row m-b-2">How are you going to make your program fun for your students?</h4>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Incentives">
+        <input class="btn btn-primary" type="button" value="Incentives">
         <button id="info-fall" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Recognition">
+        <input class="btn btn-primary" type="button" value="Recognition">
         <button id="info-spring" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" value="Playing music during run club ">
+        <input class="btn btn-primary" type="button" value="Playing music during run club ">
         <button id="info-fallspring" data-toggle="popover"></button>
       </div>
       <div class="row btn-group">
-        <input class="btn btn-outline-primary" type="button" Value="Other ideas" id="other-motiv">
-        <button class="btn btn-outline-info pull-xs-right adv" id="other-motiv-adv" disabled>
+        <input class="btn btn-primary" type="button" Value="Other ideas" id="other-motiv">
+        <button class="btn btn-info pull-xs-right adv" id="other-motiv-adv" disabled>
           <i class="fa fa-arrow-right" aria-hidden="true"></i>
         </button>
       </div>
@@ -362,6 +364,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   <script src="./script.js"></script>
 
 </body>
