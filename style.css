@@ -1,4 +1,6 @@
-html,
+html {
+    height: 750px;
+}
 body {
     font-family: 'Open Sans';
     height: 100%;
@@ -11,7 +13,7 @@ body {
 }*/
 
 .container {
-    min-height: 95vh;
+    min-height: 95%;
     position: relative;
     padding-left: 30px;
     margin: 0 auto;
@@ -24,7 +26,7 @@ body {
 
 div.deck-item {
     display: none;
-    padding-top: 8%;
+    padding-top: 1.5rem;
     margin-left: 0;
 }
 
