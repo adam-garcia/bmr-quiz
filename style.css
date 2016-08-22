@@ -133,9 +133,6 @@ blockquote > div {
     position: relative;
 }
 
-.btn-link {
-}
-
 .btn-link:disabled,
 .btn-link:disabled:hover {
     cursor: default;
