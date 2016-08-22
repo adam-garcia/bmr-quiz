@@ -1,46 +1,69 @@
 $(function() {
 
-startQuiz();
+    // Change "Quizard" to "New Here"
 
+// var q_ids = $('.deck-item').map(function() { return this.id; }).get();
 var delay = 800;
 var quizN = 0;
 var totalN = 10;
 var slides = [];
 
-$('#init').click(function(){
-    $(window).bind('beforeunload', function(){
-        // return null;
+
+$('.deck-item').first().fadeIn();
+
+
+$('blockquote')
+    .each(function() {
+    $(this)
+        .matchHeight({
+            target: $(this).parents('.team-quote').find('img')
+        });
     });
-    getNextSlide($(this));
-    $("#go-back").click(function(){
-        getPrevSlide();
-    })
+
+
+$('#init')
+    .click(function(){
+        $(window).bind('beforeunload', function(){ /* return null;*/ });
+        getNextSlide($(this));
+        $("#go-back")
+            .attr('disabled', false)
+            .click(function(){
+                getPrevSlide();
+            })
 });
 
 
-$('.deck-item').find('input').click(function() {
-    if (this.id == "role-other") {
-        var txt = $("<input type='text' placeholder='Tell us more!' id='role-other'>").hide();
-        $(this).replaceWith(txt);
-        $("#role-other").fadeIn("slow").focus();
-        $("#role-other-adv").prop("disabled", false);
-    } else if (this.id=="other-motiv") {
-        var txt = $("<input type='text' placeholder='Tell us about them!' id='other-motiv'>").hide();
-        $(this).replaceWith(txt);
-        $("#other-motiv").fadeIn("slow").focus();
-        $("#other-motiv-adv").prop("disabled", false);
-    } else if (this.type=="text") {
-        console.log("test");
-    } else {
-        setResult($(this));
+$('.deck-item')
+    .find('input')
+        .click(function() {
+            if (this.id == "role-other") {
+                var txt = $("<input id='role-other'>")
+                            .attr('type', 'text')
+                            .attr('placeholder', 'Tell us More!')
+                            .hide();
+                $(this).replaceWith(txt);
+                $("#role-other").fadeIn("slow").focus();
+                $("#role-other-adv").prop("disabled", false);
+            } else if (this.id=="motiv-other") {
+                var txt = $("<input id='motiv-other'>")
+                            .attr('type', 'text')
+                            .attr('placeholder', 'Tell us about them!')
+                            .hide();
+                $(this).replaceWith(txt);
+                $("#motiv-other").fadeIn("slow").focus();
+                $("#motiv-other-adv").prop("disabled", false);
+            } else if (this.type!="text") {
+                setResult($(this));
+                getNextSlide($(this).parent());
+        };
+    });
+
+
+$(".adv")
+    .click(function(){
+        setResult($(this).parent(), $(this).parent().find("input"));
         getNextSlide($(this).parent());
-    };
-});
-
-$(".adv").click(function(){
-    setResult($(this).parent(), $(this).parent().find("input"));
-    getNextSlide($(this).parent());
-});
+    });
 
 
 
@@ -49,21 +72,26 @@ function getPopoverTitle(el) {
 
 }
 function getPopoverBody(el) {
-    return "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+    return 
+    var lipsum = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, " +
+                 "sed do eiusmod tempor incididunt ut labore" +
+                 " et dolore magna aliqua.";
 }
 
 
 
 $.fn.extend({
     setPOTitle: function() {
-        return this.each(function() {
-            $(this).attr('title', getPopoverTitle(this.id));
-        });
+        return this
+            .each(function() {
+                $(this).attr('title', getPopoverTitle(this.id));
+            });
     },
     setPOBody: function() {
-        return this.each(function() {
-            $(this).attr('data-content', getPopoverBody(this.id))
-        });
+        return this
+            .each(function() {
+                $(this).attr('data-content', getPopoverBody(this.id))
+            });
     }
 });
 
@@ -75,7 +103,6 @@ $('[data-toggle="popover"]')
     .setPOTitle(this)
     .setPOBody()
     .html('<i class="fa fa-question-circle-o fa-lg" aria-hidden="true"></i>')
-    // .html('<div>?</div>')
     .popover({
         trigger: 'focus',
         container: 'body',
@@ -84,14 +111,6 @@ $('[data-toggle="popover"]')
 ;
 
 
-function startQuiz() {
-    $('.deck-item').first().fadeIn();
-    $('blockquote').each(function() {
-        $(this).matchHeight({
-            target: $(this).parents('.team-quote').find('img')
-        });
-    });
-}
 
 function getNextSlide(t) {
     curr = t.parents(".deck-item");
@@ -111,6 +130,10 @@ function getNextSlide(t) {
         $("#iter-progress").text("Done!");
     }
 };
+
+function getPrevSlide(t) {
+    console.log(t);
+}
 
 function updateProgress() {
     quizN += 1;
