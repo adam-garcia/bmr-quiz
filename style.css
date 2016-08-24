@@ -28,6 +28,7 @@ div.deck-item {
     display: none;
     padding-top: 1.5rem;
     margin-left: 0;
+    margin-right: 0;
 }
 
 div.deck-active {
