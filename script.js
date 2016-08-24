@@ -1,8 +1,7 @@
 $(function() {
 
-    // Change "Quizard" to "New Here"
-
-// var q_ids = $('.deck-item').map(function() { return this.id; }).get();
+var q_ids = $('.deck-item').map(function() { return this.id; }).get();
+// var q_help_ids = q_slide_ids[]
 var delay = 800;
 var quizN = 0;
 var totalN = 10;
@@ -18,6 +17,7 @@ $('blockquote')
         .matchHeight({
             target: $(this).parents('.team-quote').find('img')
         });
+        // .parents('.team-quote').hide();
     });
 
 
@@ -92,6 +92,15 @@ $.fn.extend({
             .each(function() {
                 $(this).attr('data-content', getPopoverBody(this.id))
             });
+    },
+    animateCss: function (animationName) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd' +
+                           'oanimationend animationend';
+        $(this)
+            .addClass('animated ' + animationName)
+            .one(animationEnd, function() {
+                $(this).removeClass('animated ' + animationName);
+        });
     }
 });
 
@@ -120,8 +129,13 @@ function getNextSlide(t) {
     $('[data-toggle="popover"]').popover("hide");
     curr.replaceWith(next);
     next.fadeIn(delay);
+    console.log(t);
     if (next.attr("id") != "final") {
         updateProgress();
+        if (next.find('div.team-quote').length != 0) {
+            console.log('animate!');
+            next.find('div.team-quote').animateCss('bounceInLeft');
+        }
     } else if (next.attr("id") == "final") {
         $("#progress").animate({
           value: 100,
