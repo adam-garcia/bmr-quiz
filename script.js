@@ -134,7 +134,7 @@ function getNextSlide(t) {
         updateProgress();
         if (next.find('div.team-quote').length != 0) {
             console.log('animate!');
-            next.find('div.team-quote').animateCss('bounceInLeft');
+            next.find('div.team-quote').animateCss('bounceInUp');
         }
     } else if (next.attr("id") == "final") {
         $("#progress").animate({
