@@ -11,15 +11,22 @@ var slides = [];
 $('.deck-item').first().fadeIn();
 
 
-$('blockquote')
-    .each(function() {
-    $(this)
-        .matchHeight({
-            target: $(this).parents('.team-quote').find('img')
-        });
-        // .parents('.team-quote').hide();
-    });
+// $('blockquote')
+//     .each(function() {
+//     $(this)
+//         .matchHeight({
+//             target: $(this).parents('.team-quote').find('img')
+//         });
+//         // .parents('.team-quote').hide();
+//     });
 
+
+// $('.card-block')
+//     .each(function() {
+//         $(this).matchHeight({
+//             target: $(this).parents('.tile').find('.front')
+//         });
+//     });
 
 $('#init')
     .click(function(){
@@ -34,10 +41,11 @@ $('#init')
 
 
 $('.deck-item')
-    .find('input')
+    .find('button')
         .click(function() {
             if (this.id == "role-other") {
                 var txt = $("<input id='role-other'>")
+                            .addClass("w-100 form-control")
                             .attr('type', 'text')
                             .attr('placeholder', 'Tell us More!')
                             .hide();
@@ -65,7 +73,9 @@ $(".adv")
         getNextSlide($(this).parent());
     });
 
-
+$(".tile").flip({
+    trigger: 'hover'
+});
 
 function getPopoverTitle(el) {
     return(el);
@@ -96,22 +106,22 @@ $.fn.extend({
     animateCss: function (animationName) {
         var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd' +
                            'oanimationend animationend';
-        $(this)
+        if (animationName.match('Out') != null) {
+          $(this).addClass('animated ' + animationName);
+        } else {
+          $(this)
             .addClass('animated ' + animationName)
             .one(animationEnd, function() {
                 $(this).removeClass('animated ' + animationName);
-        });
+            })
+        }
     }
 });
 
 $('[data-toggle="tooltip"]')
-    .attr('type', 'button')
-    .attr('attr', 'value')
-    .attr('type', 'button')
-    .attr('class', 'btn btn-primary')
     .setPOTitle(this)
     .setPOBody()
-    .html('<i class="fa fa-question-circle-o fa-lg" aria-hidden="true"></i>')
+    .html('<i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true"></i>')
     .tooltip({
         trigger: 'hover',
         container: 'body',
@@ -134,7 +144,7 @@ function getNextSlide(t) {
     if (next.attr("id") != "final") {
         updateProgress();
         if (next.find('div.team-quote').length != 0) {
-            next.find('div.team-quote').animateCss('bounceInUp');
+            next.find('div.team-quote').animateCss('bounceInRight');
         }
     } else if (next.attr("id") == "final") {
         $("#progress").animate({

@@ -15,9 +15,9 @@ body {
 .container {
     min-height: 95%;
     position: relative;
-    padding-left: 30px;
+    /*padding-left: 30px;*/
     margin: 0 auto;
-    max-width: 940px;
+    max-width: 850px;
 }
 
 #quiz {
@@ -35,28 +35,26 @@ div.deck-active {
     display: block;
 }
 
-.option-list,
-.info-list {
-    padding: 0;
-    width: auto;
+.q-options{
+    /*padding: 0;*/
 }
 
 div.btn-group {
     display: block !important;
     width: 350px;
-    margin-bottom: 1vh;
 }
 
-.deck-item input {
+.q-options input,
+.q-options button {
     text-align: left;
-    border-radius: 0;
-    width: 300px;
+    /*width: 300px;*/
 }
 
 .deck-item input[type="text"] {
     height: 40px;
     padding: 8px 16px;
     display: none;
+    border-radius: 0.25rem;
 }
 
 
@@ -79,33 +77,8 @@ div.btn-group {
 }
 
 
-button#init {
-    border-radius: 0;
-}
-
-button[data-toggle="tooltip"],
-button[data-toggle="tooltip"]:hover {
-    border-radius: 0;
-    width: 50px;
-    margin-left: 0;
-    background: #12a8dd;
-    border: 2px solid #12a8dd;
-    color: #fff;
-}
-
-button[data-toggle="tooltip"] > div {
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    /*border: 1px solid #fff;*/
-    text-align: center;
- }
-
-button#role-other-adv,
-button#other-motiv-adv {
-    border-radius: 0;
-    width: 50px;
-    /*border: none;*/
+button > i {
+    padding-top: 3px;
 }
 
 /*.tooltip {
@@ -113,16 +86,17 @@ button#other-motiv-adv {
 }*/
 
 blockquote {
-    position: relative;
+    /*position: relative;*/
+    padding-top: 0;
     border-left: 0 !important;
 }
 
 blockquote > div {
     font-size: 1rem;
-    position: absolute;
-    /*bottom: 0;*/
+/*    position: absolute;
+    bottom: 0;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%);*/
 }
 
 
@@ -147,4 +121,10 @@ blockquote > div {
 
 .team-quote {
     animation-delay: 0.2s;
+}
+
+
+.card {
+    height: 250px;
+    border-radius: 0.25rem;
 }
