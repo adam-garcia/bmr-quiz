@@ -104,7 +104,7 @@ $.fn.extend({
     }
 });
 
-$('[data-toggle="popover"]')
+$('[data-toggle="tooltip"]')
     .attr('type', 'button')
     .attr('attr', 'value')
     .attr('type', 'button')
@@ -112,10 +112,11 @@ $('[data-toggle="popover"]')
     .setPOTitle(this)
     .setPOBody()
     .html('<i class="fa fa-question-circle-o fa-lg" aria-hidden="true"></i>')
-    .popover({
-        trigger: 'focus',
+    .tooltip({
+        trigger: 'hover',
         container: 'body',
-        placement: 'right'
+        placement: 'right',
+        delay: 200
     })
 ;
 
@@ -133,7 +134,6 @@ function getNextSlide(t) {
     if (next.attr("id") != "final") {
         updateProgress();
         if (next.find('div.team-quote').length != 0) {
-            console.log('animate!');
             next.find('div.team-quote').animateCss('bounceInUp');
         }
     } else if (next.attr("id") == "final") {

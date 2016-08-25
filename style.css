@@ -83,13 +83,17 @@ button#init {
     border-radius: 0;
 }
 
-button[data-toggle="popover"] {
+button[data-toggle="tooltip"],
+button[data-toggle="tooltip"]:hover {
     border-radius: 0;
     width: 50px;
     margin-left: 0;
+    background: #12a8dd;
+    border: 2px solid #12a8dd;
+    color: #fff;
 }
 
-button[data-toggle="popover"] > div {
+button[data-toggle="tooltip"] > div {
     width: 20px;
     height: 20px;
     border-radius: 100%;
@@ -104,9 +108,9 @@ button#other-motiv-adv {
     /*border: none;*/
 }
 
-.popover {
+/*.tooltip {
     max-width: 500px;
-}
+}*/
 
 blockquote {
     position: relative;
@@ -138,4 +142,9 @@ blockquote > div {
 .btn-link:disabled:hover {
     cursor: default;
     color: #373a3c !important;
+}
+
+
+.team-quote {
+    animation-delay: 0.2s;
 }
