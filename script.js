@@ -119,9 +119,6 @@ $.fn.extend({
 });
 
 $('[data-toggle="tooltip"]')
-    .setPOTitle(this)
-    .setPOBody()
-    .html('<i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true"></i>')
     .tooltip({
         trigger: 'hover',
         container: 'body',
