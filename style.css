@@ -57,20 +57,28 @@ div.btn-group {
     border-radius: 0.25rem;
 }
 
+.btn:focus {
+    outline: none;
+}
 
-.btn-primary {
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:hover,
+.btn-primary:disabled:hover {
     background: #12a8dd;
     color: #fff;
     border: 2px solid #12a8dd;
 }
 
 .btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active {
+.btn-primary.selected {
     background: #fff;
     color: #12a8dd;
     border: 2px solid #12a8dd;
 }
+
+
 
 .btn-primary:hover i {
     color: #12a8dd;

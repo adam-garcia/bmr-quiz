@@ -45,24 +45,32 @@ $('.deck-item')
         .click(function() {
             if (this.id == "role-other") {
                 var txt = $("<input id='role-other'>")
-                            .addClass("w-100 form-control")
+                            .addClass("w-100 form-control m-b-1")
                             .attr('type', 'text')
                             .attr('placeholder', 'Tell us More!')
                             .hide();
                 $(this).replaceWith(txt);
-                $("#role-other").fadeIn("slow").focus();
-                $("#role-other-adv").prop("disabled", false);
+                $("#role-other")
+                    .fadeIn("slow")
+                    .toggleClass('selected')
+                    .focus();
             } else if (this.id=="motiv-other") {
                 var txt = $("<input id='motiv-other'>")
                             .attr('type', 'text')
                             .attr('placeholder', 'Tell us about them!')
                             .hide();
                 $(this).replaceWith(txt);
-                $("#motiv-other").fadeIn("slow").focus();
-                $("#motiv-other-adv").prop("disabled", false);
-            } else if (this.type!="text") {
-                setResult($(this));
+                $("#motiv-other")
+                    .fadeIn("slow")
+                    .addClass('selected')
+                    .focus();
+            } else if ($(this).hasClass('next')) {
                 getNextSlide($(this).parent());
+                
+            } else if (this.type!="text") {
+                $(this).toggleClass('selected');
+                $(this).parent().find('.next').attr('disabled', false);
+                // setResult($(this));
         };
     });
 
