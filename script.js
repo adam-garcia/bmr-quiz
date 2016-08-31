@@ -11,23 +11,6 @@ var slides = [];
 $('.deck-item').first().fadeIn();
 
 
-// $('blockquote')
-//     .each(function() {
-//     $(this)
-//         .matchHeight({
-//             target: $(this).parents('.team-quote').find('img')
-//         });
-//         // .parents('.team-quote').hide();
-//     });
-
-
-// $('.card-block')
-//     .each(function() {
-//         $(this).matchHeight({
-//             target: $(this).parents('.tile').find('.front')
-//         });
-//     });
-
 $('#init')
     .click(function(){
         $(window).bind('beforeunload', function(){ /* return null;*/ });
@@ -43,19 +26,41 @@ $('#init')
 $('.deck-item')
     .find('button')
         .click(function() {
+            if (!$(this).parent().hasClass('multi')) {
+                $(this).siblings().removeClass('selected');
+            }
+            if (this.type!="text") {
+                $(this).toggleClass('selected');
+                $(this).siblings('.next').attr('disabled', false);
+                if ($(this).parents('.deck-item').find('.team-quote').length != 0) {
+                    sendMessage(this);
+                }
+            };
             if (this.id == "role-other") {
                 var txt = $("<input id='role-other'>")
                             .addClass("w-100 form-control m-b-1")
                             .attr('type', 'text')
-                            .attr('placeholder', 'Tell us More!')
+                            .attr('placeholder', 'Tell Us What You Do!')
                             .hide();
                 $(this).replaceWith(txt);
                 $("#role-other")
                     .fadeIn("slow")
                     .toggleClass('selected')
                     .focus();
+            } else if (this.id == "when-other") {
+                var txt = $("<input id='when-other'>")
+                            .addClass("w-100 form-control m-b-1")
+                            .attr('type', 'text')
+                            .attr('placeholder', "Tell Us What You're Thinking!")
+                            .hide();
+                $(this).replaceWith(txt);
+                $("#when-other")
+                    .fadeIn("slow")
+                    .toggleClass('selected')
+                    .focus();
             } else if (this.id=="motiv-other") {
                 var txt = $("<input id='motiv-other'>")
+                            .addClass("w-100 form-control m-b-1")
                             .attr('type', 'text')
                             .attr('placeholder', 'Tell us about them!')
                             .hide();
@@ -64,15 +69,62 @@ $('.deck-item')
                     .fadeIn("slow")
                     .addClass('selected')
                     .focus();
-            } else if ($(this).hasClass('next')) {
+            } if ($(this).hasClass('next')) {
                 getNextSlide($(this).parent());
-                
-            } else if (this.type!="text") {
-                $(this).toggleClass('selected');
-                $(this).parent().find('.next').attr('disabled', false);
-                // setResult($(this));
-        };
+            };
     });
+
+
+$(".team-quote").hide();
+
+function sendMessage(ans) {
+    var msg;
+    var img = "//placehold.it/150x150";
+    var img = "";
+    switch (ans.id) {
+        case 'role-pe':
+            msg = "You’re in great company! Did you know over 65% of Billion Mile Race run clubs are led by PE teachers? Welcome to the team.";
+            break;
+        case 'role-class':
+            msg = "Nice! When kids are more active at school, classroom teachers get to see the benefits firsthand – better focus, better attention, and better academic performance.";
+            break;
+        case 'role-nurse':
+            msg = "Awesome! Nurses make everything better, including run clubs.";
+            break;
+        case 'role-parent':
+            msg = "Cool! Moms and dads just like you are organizing run clubs at their children’s schools all across the country.";
+            break;
+        case 'role-admin':
+            msg = "We tip our hats to you! No run club is possible without the support and buy-in of a school’s administration. You rock!";
+            break;
+        case 'role-other':
+            msg = "";
+            break;
+        case 'dur-15'   :
+        case 'dur-30'   :
+        case 'dur-45'   :
+        case 'dur-60'   :
+        case 'dur-plus' :
+            msg = "Consider this when planning your run club: the recommended amount of physical activity is 60 minutes/day, with 30 minutes recommended happening at school. Dan, Billion Mile Race Team"
+            break;
+        case 'lead-2'   :
+        case 'lead-3'   :
+        case 'lead-4'   :
+        case 'lead-idk' :
+            msg = "It’s important to partner up with at least one other leader at your school to make sure your run club is sustainable!";
+            break;
+    }
+    $(ans).parents('.deck-item')
+        .find('.message').text(msg);
+    $(ans).parents('.deck-item')
+        .find('img.team-pic')
+        .attr('src', img);
+
+    $(ans).parents('.deck-item')
+        .find('.team-quote')
+        .show()
+        .animateCss('bounceInRight');
+}
 
 
 $(".adv")
@@ -81,21 +133,12 @@ $(".adv")
         getNextSlide($(this).parent());
     });
 
-$(".tile").flip({
-    trigger: 'hover'
-});
-
-function getPopoverTitle(el) {
-    return(el);
-
-}
-function getPopoverBody(el) {
-    return 
-    var lipsum = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, " +
-                 "sed do eiusmod tempor incididunt ut labore" +
-                 " et dolore magna aliqua.";
-}
-
+$(".tile")
+    .flip({
+        trigger: 'hover',
+        speed: 500
+    })
+    .children("div").addClass("w-100");
 
 
 $.fn.extend({
@@ -131,6 +174,7 @@ $('[data-toggle="tooltip"]')
         trigger: 'hover',
         container: 'body',
         placement: 'right',
+        offset: '0 -8px',
         delay: 200
     })
 ;
@@ -140,12 +184,8 @@ $('[data-toggle="tooltip"]')
 function getNextSlide(t) {
     curr = t.parents(".deck-item");
     var next = curr.next();
-    slides.push(curr);
-    // console.log(slides);
-    $('[data-toggle="popover"]').popover("hide");
     curr.replaceWith(next);
     next.fadeIn(delay);
-    console.log(t);
     if (next.attr("id") != "final") {
         updateProgress();
         if (next.find('div.team-quote').length != 0) {
