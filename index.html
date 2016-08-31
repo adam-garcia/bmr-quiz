@@ -35,16 +35,10 @@
     <div class="row deck-item" id="intro">
       <h3>New Here?</h3>
       <p>
-        Every new run club needs to think through some key decision points 
-        before starting. Our quiz will coach you through everything you need 
-        to know! We don’t expect you to have all the answers, 
-        just choose what feels right at this moment.
-      </p>
-      <p class="m-t-2">
-        Ready? Let’s do it!
+        Any school starting a new run club has key decisions to make. Who will lead the club? When and where will kids run? How will success be celebrated? This quiz will coach you through all these considerations and more while showing you how Billion Mile Race schools across the country make it happen. You likely won’t have all the answers out of the gate. That’s okay! Use this quiz as a guide to begin your planning.
       </p>
       <div>
-      <button class="btn btn-primary" id="init">Begin Quiz</button>
+        <button class="btn btn-primary" id="init">Ready? Let’s Go.</button>
       </div>
     </div>
 
@@ -56,17 +50,20 @@
 
         <div class="row">
         <div class="col-xs-6 q-options">
-          <button class="btn btn-primary w-100 m-b-1" id="role-parent">
-            Parent
-          </button>
-          <button class="btn btn-primary w-100 m-b-1" id="role-nurse">
-            Nurse
-          </button>
           <button class="btn btn-primary w-100 m-b-1" id="role-pe">
             PE Teacher
           </button>
           <button class="btn btn-primary w-100 m-b-1" id="role-class">
             Classroom Teacher
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="role-nurse">
+            School Nurse
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="role-parent">
+            Parent
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="role-admin">
+            Administrator
           </button>
           <button class="btn btn-primary w-100 m-b-1" id="role-other">
             Other
@@ -78,67 +75,27 @@
 
         <div class="col-xs-6 pull-xs-right">
           <div class="team-quote">
-              <blockquote class="blockquote p-y-0">
-                <div>
-                  <p class="m-b-0">The recommended amount of physical activity is 60 minutes/day, with 30 minutes recommended happening at school. Consider this when planning your program!
-                  <source>Dan, <cite title="Source Title">BMR Team</cite></source></p>
-                </div>
-              </blockquote>
-              <img src="//placehold.it/150x150" class="img-fluid img-circle team-pic m-x-auto">
+            <blockquote class="blockquote">
+              <div>
+                <p class='message m-b-0'></p>
+              </div>
+            </blockquote>
+            <img class="img-fluid img-circle team-pic m-x-auto">
           </div>
         </div>
 
         </div>
-
-
-        <!-- <div class="row m-t-2">  
-          <div class="col-xs-4">
-            <div class="tile">
-              <div class="front">
-                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
-              </div>
-              <div class="back">
-                <div class="card card-block card-inverse card-success text-xs-center">
-                    back content
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-4">
-            <div class="tile">
-              <div class="front">
-                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
-              </div>
-              <div class="back">
-                <div class="card card-block card-inverse card-success text-xs-center">
-                    back content
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-4">
-            <div class="tile">
-              <div class="front">
-                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
-              </div>
-              <div class="back">
-                <div class="card card-block card-inverse card-success text-xs-center">
-                    back content
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
     </div>
             
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
     <div class="row deck-item"  id="q-year">
       <h4 class="m-b-2">Schools can implement run clubs all year long or for shorter durations. What do you think would work best for your school?</h4>
       <div class="row">
         <div class="col-xs-6 q-options">
-          <button class="btn btn-primary w-100 m-b-1" id="year-whole" data-toggle="tooltip" data-placement="right" title="Year-long run clubs are a popular choice, whether they meet daily or on certain days of the week.">
+          <button class="btn btn-primary w-100 m-b-1" id="year-whole" >
             Whole School Year
-            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true"></i>
+            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Year-long run clubs are a popular choice, whether they meet daily or on certain days of the week."></i>
           </button>
           <button class="btn btn-primary w-100 m-b-1" id="year-fors">
             Fall or Spring
@@ -146,26 +103,26 @@
           <button class="btn btn-primary w-100 m-b-1" id="year-fans">
             Fall and Spring
           </button>
-          <button class="btn btn-primary w-100 m-b-1" id="year-idk" data-toggle="tooltip" data-placement="right" title="That’s A-OK. There’s no need to commit to an official schedule out of the gate.">
+          <button class="btn btn-primary w-100 m-b-1" id="year-idk" >
             I’m not quite sure yet
-            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true"></i>
+            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="That’s A-OK. There’s no need to commit to an official schedule out of the gate."></i>
+          </button>
+          <button class="btn btn-primary w-100 m-b-1 next" disabled>
+            Next
           </button>
         </div>
         
         <div class="col-xs-6 pull-xs-right">
           <div class="team-quote">
               <blockquote class="blockquote p-y-0">
-                <div>
-                  <p class="m-b-0">The recommended amount of physical activity is 60 minutes/day, with 30 minutes recommended happening at school. Consider this when planning your program!
-                  <source>Dan, <cite title="Source Title">BMR Team</cite></source></p>
-                </div>
+                <div><p class="message m-b-0"></p></div>
               </blockquote>
-              <img src="//placehold.it/150x150" class="img-fluid img-circle team-pic m-x-auto">
+              <img class="img-fluid img-circle team-pic m-x-auto">
           </div>
         </div> 
       </div> 
 
-       <h5 align="center">How they do it</h5>
+      <h5 class="m-t-1" align="center">How they do it</h5>
       <div class="row m-t-2">  
           <div class="col-xs-4">
             <div class="tile">
@@ -173,8 +130,10 @@
                 <img src="//placehold.it/250x250" class="img-fluid img-rounded">
               </div>
               <div class="back">
-                <div class="card card-block card-inverse card-success text-xs-center">
-                    back content
+                <div class="card card-block card-inverse card-success">
+                  <div class="text">
+                  &quot;Our morning run is open to 3rd, 4th, and 5th graders and is conducted on Tuesday and Thursday mornings in the fall.  We have access to the middle school track and this is where the members walk and run laps.  Plastic tokens are earned for miles completed.&quot;
+                  </div>
                 </div>
               </div>
             </div>
@@ -185,8 +144,8 @@
                 <img src="//placehold.it/250x250" class="img-fluid img-rounded">
               </div>
               <div class="back">
-                <div class="card card-block card-inverse card-success text-xs-center">
-                    back content
+                <div class="card card-block card-inverse card-success">
+                  &quot;This is my 3rd year with my Running Club.  We meet after school in the fall and spring.  My kids keep track of laps run on their punch card, which are then converted to mile that I track manually now on a spreadsheet and earn incentives based on the number of miles they run.&quot;
                 </div>
               </div>
             </div>
@@ -197,335 +156,604 @@
                 <img src="//placehold.it/250x250" class="img-fluid img-rounded">
               </div>
               <div class="back">
-                <div class="card card-block card-inverse card-success text-xs-center">
-                    back content
+                <div class="card card-block card-inverse card-success">
+                  &quot;We take part in the 100 Mile Club and our students have the opportunity to walk, jog, or run every day during recess to accumulate miles and earn prizes for the entire school year.&quot;
                 </div>
               </div>
             </div>
           </div>
         </div>
     </div>
-<!-- 
-    <div class="row deck-item" id="q-time">
-      <h4 class="row m-b-2">What times during your school day could kids be available to walk and run?</h4>
-      <div class="row">
-        <div class="col-xs-6">
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Before School">
-            <button id="info-bschool" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="After School">
-            <button id="info-aschool" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Recess">
-            <button id="info-recess" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="In Class Activity">
-            <button id="info-class" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="During PE Class">
-            <button id="info-peclass" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Let me get back to you on this one!">
-            <button id="info-getback" data-toggle="tooltip"></button>
-          </div>
-        </div>
-        <div class="col-xs-6">
-        </div> 
-      </div> 
-    </div>
 
-    <div class="row deck-item" id="q-frequency">
-      <h4 class="row m-b-2">How many days a week do you envision hosting the run club?</h4>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+    <div class="row deck-item"  id="q-when">
+      <h4 class="m-b-2">When will your run club take place? Select all that apply.</h4>
       <div class="row">
-        <div class="col-xs-6">
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Once a week">
-            <button id="info-fall" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Twice a week ">
-            <button id="info-spring" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Three times a week">
-            <button id="info-fallspring" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Four Times a week">
-            <button id="info-year" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Every school day ">
-            <button id="info-unsure" data-toggle="tooltip"></button>
-          </div>
+        <div class="col-xs-6 q-options">
+          <button class="btn btn-primary w-100 m-b-1" id="when-bef" >
+            Before School
+            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="There’s evidence that AM activity primes the brain for a day of learning. Building in time for your run club before school is a great way to capitalize on this benefit."></i>
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="when-aft">
+            After School
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="when-rec">
+            Recess
+            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Make your recess active with a run club and engage kids who might otherwise sit on the sidelines."></i>
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="when-cls" >
+            Classroom Breaks
+            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Smart move. Short bouts of physical activity can serve as a ‘reset button’ for tired or fidgety classrooms."></i>
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="when-pe">
+            During PE Class
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="when-other">
+            I’ve got another time in mind.
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="when-idk">
+            Let me get back to you on this one.
+          </button>
+          <button class="btn btn-primary w-100 next" disabled>
+            Next
+          </button>
         </div>
-        <div class="col-xs-6">
-        </div> 
       </div> 
 
-      <div class="row m-t-2 team-quote">
-        <blockquote class="blockquote">
-          <div>
-            <p class="m-b-0">The Haley School meets Mondays, Wednesdays and Friday mornings from 7:20-7:50am for a total of 90 minutes per week.</p>
-          </div>
-        </blockquote>
-      </div>
-    </div>
-
-    <div class="row deck-item" id="q-duration">
-      <h4 class="row m-b-2">How much time per day can you dedicate?</h4>
-      <div class="row">
-        <div class="col-xs-6">
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="15 minutes">
-            <button id="info-fall" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="15-30 minutes">
-            <button id="info-spring" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="30-45 minutes">
-            <button id="info-fallspring" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="45-60 minutes">
-            <button id="info-year" data-toggle="tooltip"></button>
-          </div>
-        </div>
-        <div class="col-xs-6">
-          <div class="team-quote">
-            <div class="">
-              <blockquote class="blockquote">
-                <div>
-                  <p class="m-b-0">The recommended amount of physical activity is 60 minutes/day, with 30 minutes recommended happening at school. Consider this when planning your program!</p>
-                  <footer class="blockquote-footer">Dan, <cite title="Source Title">BMR Team</cite></footer>
-                  <img src="dan-min-sq.png" class="img-fluid img-circle" style="max-width: 150px; float: right;">
+      <h5 class="m-t-1" align="center">How they do it</h5>
+      <div class="row m-t-2">  
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;Our morning run is open to 3rd, 4th, and 5th graders and is conducted on Tuesday and Thursday mornings in the fall.  We have access to the middle school track and this is where the members walk and run laps.  Plastic tokens are earned for miles completed.&quot;
                 </div>
-                <div class="col-xs-8">
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;This is my 3rd year with my Running Club.  We meet after school in the fall and spring.  My kids keep track of laps run on their punch card, which are then converted to mile that I track manually now on a spreadsheet and earn incentives based on the number of miles they run.&quot;
                 </div>
-                <div class="col-xs-4">
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;We take part in the 100 Mile Club and our students have the opportunity to walk, jog, or run every day during recess to accumulate miles and earn prizes for the entire school year.&quot;
                 </div>
-              </blockquote>
-            </div>
-            <div class="row">
+              </div>
             </div>
           </div>
-        </div> 
-      </div> 
-
-    <div class="row m-t-2 team-quote">
-        <div class="col-xs-2">
-          <img src="dan-min-sq.png" class="img-fluid img-circle">
         </div>
-        <div class="col-xs-10">
-          <blockquote class="blockquote">
-            <div>
-              <p class="m-b-0">The recommended amount of physical activity is 60 minutes/day, with 30 minutes recommended happening at school. Consider this when planning your program!</p>
-              <footer class="blockquote-footer">Dan, <cite title="Source Title">BMR Team</cite></footer>
-            </div>
-          </blockquote>
-        </div>
-        </div>
- </div>
-    <div class="row deck-item" id="q-where">
-      <h4 class="row m-b-2">Where do you envision the run club meeting?</h4>
-      <div class="row">
-        <div class="col-xs-6">
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Inside  (Gym, Hallways)">
-            <button id="info-fall" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Outside (Playground, track, etc.)">
-            <button id="info-spring" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Both">
-            <button id="info-fallspring" data-toggle="tooltip"></button>
-          </div>
-        </div>
-        <div class="col-xs-6">
-        </div> 
-      </div> 
-
-      <div class="row m-t-2 team-quote">
-        <div class="col-xs-2">
-          <img src="//placehold.it/350x350" class="img-fluid img-circle">
-        </div>
-        <div class="col-xs-10">
-          <blockquote class="blockquote">
-            <div>
-              <p class="m-b-0">Don’t worry if you don’t have dedicated gym space! We work with many schools in Boston who utilize hallways to get their activity in!</p>
-              <footer class="blockquote-footer">Daniel, <cite title="Source Title">BMR Team</cite></footer>
-            </div>
-          </blockquote>
-        </div>
-      </div>
     </div>
 
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
-    <div class="row deck-item" id="q-track">
-      <h4 class="row m-b-2">Some run clubs track individual miles while others estimate miles run by a group. How do you want to track your students’ miles?</h4>
+    <div class="row deck-item"  id="q-freq">
+      <h4 class="m-b-2">How many days a week will your run club take place?</h4>
       <div class="row">
-        <div class="col-xs-6">
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Steps">
-            <button id="info-fall" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Laps">
-            <button id="info-spring" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Distance">
-            <button id="info-fallspring" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="I’ll just keep track of time! ">
-            <button id="info-year" data-toggle="tooltip"></button>
-          </div>
+        <div class="col-xs-6 q-options">
+          <button class="btn btn-primary w-100 m-b-1" id="freq-1" >
+            Once a week
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="freq-2-4">
+            2-4 days a week
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="freq-all">
+            Every school day
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="freq-idk" >
+            We haven't decided yet
+          </button>
+          <button class="btn btn-primary w-100 m-b-1 next" disabled>
+            Next
+          </button>
         </div>
-        <div class="col-xs-6">
-        </div> 
       </div> 
 
-      <div class="row m-t-2 team-quote">
-        <div class="col-xs-2">
-          <img src="//placehold.it/350x350" class="img-fluid img-circle">
-        </div>
-        <div class="col-xs-10">
-          <blockquote class="blockquote">
-            <div>
-              <p class="m-b-0">When tracking by time you can use our <a href="http://BillionMileRace.org/calculator" target="_blank">BMR calculator</a> to easily upload miles and continue working toward your goals!</p>
-              <footer class="blockquote-footer">Emily, <cite title="Source Title">BMR Team</cite></footer>
+      <h5 class="m-t-1" align="center">How they do it</h5>
+      <div class="row m-t-2">  
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  <div class="text">
+                  &quot;We meet after school from 3-4 on Tuesdays and Thursdays.  We walk or run for 45 minutes then have a healthy snack.  We give students incentives for miles walked or run and have a big celebration at the end of the year and walk to a nearby park.&quot;
+                  </div>
+                </div>
+              </div>
             </div>
-          </blockquote>
+          </div>
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;We have a before school running club that meets 3 mornings a week.  We average approximately 175-200 students each morning with a total school enrollment of 423. One Saturday a month we have a family fun run where families can come out for an hour and students can work towards their hundred mile goal.  Students also run/walk during their physical education class several days a week.&quot;
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;We designed our own run club where every day for the last 10 minutes of morning recess, the entire school walks together doing laps around the grounds.&quot;
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
     </div>
 
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
-    <div class="row deck-item" id="q-students">
-      <h4 class="row m-b-2">How many students do you want participating  in your running club? </h4>
+    <div class="row deck-item"  id="q-dur">
+      <h4 class="m-b-2">How long will your run club sessions be?</h4>
       <div class="row">
-        <div class="col-xs-6">
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="1-30 students">
-            <button id="info-fall" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="31-51 students">
-            <button id="info-spring" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="51 -100 students">
-            <button id="info-fallspring" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="101-200 students">
-            <button id="info-year" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Entire School">
-            <button id="info-unsure" data-toggle="tooltip"></button>
-          </div>
+        <div class="col-xs-6 q-options">
+          <button class="btn btn-primary w-100 m-b-1" id="dur-15" >
+            Less than 15 minutes
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="dur-30">
+            15-29 minutes
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="dur-45">
+            30-44 minutes
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="dur-60" >
+            45-60 minutes
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="dur-plus" >
+            More than 60 minutes
+          </button>
+          <button class="btn btn-primary w-100 m-b-1 next" disabled>
+            Next
+          </button>
         </div>
-        <div class="col-xs-6">
-        </div> 
-      </div> 
-
-      <div class="row m-t-2 team-quote">
-        <div class="col-xs-2">
-          <img src="//placehold.it/350x350" class="img-fluid img-circle">
-        </div>
-        <div class="col-xs-10">
-          <blockquote class="blockquote">
-            <div>
-              <p class="m-b-0">Consider limiting your run club to certain grade levels and think about any space constraints you may have! </p>
-              <footer class="blockquote-footer">Nate, <cite title="Source Title">BMR Team</cite></footer>
-            </div>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="row deck-item" id="q-leaders">
-      <h4 class="row m-b-2">Ideally, run clubs have several leaders at the school. How many leaders will take part in your rub club?</h4>
-      <div class="row">
-        <div class="col-xs-6">
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="2">
-            <button id="info-fall" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="3">
-            <button id="info-spring" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="4+">
-            <button id="info-fallspring" data-toggle="tooltip"></button>
-          </div>
-        </div>
-        <div class="col-xs-6">
-        </div> 
-      </div> 
-
-      <div class="row m-t-2 team-quote">
-        <div class="col-xs-2">
-          <img src="//placehold.it/350x350" class="img-fluid img-circle">
-        </div>
-        <div class="col-xs-10">
-          <blockquote class="blockquote">
-            <div>
-              <p class="m-b-0">It’s important to partner up with another champion at your school to make sure the program is sustainable!</p>
-              <footer class="blockquote-footer">Lauren, <cite title="Source Title">BMR Team</cite></footer>
-            </div>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="row deck-item" id="q-fun">
-      <h4 class="row m-b-2">It's great to motivate students throughout your program, whether that means prizes, announcing mile goals on the load speaker, or playing music during your walk/run club. How will you make it fun for student runners?</h4>
-      <div class="row">
-        <div class="col-xs-6">
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Incentives">
-            <button id="info-fall" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Recognition">
-            <button id="info-spring" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" value="Playing music during run club ">
-            <button id="info-fallspring" data-toggle="tooltip"></button>
-          </div>
-          <div class="row btn-group">
-            <input class="btn btn-primary" type="button" Value="Other ideas" id="motiv-other">
-            <button class="btn btn-primary pull-xs-right adv" id="motiv-other-adv" disabled>
-              <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            </button>
-          </div>
-        </div> 
-        <div class="col-xs-6">
-        </div> 
-        </div> 
-    </div> -->
         
+        <div class="col-xs-6 pull-xs-right">
+          <div class="team-quote">
+              <blockquote class="blockquote p-y-0">
+                <div><p class="message m-b-0"></p></div>
+              </blockquote>
+              <img class="img-fluid img-circle team-pic m-x-auto">
+          </div>
+        </div> 
+      </div> 
 
-    <div class="row deck-item" id="final">
-      <h4>Awesome!</h4>
-      <p>We have a customized toolkit to help get your school up and running! <em>link to toolkit</em> to get you started and be sure to <a href="http://BillionMileRace.org/register" target="_blank">register</a> with the Billion Mile Race! </p>
+      <h5 class="m-t-1" align="center">How they do it</h5>
+      <div class="row m-t-2">  
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  <div class="text">
+                  &quot;Our Jog &amp; Fit Club takes place for 20 minutes every morning, from 7:20-7:40am. On good weather days, students will report to their classroom, drop off their belongings, grab their mileage card and meet me at the track. On bad weather days, students will report to their classroom, drop off their belongings, and report to the gym.&quot;
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;The kids have ten minutes at the start of every gym class to walk or run around the outside field. 10 laps is a mile. We have a charting system that they use to track their mileage. We have certain landmarks they can get to like the Liberty Bell, Ocean City New Jersey and Niagara Falls. At the end of the school year we take each class on a 2 hour hike in a local state park.&quot;
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;Our run club is called Happy Feet.  Students sign up and on club days report to the gym. We will either walk around gym or outside for about 45 minutes.&quot;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <div class="row deck-item"  id="q-where">
+      <h4 class="m-b-2">Where will students walk &amp; run? Select all that apply.</h4>
+      <div class="row">
+        <div class="col-xs-6 q-options multi">
+          <button class="btn btn-primary w-100 m-b-1" id="where-field" >
+            Outside on a track or athletic field
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="where-path">
+            Outside on a designated route or path
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="where-gym">
+            Inside in a gymnasium or cafeteria
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="where-hall" >
+            Inside in hallways
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="where-idk" >
+            I'm not sure yet.
+          </button>
+          <button class="btn btn-primary w-100 m-b-1 next" disabled>
+            Next
+          </button>
+        </div>
+      </div> 
+
+      <h5 class="m-t-1" align="center">How they do it</h5>
+      <div class="row m-t-2">  
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  <div class="text">
+                  &quot;In our Wildcat Fitness Club kids walk and run the track at recess and get their laps counted.  Awards are given out at various goals.  5 miles = $.50 at the school store, 15 miles is a wildcat fitness pencil, 30 miles is a medal, 60 miles is a trophy and 100 miles is a T-shirt.&quot;
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;In our Husky Challenge program students walk every morning from 7:30 to 7:50, and during their lunch recess. A small asphalt walking track around our playground provides students with a safe place to walk where there were no concerns about traffic. On days when the weather prohibits going outside we walk the school hallways.&quot;
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;On Monday, Wednesday, and Friday students can choose between our cross country trail or our 1/8 mile walking trail and get punches on a card for every lap they complete. When they finish a card they turn it in for a prize. Prizes include key chain items such as a small foot, running man, mega foot, and dog tag. Each 9 weeks we take the top 10 walkers on a fun physical activity type field trip.&quot;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+    <div class="row deck-item"  id="q-track">
+      <h4 class="m-b-2">How will miles be tracked? Some run clubs track students' individual miles while others estimate miles that students run as a group</h4>
+      <div class="row">
+        <div class="col-xs-6 q-options">
+          <button class="btn btn-primary w-100 m-b-1" id="when-bef" >
+            Distance/Laps
+            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Many schools use an app like MapMyRun to determine how many laps around their track/soccer field/school perimeter is equal to one mile. Once you know this you can use any of a number of systems to count student laps. We’ve seen schools use punch cards, Popsicle sticks, dots on a card and more."></i>
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="when-aft">
+            Steps
+            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="If you have access to pedometers, counting steps is a simple way to track miles. You can use our calculator to convert steps to miles whether you have pedometers for all your students or you select one or two to wear them and represent a group."></i>
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="when-rec">
+            Time
+            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Tracking how long your students walk and run for is a handy way to estimate miles. Our calculator will do the math for you!"></i>
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="when-cls" >
+            I'm not sure yet.
+            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Try out a few different methods to find the solution that’s right for your run club."></i>
+          </button>
+          <button class="btn btn-primary w-100 next" disabled>
+            Next
+          </button>
+        </div>
+      </div> 
+
+      <h5 class="m-t-1" align="center">How they do it</h5>
+      <div class="row m-t-2">  
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;Our school’s Mileage Club runs on Tuesdays and Thursdays every week during the school year in the Fall and Spring.  K-5 students walk, run, and jog around the school's walking track.  For every lap they get a popsicle stick. Four Popsicle sticks equal a mile for which they earn a foot charm.&quot;
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;In our Miles Club 1st-3rd grade students accumulate miles during the school day through laps around the playground, inside the building, or around the perimeter of the building. Students wear pedometers and get steps that are converted into mileage. Students are encouraged by their teachers, who get their own miles by wearing pedometers. Classroom teachers turn step counts into me and I record and display their progress.&quot;
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;Students come to the gym before school, from 7:10-7:30 to walk jog or run. Upbeat music is playing to encourage movement and awaken participants! Lanes are clearly marked for walking or running for safety. Laps are tallied for entry to the Billion Mile Race. We also have classes that utilize their recess time to add miles to our total.&quot;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <div class="row deck-item"  id="q-lead">
+      <h4 class="m-b-2">The most successful run clubs have several leaders at the helm. Teachers, nurses, parents, administrators, school staff and volunteers can all play this role. How many adults do you anticipate getting involved?</h4>
+      <div class="row">
+        <div class="col-xs-6 q-options">
+          <button class="btn btn-primary w-100 m-b-1" id="lead-2" >
+            2
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="lead-3">
+            3
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="lead-4">
+            4+
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="lead-idk" >
+            I'm not sure yet what the response will be.
+          </button>
+          <button class="btn btn-primary w-100 m-b-1 next" disabled>
+            Next
+          </button>
+        </div>
+        
+        <div class="col-xs-6 pull-xs-right">
+          <div class="team-quote">
+              <blockquote class="blockquote p-y-0">
+                <div><p class="message m-b-0"></p></div>
+              </blockquote>
+              <img class="img-fluid img-circle team-pic m-x-auto">
+          </div>
+        </div> 
+      </div> 
+
+      <h5 class="m-t-1" align="center">How they do it</h5>
+      <div class="row m-t-2">  
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  <div class="text">
+                  &quot;Our Miano Mileage Club was started last year by a group of 5 teachers.  The students run after school on Mondays and Thursdays for 30 minutes.  Teachers donate their time as coaches.  After 4 months of training, the students are able to participate in a 5k fun run to show their parents and peers their hard work.&quot;
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;Our run club meets twice a week 30 minutes before school for 7 weeks in the spring. Students walk or run as many laps around the track in that 30 minute time period as they can. Students earn bracelets for every 5 miles they complete. Parent volunteers help record the students’ miles by punching a hole in a card that the student carries every time they complete a lap (quarter mile).&quot;
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;Our Emmerton Walking Club has students/staff come before school and walk around a designated area on our playground. Staff members punch their Emmerton Walking Club punch card.  Students are recognized at the quarterly assemblies.&quot;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <div class="row deck-item"  id="q-kids">
+      <h4 class="m-b-2">Where will students walk &amp; run? Select all that apply.</h4>
+      <div class="row">
+        <div class="col-xs-6 q-options multi">
+          <button class="btn btn-primary w-100 m-b-1" id="kids-elect" >
+            OElective (open to any students who’d like to participate)
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="kids-grade">
+            One grade level
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="kids-grades">
+            Multiple grade levels
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="kids-all" >
+            Entire School
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="kids-idk" >
+            I’m not sure yet.
+          </button>
+          <button class="btn btn-primary w-100 m-b-1 next" disabled>
+            Next
+          </button>
+        </div>
+      </div> 
+
+      <h5 class="m-t-1" align="center">How they do it</h5>
+      <div class="row m-t-2">  
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  <div class="text">
+                  &quot;We have two running clubs: one for grades 2-3 and one for Kindergarten-1. The running clubs meet after school and do a variety of exercises as well as build stamina for races. At the end of the year, they participate in a fun run!&quot;
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;We encourage all our students to run 25 miles at school between Sept-Nov and then a final 1.2 miles on the Seattle Marathon Course. We provide tracking and incentives to students as well as running support at recess and before school.&quot;
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;I conduct an after school running club in the fall.  I have offered this opportunity to all students for the last four years.  Our numbers have steadily grown over this time from 28 the first year to over 90 this year.  I have tied our culminating event in with the Calumet City Park District's annual 5K Race.&quot;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+    <div class="row deck-item"  id="q-track">
+      <h4 class="m-b-2">How will miles be tracked? Some run clubs track students' individual miles while others estimate miles that students run as a group</h4>
+      <div class="row">
+        <div class="col-xs-6 q-options">
+          <button class="btn btn-primary w-100 m-b-1" id="motiv-prize" >
+            Prizes &amp; Incentives
+            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Stickers, charms, medals, and t shirts are always popular but don’t be afraid to get creative. An extra recess, a homework pass, or even a Principal doing something silly can be used as prizes and incentives."></i>
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="motiv-recog">
+            Recognition
+            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Give shout outs to run club successes in your morning announcements, in your school newsletter, on your website and social media channels and at school assemblies."></i>
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="motiv-hip">
+            Making it the place to be
+            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="When run club means socializing and hip music, kids will want to be there."></i>
+          </button>
+          <button class="btn btn-primary w-100 m-b-1" id="motiv-other" >
+            I have some other ideas.
+          </button>
+          <button class="btn btn-primary w-100 next" disabled>
+            Next
+          </button>
+        </div>
+      </div> 
+
+      <h5 class="m-t-1" align="center">How they do it</h5>
+      <div class="row m-t-2">  
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;In our run club students run and walk as many laps as they desire during lunch recess twice a week. Each lap is 1/4 mile. We challenge all students to run 105 laps (equal to a marathon) over the course of the year. At the end of the year we have a party and assembly for all students who completed 26.2 miles. The top students are acknowledged on stage.&quot;
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;On all of our early release days we host a "Walk and Talk".  We play music and all 800 of our students walk around the school, walking, talking and singing.&quot;
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="tile">
+              <div class="front">
+                <img src="//placehold.it/250x250" class="img-fluid img-rounded">
+              </div>
+              <div class="back">
+                <div class="card card-block card-inverse card-success">
+                  &quot;In our run club students run laps during PE and also run laps as brain breaks in their classroom.  Students earn prizes for each 10 miles they complete.  Class challenges occur every month for the class with the most miles and they get extra recess time.&quot;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+    <div class="row jumbotron jumbotron-fluid deck-item p-x-1" id="final">
+      <h1 class="display-3">Bam!</h1>
+      <p class="lead">You're well on your way to designing an A+ run club. To send you on your way, we've got two tools for you to download</p>
     </div>
 
 
@@ -533,7 +761,7 @@
 
 
 
-  <div class="progress">
+  <div class="progress-container">
     <div>
       <button type="button" class="btn btn-link" id="go-back" disabled>Go Back</button>
       <button type="button" class="btn btn-link pull-xs-right" id="iter-progress" disabled></button>
@@ -543,13 +771,15 @@
 
   </div>
 
+
   <script src="//d3js.org/d3.v4.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js" type="text/javascript"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-  <script src="//cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+  <!-- <script src="//cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script> -->
+  <script src="/flip.js"></script>
   <script src="./script.js"></script>
 
 </body>
