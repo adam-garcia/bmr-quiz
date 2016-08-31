@@ -38,7 +38,7 @@
         Any school starting a new run club has key decisions to make. Who will lead the club? When and where will kids run? How will success be celebrated? This quiz will coach you through all these considerations and more while showing you how Billion Mile Race schools across the country make it happen. You likely won’t have all the answers out of the gate. That’s okay! Use this quiz as a guide to begin your planning.
       </p>
       <div>
-        <button class="btn btn-primary" id="init">Ready? Let’s Go.</button>
+        <button class="btn-lg btn-primary" id="init">Ready? Let’s Go.</button>
       </div>
     </div>
 
@@ -751,9 +751,12 @@
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 
-    <div class="row jumbotron jumbotron-fluid deck-item p-x-1" id="final">
-      <h1 class="display-3">Bam!</h1>
-      <p class="lead">You're well on your way to designing an A+ run club. To send you on your way, we've got two tools for you to download</p>
+    <div class="row deck-item p-x-1" id="final">
+      <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-3">Bam!</h1>
+        <p class="lead">You're well on your way to designing an A+ run club. To send you on your way, we've got two tools for you to download</p>
+      </div>
+      <button class="btn btn-success" id="summary">View A Summary</button> of your responses.
     </div>
 
 
@@ -771,6 +774,43 @@
 
   </div>
 
+<!-- Response Page Output - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div style="visibility: hidden">
+  <div id="responses">
+  <h1>Awesome!</h1>
+  <p>Here's a summary of your respsonses:</p>
+  <p id="a-role">
+    You're a <span>{role.answer}</span>, which is awesome.
+  </p>
+  <p id="a-year">
+    
+  </p>
+  <p id="a-when">
+    
+  </p>
+  <p id="a-freq">
+    
+  </p>
+  <p id="a-dur">
+    
+  </p>
+  <p id="a-where">
+    
+  </p>
+  <p id="a-track">
+    
+  </p>
+  <p id="a-lead">
+    
+  </p>
+  <p id="a-kids">
+    
+  </p>
+  <p id="a-track">
+    
+  </p>
+  </div>
+</div>
 
   <script src="//d3js.org/d3.v4.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
