@@ -48,6 +48,27 @@ div.btn-group {
     padding: 4px 8px;
 }
 
+.btn-circle {
+    width: 4.5rem !important;
+    height: 4.5rem !important;
+    position: relative;
+    border-radius: 100%;
+}
+
+.btn-circle:focus,
+.btn-circle.active,
+.btn-circle:active {
+    outline: none !important;
+}
+
+.btn-circle > i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 .q-options input,
 .q-options button {
     text-align: left;
@@ -55,8 +76,8 @@ div.btn-group {
 }
 
 .deck-item input[type="text"] {
-    height: 40px;
-    padding: 8px 16px;
+    height: 32px;
+    padding: 4px 8px;
     display: none;
     border-radius: 0.25rem;
 }
@@ -70,21 +91,40 @@ div.btn-group {
 .btn-primary:active,
 .btn-primary:active:hover,
 .btn-primary:disabled:hover {
-    background: #12a8dd;
-    color: #fff;
-    border: 2px solid #12a8dd;
+    color: #555;
+    background: #fff;
+    border: 2px solid #737373;
 }
 
 .btn-primary:hover,
 .btn-primary.selected {
-    background: #fff;
-    color: #12a8dd;
+    color: #fff;
+    background: #12a8dd;
     border: 2px solid #12a8dd;
 }
 
 .btn-primary:hover i {
-    color: #12a8dd;
+    color: #fff;
 }
+
+.next,
+.next:disabled:hover {
+    color: #fff;
+    background: #f25b14;
+    border-color: #f25b14;
+}
+.next:hover,
+.next:focus,
+.next:active {
+    color: #f25b14;
+    background: #fff;
+    border-color: #f25b14;
+}
+
+hr.sep {
+    margin-top: 0;
+}
+
 
 
 button > i {

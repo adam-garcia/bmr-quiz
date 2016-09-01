@@ -6,7 +6,7 @@ var delay = 800;
 var quizN = 0;
 var totalN = 10;
 var slides = [];
-
+var next;
 
 $('.deck-item').first().fadeIn();
 
@@ -26,15 +26,18 @@ $('#init')
 $('.deck-item')
     .find('button')
         .click(function() {
-            if (!$(this).parent().hasClass('multi')) {
+            if (!$(this).parent().hasClass('multi') && !$(this).hasClass('next')) {
                 $(this).siblings().removeClass('selected');
             }
             if (this.type!="text") {
-                $(this).toggleClass('selected');
+                $(this).not('.next').toggleClass('selected');
                 $(this).siblings('.next').attr('disabled', false);
                 if ($(this).parents('.deck-item').find('.team-quote').length != 0) {
                     sendMessage(this);
                 }
+            } else if (this.type=="text") {
+                $(this).addClass('selected');
+                $(this).siblings().removeClass('selected');
             };
             if (this.id == "role-other") {
                 var txt = $("<input id='role-other'>")
@@ -70,7 +73,7 @@ $('.deck-item')
                     .addClass('selected')
                     .focus();
             } if ($(this).hasClass('next')) {
-                getNextSlide($(this).parent());
+                getNextSlide($(this).parents('.q-options'));
             };
     });
 
@@ -183,11 +186,32 @@ $('[data-toggle="tooltip"]')
 
 function getNextSlide(t) {
     curr = t.parents(".deck-item");
+    var question = curr.attr('id');
+    var response = [];
+    var role_other = "";
+    var when_other = "";
+    var motiv_other = "";
+    curr.find('.selected').not('.next').each(function() {
+        response.push(this.id);
+        switch (this.id) {
+            case 'role-other':
+                role_other = $(this).val();
+                break;
+            case 'when-other':
+                when_other = $(this).val();
+                break;
+            case 'motiv-other':
+                motiv_other = $(this).val();
+                break;
+        };
+    });
     var next = curr.next();
-    curr.replaceWith(next);
+    console.log(next);
+    slides.push(curr);
+    curr.hide();
     next.fadeIn(delay);
     if (next.attr("id") != "final") {
-        updateProgress();
+        updateProgress(1);
         if (next.find('div.team-quote').length != 0) {
             next.find('div.team-quote').animateCss('bounceInRight');
         }
@@ -200,14 +224,17 @@ function getNextSlide(t) {
     }
 };
 
-function getPrevSlide(t) {
-    console.log(t);
+function getPrevSlide() {
+    var prev = slides.pop();
+    next.hide();
+    prev.fadeIn(delay);
+    updateProgress(-1);
 }
 
-function updateProgress() {
-    quizN += 1;
+function updateProgress(n) {
+    quizN += n;
     $("#progress").animate({
-      value: $("#progress").val() + 100/(totalN + 1),
+      value: $("#progress").val() + n * 100/(totalN + 1),
       easing: 'swing'
     }, delay/1.5);
     $("#iter-progress").text("Question " + quizN + " of " + totalN);
@@ -226,15 +253,28 @@ function setResult(option) {
                   .fadeIn();
 };
 
-$("#summary").click(function() {
-   var prtContent = document.getElementById("responses");
+$("#view-summary").click(function() {
+    var prtContent = document.getElementById("responses");
     var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
-    WinPrint.document.write(prtContent.innerHTML);
     WinPrint.document.write('<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">')
+    WinPrint.document.write(prtContent.innerHTML);
     WinPrint.document.close();
-    WinPrint.focus(); 
+    WinPrint.focus();
 });
 
+$("#facebook").click(function() {
+    FB.ui({
+    method: 'feed',
+    caption: 'popup',
+    link: null,
+  }, function(response){});
+});
+var twt = "http://twitter.com/intent/tweet?"+
+          "text=Hooray for the @BillionMileRace";
+$("#twitter").attr('href', twt);
+$("#email").click(function() {
+
+});
 
 
 // TODO
