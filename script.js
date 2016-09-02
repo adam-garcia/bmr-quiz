@@ -182,21 +182,25 @@ function getNextSlide(t) {
     curr = t.parents(".deck-item");
     setResult(curr);
     next = curr.next();
+    if (next.attr("id") != "final") {
+        updateProgress(1);
+    } else if (next.attr("id") == "final") {
+        $("#progress").animate({
+          value: 1,
+          easing: 'swing'
+        }, delay/1.5);
+        $("#iter-progress")
+            .text("Done!")
+            .parents('.progress-container')
+                .delay(2500)
+                .fadeOut(delay);
+    }
     curr.hide();
     next.fadeIn(delay);
     prev = curr;
     curr = next;
     if (next.find('div.team-quote').length != 0) {
         next.find('div.team-quote').animateCss('bounceInRight');
-    }
-    if (next.attr("id") != "final") {
-        updateProgress(1);
-    } else if (next.attr("id") == "final") {
-        $("#progress").animate({
-          value: 100,
-          easing: 'swing'
-        }, delay/1.5);
-        $("#iter-progress").text("Done!");
     }
 };
 
@@ -228,25 +232,25 @@ function setResult(q) {
     var when_other = "";
     var motiv_other = "";
     curr.find('.selected').not('.next').each(function() {
-        response.push(this.id);
         switch (this.id) {
             case 'role-other':
-                role_other = $(this).val();
-                break;
             case 'when-other':
-                when_other = $(this).val();
-                break;
             case 'motiv-other':
-                motiv_other = $(this).val();
+                response.push($(this).val());
                 break;
+            default:
+                response.push(this.id);
         };
     });
     $(question).data('response', response);
+    var answer = question.replace('q-', 'a-');
+    $(answer).find('span').text(response);
 };
 
 $("#view-summary").click(function() {
     var prtContent = document.getElementById("responses");
     var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+    WinPrint.document.write('<link rel="stylesheet" href="/style.css">')
     WinPrint.document.write('<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">')
     WinPrint.document.write(prtContent.innerHTML);
     WinPrint.document.close();
@@ -260,12 +264,12 @@ $("#facebook").click(function() {
     link: null,
   }, function(response){});
 });
+
 var twt = "http://twitter.com/intent/tweet?"+
           "text=Hooray for the @BillionMileRace";
 $("#twitter").attr('href', twt);
-$("#email").click(function() {
 
-});
+$("#email").attr('href', 'http://billionmilerace.org/tellafriend');
 
 
 // TODO

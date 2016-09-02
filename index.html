@@ -673,10 +673,10 @@
 
 
 
-    <div class="row deck-item"  id="q-track">
-      <h4 class="m-b-2">How will miles be tracked? Some run clubs track students' individual miles while others estimate miles that students run as a group</h4>
+    <div class="row deck-item"  id="q-fun">
+      <h4 class="m-b-2">How will you make your run club fun for students and celebrate success? Select all that apply.</h4>
       <div class="row">
-        <div class="col-xs-6 q-options">
+        <div class="col-xs-6 q-options multi">
           <button class="btn btn-primary w-100" id="motiv-prize" >
             Prizes &amp; Incentives
             <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Stickers, charms, medals, and t shirts are always popular but don’t be afraid to get creative. An extra recess, a homework pass, or even a Principal doing something silly can be used as prizes and incentives."></i>
@@ -749,7 +749,15 @@
           <h1 class="display-3">Bam!</h1>
           <p class="lead">You're well on your way to designing an A+ run club. To send you on your way, we've got two tools for you to download</p>
         </div>
-        <button class="btn btn-success" id="view-summary">View</button> a summary of your responses.
+        <p>
+          <button class="btn btn-success" id="view-summary">
+            Answer Summary
+          </button>
+          Use this summary of your quiz answers as a quick reference guide when planning your run club with your colleagues and administrators.
+        </p>
+        <p>
+          Billion Mile Race Quick Start Toolkit – In this toolkit you’ll find detailed guidance on scheduling, mapping a route for your run club, tracking miles and keeping students motivated
+        </p>
       </div>
       <div class="row m-t-3" align="center">
         <h3>
@@ -758,7 +766,7 @@
         <div class="m-t-1">
           <button class="btn btn-info btn-circle" id="facebook"><i class="fa fa-2x fa-facebook" aria-hidden="true"></i></button>
           <a class="btn btn-info btn-circle" id="twitter"><i class="fa fa-2x fa-twitter" aria-hidden="true"></i></a>
-          <button class="btn btn-info btn-circle" id="email"><i class="fa fa-2x fa-envelope" aria-hidden="true"></i></button>
+          <a class="btn btn-info btn-circle" id="email"><i class="fa fa-2x fa-envelope" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -782,39 +790,39 @@
 <div style="visibility: hidden">
   <div id="responses">
   <div id="printresponses" style="position: absolute; top: 0; right: 0; margin-right: 1em;">
-    <a href="javascript:window.print();">Print this Page</a>
+    <a href="javascript:window.print();" class="hideprint">Print this Page</a>
   </div>
   <h1>Awesome!</h1>
   <p>Here's a summary of your respsonses:</p>
   <p id="a-role">
-    You're a <span>{role.answer}</span>, which is awesome.
+    Role: <span></span>
   </p>
   <p id="a-year">
-    
+    Time of year: <span></span>
   </p>
   <p id="a-when">
-    
+    When club is held: <span></span>.
   </p>
   <p id="a-freq">
-    
+    How often held: <span></span>
   </p>
   <p id="a-dur">
-    
+    Duration of club meetings: <span></span>
   </p>
   <p id="a-where">
-    
+    Where club meets: <span></span>
   </p>
   <p id="a-track">
-    
+    How to track: <span></span>
   </p>
   <p id="a-lead">
-    
+    How many champions: <span></span>
   </p>
   <p id="a-kids">
-    
+    How many students: <span></span>
   </p>
-  <p id="a-track">
-    
+  <p id="a-fun">
+    How to make fun for students: <span></span>
   </p>
   </div>
 </div>

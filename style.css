@@ -133,6 +133,9 @@ hr.sep {
 button > i {
     padding-top: 3px;
 }
+button > img {
+    max-height: 1.2rem;
+}
 
 /*.tooltip {
     max-width: 500px;
@@ -204,3 +207,14 @@ blockquote > div {
 /*.tooltip {
     margin-left: 16px;
 }*/
+#printresponses {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1em;
+}
+@media print {
+    #printresponses {
+        visibility: hidden;
+    }
+}
