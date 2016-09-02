@@ -72,6 +72,7 @@ div.btn-group {
 .q-options input,
 .q-options button {
     text-align: left;
+    margin-bottom: 0.5rem;
     /*width: 300px;*/
 }
 
@@ -79,6 +80,7 @@ div.btn-group {
     height: 32px;
     padding: 4px 8px;
     display: none;
+    margin-bottom: 0.5rem;
     border-radius: 0.25rem;
 }
 
@@ -123,6 +125,7 @@ div.btn-group {
 
 hr.sep {
     margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
 
@@ -191,6 +194,10 @@ blockquote > div {
 .tile > .back {
     /*width: 100%;*/
     border-radius: 0.25rem;
+}
+
+#artboard-1 {
+    background-image: url(artboard-1.svg);
 }
 
 #final.jumbotron {

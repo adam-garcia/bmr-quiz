@@ -6,7 +6,8 @@ var delay = 800;
 var quizN = 0;
 var totalN = 10;
 var slides = [];
-var next;
+var curr;
+var prev;
 
 $('.deck-item').first().fadeIn();
 
@@ -15,11 +16,6 @@ $('#init')
     .click(function(){
         $(window).bind('beforeunload', function(){ /* return null;*/ });
         getNextSlide($(this));
-        $("#go-back")
-            .attr('disabled', false)
-            .click(function(){
-                getPrevSlide();
-            })
 });
 
 
@@ -185,7 +181,52 @@ $('[data-toggle="tooltip"]')
 
 
 function getNextSlide(t) {
+    $("#go-back")
+            .attr('disabled', false)
+            .click(function(){
+                getPrevSlide();
+            });
     curr = t.parents(".deck-item");
+    setResult(curr);
+    next = curr.next();
+    curr.hide();
+    next.fadeIn(delay);
+    prev = curr;
+    curr = next;
+    if (next.attr("id") != "final") {
+        updateProgress(1);
+        if (next.find('div.team-quote').length != 0) {
+            next.find('div.team-quote').animateCss('bounceInRight');
+        }
+    } else if (next.attr("id") == "final") {
+        $("#progress").animate({
+          value: 100,
+          easing: 'swing'
+        }, delay/1.5);
+        $("#iter-progress").text("Done!");
+    }
+};
+
+function getPrevSlide() {
+    $("#go-back")
+            .attr('disabled', true);
+    var prev = slides.shift();
+    next.hide();
+    prev.fadeIn(delay);
+    updateProgress(-1);
+}
+
+function updateProgress(n) {
+    quizN += n;
+    $("#progress").animate({
+      value: $("#progress").val() + n * 100/(totalN + 1),
+      easing: 'swing'
+    }, delay/1.5);
+    $("#iter-progress").text("Question " + quizN + " of " + totalN);
+}
+
+
+function setResult(q) {
     var question = curr.attr('id');
     var response = [];
     var role_other = "";
@@ -205,52 +246,6 @@ function getNextSlide(t) {
                 break;
         };
     });
-    var next = curr.next();
-    console.log(next);
-    slides.push(curr);
-    curr.hide();
-    next.fadeIn(delay);
-    if (next.attr("id") != "final") {
-        updateProgress(1);
-        if (next.find('div.team-quote').length != 0) {
-            next.find('div.team-quote').animateCss('bounceInRight');
-        }
-    } else if (next.attr("id") == "final") {
-        $("#progress").animate({
-          value: 100,
-          easing: 'swing'
-        }, delay/1.5);
-        $("#iter-progress").text("Done!");
-    }
-};
-
-function getPrevSlide() {
-    var prev = slides.pop();
-    next.hide();
-    prev.fadeIn(delay);
-    updateProgress(-1);
-}
-
-function updateProgress(n) {
-    quizN += n;
-    $("#progress").animate({
-      value: $("#progress").val() + n * 100/(totalN + 1),
-      easing: 'swing'
-    }, delay/1.5);
-    $("#iter-progress").text("Question " + quizN + " of " + totalN);
-}
-
-
-function setResult(option) {
-    console.log(option.attr('id'));
-    // console.log(option);
-    // Show Encouraging Message
-    // http://stackoverflow.com/questions/15066882/make-toastr-alerts-look-like-bootstrap-alerts
-    $("#post-msg").html('<h3>hello</h3>');
-                  
-    $("#post-msg").delay(1000)
-                  .replaceWith('<h3>&nbsp;</h3>')
-                  .fadeIn();
 };
 
 $("#view-summary").click(function() {
