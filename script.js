@@ -15,6 +15,11 @@ $('.deck-item').first().fadeIn();
 $('#init')
     .click(function(){
         $(window).bind('beforeunload', function(){ /* return null;*/ });
+        $("#go-back")
+            .attr('disabled', false)
+            .click(function(){
+                getPrevSlide();
+            });
         getNextSlide($(this));
 });
 
@@ -125,13 +130,6 @@ function sendMessage(ans) {
         .animateCss('bounceInRight');
 }
 
-
-$(".adv")
-    .click(function(){
-        setResult($(this).parent(), $(this).parent().find("input"));
-        getNextSlide($(this).parent());
-    });
-
 $(".tile")
     .flip({
         trigger: 'hover',
@@ -181,11 +179,6 @@ $('[data-toggle="tooltip"]')
 
 
 function getNextSlide(t) {
-    $("#go-back")
-            .attr('disabled', false)
-            .click(function(){
-                getPrevSlide();
-            });
     curr = t.parents(".deck-item");
     setResult(curr);
     next = curr.next();
@@ -193,11 +186,11 @@ function getNextSlide(t) {
     next.fadeIn(delay);
     prev = curr;
     curr = next;
+    if (next.find('div.team-quote').length != 0) {
+        next.find('div.team-quote').animateCss('bounceInRight');
+    }
     if (next.attr("id") != "final") {
         updateProgress(1);
-        if (next.find('div.team-quote').length != 0) {
-            next.find('div.team-quote').animateCss('bounceInRight');
-        }
     } else if (next.attr("id") == "final") {
         $("#progress").animate({
           value: 100,
@@ -208,18 +201,20 @@ function getNextSlide(t) {
 };
 
 function getPrevSlide() {
-    $("#go-back")
-            .attr('disabled', true);
-    var prev = slides.shift();
+    // var prev = slides.shift();
+    console.log('back');
     next.hide();
     prev.fadeIn(delay);
+    next = prev;
+    prev = prev.prev();
     updateProgress(-1);
 }
 
 function updateProgress(n) {
     quizN += n;
+    console.log(quizN);
     $("#progress").animate({
-      value: $("#progress").val() + n * 100/(totalN + 1),
+      value: quizN / (totalN + 1),
       easing: 'swing'
     }, delay/1.5);
     $("#iter-progress").text("Question " + quizN + " of " + totalN);
@@ -227,7 +222,7 @@ function updateProgress(n) {
 
 
 function setResult(q) {
-    var question = curr.attr('id');
+    var question = "#"+curr.attr('id');
     var response = [];
     var role_other = "";
     var when_other = "";
@@ -246,6 +241,7 @@ function setResult(q) {
                 break;
         };
     });
+    $(question).data('response', response);
 };
 
 $("#view-summary").click(function() {

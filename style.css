@@ -196,10 +196,6 @@ blockquote > div {
     border-radius: 0.25rem;
 }
 
-#artboard-1 {
-    background-image: url(artboard-1.svg);
-}
-
 #final.jumbotron {
     background: #85c423;
     color: white;
