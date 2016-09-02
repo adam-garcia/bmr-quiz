@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    min-height: 850px;
 }
 body {
     font-family: 'Open Sans';
@@ -133,7 +134,7 @@ hr.sep {
 button > i {
     padding-top: 3px;
 }
-button > img {
+button img {
     max-height: 1.2rem;
 }
 
