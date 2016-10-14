@@ -90,7 +90,7 @@ function sendMessage(ans) {
             msg = "You’re in great company! Did you know that most Billion Mile Race run clubs are led by PE teachers? Welcome to the team.";
             break;
         case 'role-class':
-            msg = "Nice! When kids are more active at school, classroom teachers get to see the benefits firsthand – better academic performance, enhanced attention, and improved brain health.";
+            msg = "Nice! When kids are more active at school, classroom teachers get to see the benefits firsthand – better academic performance, enhanced attention, and improved brain health<sup>[1]</sup>";
             break;
         case 'role-nurse':
             msg = "Awesome! Nurses make everything better, including run clubs.";
@@ -104,12 +104,25 @@ function sendMessage(ans) {
         case 'role-other':
             msg = "";
             break;
+        case 'freq-1':
+        case 'freq-2-4':
+        case 'freq-all':
+        case 'freq-idk':
+            msg = "It’s recommended that kids get 30 minutes of physical activity a day at school. When designing your schedule, consider all the opportunities your students have to be active and how adding a run club can help your school meet this target. <br> &ndash; <em>Emily</em>, Billion Mile Race Team"
+            break;
         case 'dur-15'   :
         case 'dur-30'   :
         case 'dur-45'   :
         case 'dur-60'   :
         case 'dur-plus' :
-            msg = "Consider this when planning your run club: the recommended amount of physical activity is 60 minutes/day, with 30 minutes recommended happening at school. Dan, Billion Mile Race Team"
+            msg = "Consider this when planning your run club: the recommended amount of physical activity is 60 minutes/day, with 30 minutes recommended happening at school. <br> &ndash; Dan, <em>Billion Mile Race Team</em>"
+            break;
+        case 'where-field':
+        case 'where-path':
+        case 'where-gym':
+        case 'where-hall':
+        case 'where-idk':
+            msg = "Great! Remember your go-to location doesn’t need to be your only location. Mixing up where you run club takes place is a great way to introduce variety into your routine. <em>Sarah</em>, Billion Mile Race Team"
             break;
         case 'lead-2'   :
         case 'lead-3'   :
@@ -119,7 +132,7 @@ function sendMessage(ans) {
             break;
     }
     $(ans).parents('.deck-item')
-        .find('.message').text(msg);
+        .find('.message').html(msg);
     $(ans).parents('.deck-item')
         .find('img.team-pic')
         .attr('src', img);
@@ -181,7 +194,8 @@ $('[data-toggle="tooltip"]')
         container: 'body',
         placement: 'right',
         offset: '0 -8px',
-        delay: 200
+        delay: 200,
+        html: true
     })
 ;
 
@@ -232,6 +246,9 @@ function updateProgress(n) {
     }, delay/1.5);
     $("#iter-progress").text("Question " + quizN + " of " + totalN);
 }
+
+// Check if any value in array is in another array
+// [1, 2, 7, 8, 10].forEach(function(el){if ([1, 2, 3].includes(el)) {window.foo = true;}})
 
 
 function setResult(q) {

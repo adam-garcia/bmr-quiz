@@ -36,6 +36,7 @@
     </div>
 
     <!-- Role Question - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
     <div class="row deck-item" id="q-role">
       <h4 class=" m-b-2">
         What’s your role?
@@ -82,21 +83,24 @@
     </div>   
 
     <div class="row deck-item"  id="q-year">
-      <h4 class="m-b-2">Schools can implement run clubs all year long or for shorter durations. What do you think would work best for your school?</h4>
+      <h4 class="m-b-2">Schools can implement run clubs all year long or for shorter durations. What do you think would work best for your school? (Select all that apply)</h4>
       <div class="row">
-        <div class="col-xs-6 q-options">
+        <div class="col-xs-6 q-options multi">
           <button class="btn btn-primary w-100" id="year-whole" >
             Whole School Year
             <img class="pull-xs-right" src="sneaker.png" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Year-long run clubs are a popular choice, whether they meet daily or on certain days of the week.">
           </button>
-          <button class="btn btn-primary w-100" id="year-fors">
-            Fall or Spring
+          <button class="btn btn-primary w-100" id="year-fall">
+            Fall
           </button>
-          <button class="btn btn-primary w-100" id="year-fans">
-            Fall and Spring
+          <button class="btn btn-primary w-100" id="year-winter">
+            Winter
+          </button>
+          <button class="btn btn-primary w-100" id="year-spring">
+            Spring
           </button>
           <button class="btn btn-primary w-100" id="year-idk" >
-            I’m not quite sure yet
+            I’m not sure yet
             <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="That’s a-ok. There’s no need to commit to an official schedule out of the gate."></i>
           </button>
           <hr class="sep">
@@ -120,12 +124,12 @@
           <div class="col-xs-4">
             <div class="tile" id="year-q-1">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_1.svg" class="img-fluid img-rounded"/>
+                <img src="Artboard_1.svg" class="img-fluid img-rounded"/>
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;Our morning run is open to 3rd, 4th, and 5th graders and is conducted on Tuesday and Thursday mornings in the fall.  We have access to the middle school track, and this is where the members walk and run laps.  Plastic tokens are earned for miles completed.&quot;
-                  -Lori, PE teacher at Guion Creek Elementary in Indianapolis, IN
+                  &quot;Our morning run is open to 3<sup>rd</sup>, 4<sup>th</sup>, and 5<sup>th</sup> graders and is conducted on Tuesday and Thursday mornings in the fall.  We have access to the middle school track, and this is where the members walk and run laps.  Plastic tokens are earned for miles completed.&quot; <br>
+                  &ndash; Lori, PE teacher
                 </div>
               </div>
             </div>
@@ -133,11 +137,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_2.svg" class="img-fluid img-rounded">
+                <img src="Artboard_2.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;This is my 3rd year with my Running Club.  We meet after school in the fall and spring.  My kids keep track of laps run on their punch card, which are then converted to mile that I track manually now on a spreadsheet and earn incentives based on the number of miles they run.&quot;
+                  &quot;This is my 3<sup>rd</sup> year with my Running Club.  We meet after school in the fall and spring.  My kids keep track of laps run on their punch card, which are then converted to mile that I track manually now on a spreadsheet and earn incentives based on the number of miles they run.&quot; <br>
+                  &ndash; Jackie, PE Teacher 
                 </div>
               </div>
             </div>
@@ -145,11 +150,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_3.svg" class="img-fluid img-rounded">
+                <img src="Artboard_3.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;We take part in the 100 Mile Club and our students have the opportunity to walk, jog, or run every day during recess to accumulate miles and earn prizes for the entire school year.&quot;
+                  &quot;We take part in the 100 Mile Club and our students have the opportunity to walk, jog, or run every day during recess to accumulate miles and earn prizes for the entire school year.&quot; <br>
+                  &ndash; Bonnie, PE Teacher 
                 </div>
               </div>
             </div>
@@ -165,18 +171,18 @@
         <div class="col-xs-6 q-options multi">
           <button class="btn btn-primary w-100" id="when-bef" >
             Before School
-            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="There’s evidence that AM activity primes the brain for a day of learning. Building in time for your run club before school is a great way to capitalize on this benefit."></i>
+            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="There’s evidence that activity primes the brain for learning.<sup>1</sup> Building in time for your run club before school is a great way to capitalize on this benefit"></i>
           </button>
           <button class="btn btn-primary w-100" id="when-aft">
             After School
           </button>
           <button class="btn btn-primary w-100" id="when-rec">
             Recess
-            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Make your recess active with a run club and engage kids who might otherwise sit on the sidelines."></i>
+            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Excellent! There’s evidence that children can accumulate up to 40 percent of their total daily physical activity during recess.<sup>2</sup>"></i>
           </button>
           <button class="btn btn-primary w-100" id="when-cls" >
             Classroom Breaks
-            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Smart move. Short bouts of physical activity can serve as a ‘reset button’ for tired or fidgety classrooms."></i>
+            <i class="fa fa-star-o fa-lg pull-xs-right" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="Smart move. Short bouts of physical activity can serve as a ‘reset button’ and improve on-task behavior.<sup>3</sup>"></i>
           </button>
           <button class="btn btn-primary w-100" id="when-pe">
             During PE Class
@@ -199,11 +205,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_4.svg" class="img-fluid img-rounded">
+                <img src="Artboard_4.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;Our morning run is open to 3rd, 4th, and 5th graders and is conducted on Tuesday and Thursday mornings in the fall.  We have access to the middle school track and this is where the members walk and run laps.  Plastic tokens are earned for miles completed.&quot;
+                  &quot;We allow our students to enter the school 30 minutes early each morning and participate in Morning Walk. Our students find their tracking sheet, put on a pedometer and walk, jog, and run for 30 minutes.  At the end of the 30 minutes they record their steps.  Every Monday students receive prizes like toe charms for mileage and attendance. Last year we had 48% of our school participate!.&quot; <br>
+                  &ndash; Holly, PE Teacher 
                 </div>
               </div>
             </div>
@@ -211,11 +218,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_5.svg" class="img-fluid img-rounded">
+                <img src="Artboard_5.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;This is my 3rd year with my Running Club.  We meet after school in the fall and spring.  My kids keep track of laps run on their punch card, which are then converted to mile that I track manually now on a spreadsheet and earn incentives based on the number of miles they run.&quot;
+                  &quot;In our 5K running club students in 3rd, 4th, and 5th grade stay after school 2 days a week for training.  As a club, we train for 8 weeks to prepare for our 5k event.  We have one race in the fall and one race in the spring.  Our goal is to equip students with the skills to set goals, make a plan, and execute it.  We select one community outreach event and support them by running in the race.&quot; <br>
+                  &ndash; Jimmy Bowen, PE Teacher
                 </div>
               </div>
             </div>
@@ -223,11 +231,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_6.svg" class="img-fluid img-rounded">
+                <img src="Artboard_6.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;We take part in the 100 Mile Club and our students have the opportunity to walk, jog, or run every day during recess to accumulate miles and earn prizes for the entire school year.&quot;
+                  &quot;In my PE class we do a Personal Fitness Challenge. Every student runs or walks a 1.2 mile course during P.E. for a 6 week training period. At the end of the 6 weeks we have a school-wide road race on the course.&quot; <br>
+                  &ndash; Alida Carter, PE Teacher 
                 </div>
               </div>
             </div>
@@ -240,7 +249,7 @@
       <h4 class="m-b-2">How many days a week will your run club take place?</h4>
       <div class="row">
         <div class="col-xs-6 q-options">
-          <button class="btn btn-primary w-100" id="freq-1" >
+          <button class="btn btn-primary w-100" id="freq-1">
             Once a week
           </button>
           <button class="btn btn-primary w-100" id="freq-2-4">
@@ -249,7 +258,7 @@
           <button class="btn btn-primary w-100" id="freq-all">
             Every school day
           </button>
-          <button class="btn btn-primary w-100" id="freq-idk" >
+          <button class="btn btn-primary w-100" id="freq-idk">
             We haven't decided yet
           </button>
           <hr class="sep">
@@ -257,6 +266,14 @@
             Next
           </button>
         </div>
+        <div class="col-xs-6 pull-xs-right">
+          <div class="team-quote">
+              <blockquote class="blockquote p-y-0">
+                <div><p class="message m-b-0"></p></div>
+              </blockquote>
+              <img class="img-fluid img-circle team-pic m-x-auto">
+          </div>
+        </div> 
       </div> 
 
       <h5 class="m-t-1" align="center">How they do it</h5>
@@ -264,12 +281,13 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_7.svg" class="img-fluid img-rounded">
+                <img src="Artboard_7.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
                   <div class="text">
-                  &quot;We meet after school from 3-4 on Tuesdays and Thursdays.  We walk or run for 45 minutes then have a healthy snack.  We give students incentives for miles walked or run and have a big celebration at the end of the year and walk to a nearby park.&quot;
+                  &quot;We meet after school from 3-4 on Tuesdays and Thursdays.  We walk or run for 45 minutes and then have a healthy snack.  We give students incentives for miles walked or run and have a big celebration at the end of the year and walk to a nearby park.&quot; <br>
+                  &ndash; Pam, PE Teacher 
                   </div>
                 </div>
               </div>
@@ -278,11 +296,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_8.svg" class="img-fluid img-rounded">
+                <img src="Artboard_8.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;We have a before school running club that meets 3 mornings a week.  We average approximately 175-200 students each morning with a total school enrollment of 423. One Saturday a month we have a family fun run where families can come out for an hour and students can work towards their hundred mile goal.  Students also run/walk during their physical education class several days a week.&quot;
+                  &quot;We have a before-school running club that meets 3 mornings a week.  We average approximately 175-200 students each morning with a total school enrollment of 423. One Saturday a month we have a family fun run where families can come out for an hour and students can work towards their hundred mile goal.  Students also run/walk during their physical education class several days a week.&quot; <br>
+                  &ndash; Shelley, PE Teacher 
                 </div>
               </div>
             </div>
@@ -290,18 +309,18 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_9.svg" class="img-fluid img-rounded">
+                <img src="Artboard_9.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;We designed our own run club where every day for the last 10 minutes of morning recess, the entire school walks together doing laps around the grounds.&quot;
+                  &quot;We designed our own run club where every day for the last 10 minutes of morning recess, the entire school walks together doing laps around the grounds.&quot; <br>
+                  &ndash; Kassie, Classroom Teacher 
                 </div>
               </div>
             </div>
           </div>
         </div>
     </div>
-
 
     <div class="row deck-item"  id="q-dur">
       <h4 class="m-b-2">How long will your run club sessions be?</h4>
@@ -343,12 +362,13 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_10.svg" class="img-fluid img-rounded">
+                <img src="Artboard_10.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
                   <div class="text">
-                  &quot;Our Jog &amp; Fit Club takes place for 20 minutes every morning, from 7:20-7:40am. On good weather days, students will report to their classroom, drop off their belongings, grab their mileage card and meet me at the track. On bad weather days, students will report to their classroom, drop off their belongings, and report to the gym.&quot;
+                  &quot;Our Jog &amp; Fit Club takes place for 20 minutes every morning, from 7:20-7:40am. On good weather days, students will report to their classroom, drop off their belongings, grab their mileage card and meet me at the track. On bad weather days, students will report to their classroom, drop off their belongings, and report to the gym.&quot; <br>
+                  &ndash; 
                   </div>
                 </div>
               </div>
@@ -357,11 +377,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_11.svg" class="img-fluid img-rounded">
+                <img src="Artboard_11.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;The kids have ten minutes at the start of every gym class to walk or run around the outside field. 10 laps is a mile. We have a charting system that they use to track their mileage. We have certain landmarks they can get to like the Liberty Bell, Ocean City New Jersey and Niagara Falls. At the end of the school year we take each class on a 2 hour hike in a local state park.&quot;
+                  &quot;The kids have ten minutes at the start of every gym class to walk or run around the outside field. 10 laps is a mile. We have a charting system that they use to track their mileage. We have certain landmarks they can get to like the Liberty Bell, Ocean City New Jersey and Niagara Falls. At the end of the school year we take each class on a 2 hour hike in a local state park.&quot; <br>
+                  &ndash; Pigeon, PE Teacher 
                 </div>
               </div>
             </div>
@@ -369,11 +390,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_12.svg" class="img-fluid img-rounded">
+                <img src="Artboard_12.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;Our run club is called Happy Feet.  Students sign up and on club days report to the gym. We will either walk around gym or outside for about 45 minutes.&quot;
+                  &quot;Our run club is called Happy Feet.  Students sign up and on club days report to the gym. We will either walk around the gym or outside for about 45 minutes.&quot; <br>
+                  &ndash; Melissa, PE Teacher 
                 </div>
               </div>
             </div>
@@ -406,6 +428,14 @@
             Next
           </button>
         </div>
+        <div class="col-xs-6 pull-xs-right">
+          <div class="team-quote">
+              <blockquote class="blockquote p-y-0">
+                <div><p class="message m-b-0"></p></div>
+              </blockquote>
+              <img class="img-fluid img-circle team-pic m-x-auto">
+          </div>
+        </div> 
       </div> 
 
       <h5 class="m-t-1" align="center">How they do it</h5>
@@ -413,12 +443,13 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_13.svg" class="img-fluid img-rounded">
+                <img src="Artboard_13.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
                   <div class="text">
-                  &quot;In our Wildcat Fitness Club kids walk and run the track at recess and get their laps counted.  Awards are given out at various goals.  5 miles = $.50 at the school store, 15 miles is a wildcat fitness pencil, 30 miles is a medal, 60 miles is a trophy and 100 miles is a T-shirt.&quot;
+                  &quot;In our Wildcat Fitness Club kids walk and run the track at recess and get their laps counted.  Awards are given out at various goals.  5 miles = $.50 at the school store, 15 miles is a wildcat fitness pencil, 30 miles is a medal, 60 miles is a trophy and 100 miles is a T-shirt.&quot; <br>
+                  &ndash; Chris, PE Teacher 
                   </div>
                 </div>
               </div>
@@ -427,11 +458,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_14.svg" class="img-fluid img-rounded">
+                <img src="Artboard_14.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;In our Husky Challenge program students walk every morning from 7:30 to 7:50, and during their lunch recess. A small asphalt walking track around our playground provides students with a safe place to walk where there were no concerns about traffic. On days when the weather prohibits going outside we walk the school hallways.&quot;
+                  &quot;In our Husky Challenge program students walk every morning from 7:30 to 7:50 and during their lunch recess. A small asphalt walking track around our playground provides students with a safe place to walk where there are no concerns about traffic. On days when the weather prohibits going outside we walk the school hallways.&quot; <br>
+                  &ndash; Jeff, PE Teacher 
                 </div>
               </div>
             </div>
@@ -439,11 +471,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_15.svg" class="img-fluid img-rounded">
+                <img src="Artboard_15.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;On Monday, Wednesday, and Friday students can choose between our cross country trail or our 1/8 mile walking trail and get punches on a card for every lap they complete. When they finish a card they turn it in for a prize. Prizes include key chain items such as a small foot, running man, mega foot, and dog tag. Each 9 weeks we take the top 10 walkers on a fun physical activity type field trip.&quot;
+                  &quot;On Monday, Wednesday, and Friday students can choose between our cross country trail and our 1/8 mile walking trail and get punches on a card for every lap they complete. When they finish a card they turn it in for a prize. Prizes include key chain items such as a small foot, running man, mega foot, and dog tag. Each 9 weeks we take the top 10 walkers on a fun physical activity type field trip.&quot; <br>
+                  &ndash; Amanda, PE Teacher
                 </div>
               </div>
             </div>
@@ -485,11 +518,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_16.svg" class="img-fluid img-rounded">
+                <img src="Artboard_16.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;Our school’s Mileage Club runs on Tuesdays and Thursdays every week during the school year in the Fall and Spring.  K-5 students walk, run, and jog around the school's walking track.  For every lap they get a popsicle stick. Four Popsicle sticks equal a mile for which they earn a foot charm.&quot;
+                  &quot;Our school’s Mileage Club runs on Tuesdays and Thursdays every week during the school year in the Fall and Spring.  K-5 students walk, run, and jog around the school's walking track.  For every lap they get a popsicle stick. Four Popsicle sticks equal a mile for which they earn a foot charm.&quot; <br>
+                  &ndash; 
                 </div>
               </div>
             </div>
@@ -497,11 +531,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_17.svg" class="img-fluid img-rounded">
+                <img src="Artboard_17.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;In our Miles Club 1st-3rd grade students accumulate miles during the school day through laps around the playground, inside the building, or around the perimeter of the building. Students wear pedometers and get steps that are converted into mileage. Students are encouraged by their teachers, who get their own miles by wearing pedometers. Classroom teachers turn step counts into me and I record and display their progress.&quot;
+                  &quot;In our Miles Club 1st-3rd grade students accumulate miles during the school day through laps around the playground, inside the building, or around the perimeter of the building. Students wear pedometers and get steps that are converted into mileage. Students are encouraged by their teachers, who get their own miles by wearing pedometers. Classroom teachers turn step counts into me and I record and display their progress.&quot; <br>
+                  &ndash; 
                 </div>
               </div>
             </div>
@@ -509,11 +544,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_18.svg" class="img-fluid img-rounded">
+                <img src="Artboard_18.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;Students come to the gym before school, from 7:10-7:30 to walk jog or run. Upbeat music is playing to encourage movement and awaken participants! Lanes are clearly marked for walking or running for safety. Laps are tallied for entry to the Billion Mile Race. We also have classes that utilize their recess time to add miles to our total.&quot;
+                  &quot;Students come to the gym before school, from 7:10-7:30 to walk jog or run. Upbeat music is playing to encourage movement and awaken participants! Lanes are clearly marked for walking or running for safety. Laps are tallied for entry to the Billion Mile Race. We also have classes that utilize their recess time to add miles to our total.&quot; <br>
+                  &ndash; 
                 </div>
               </div>
             </div>
@@ -560,12 +596,13 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_19.svg" class="img-fluid img-rounded">
+                <img src="Artboard_19.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
                   <div class="text">
-                  &quot;Our Miano Mileage Club was started last year by a group of 5 teachers.  The students run after school on Mondays and Thursdays for 30 minutes.  Teachers donate their time as coaches.  After 4 months of training, the students are able to participate in a 5k fun run to show their parents and peers their hard work.&quot;
+                  &quot;Our Miano Mileage Club was started last year by a group of 5 teachers.  The students run after school on Mondays and Thursdays for 30 minutes.  Teachers donate their time as coaches.  After 4 months of training, the students are able to participate in a 5k fun run to show their parents and peers their hard work.&quot; <br>
+                  &ndash; 
                   </div>
                 </div>
               </div>
@@ -574,11 +611,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_20.svg" class="img-fluid img-rounded">
+                <img src="Artboard_20.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;Our run club meets twice a week 30 minutes before school for 7 weeks in the spring. Students walk or run as many laps around the track in that 30 minute time period as they can. Students earn bracelets for every 5 miles they complete. Parent volunteers help record the students’ miles by punching a hole in a card that the student carries every time they complete a lap (quarter mile).&quot;
+                  &quot;Our run club meets twice a week 30 minutes before school for 7 weeks in the spring. Students walk or run as many laps around the track in that 30 minute time period as they can. Students earn bracelets for every 5 miles they complete. Parent volunteers help record the students’ miles by punching a hole in a card that the student carries every time they complete a lap (quarter mile).&quot; <br>
+                  &ndash; 
                 </div>
               </div>
             </div>
@@ -586,11 +624,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_21.svg" class="img-fluid img-rounded">
+                <img src="Artboard_21.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;Our Emmerton Walking Club has students/staff come before school and walk around a designated area on our playground. Staff members punch their Emmerton Walking Club punch card.  Students are recognized at the quarterly assemblies.&quot;
+                  &quot;Our Emmerton Walking Club has students/staff come before school and walk around a designated area on our playground. Staff members punch their Emmerton Walking Club punch card.  Students are recognized at the quarterly assemblies.&quot; <br>
+                  &ndash; 
                 </div>
               </div>
             </div>
@@ -631,13 +670,14 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front" style="border: 1px solid 4; border-radius: 0.5rem">
-                <!-- <img http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_22.svg" class="img-fluid img-rounded"> -->
+                <!-- <img Artboard_22.svg" class="img-fluid img-rounded"> -->
                 hello world
               </div>
               <div class="back">
                 <!-- <div class="card card-block card-inverse card-success"> -->
                   <!-- <div class="text"> -->
-                  &quot;We have two running clubs: one for grades 2-3 and one for Kindergarten-1. The running clubs meet after school and do a variety of exercises as well as build stamina for races. At the end of the year, they participate in a fun run!&quot;
+                  &quot;We have two running clubs: one for grades 2-3 and one for Kindergarten-1. The running clubs meet after school and do a variety of exercises as well as build stamina for races. At the end of the year, they participate in a fun run!&quot; <br>
+                  &ndash; 
                   <!-- </div> -->
                 <!-- </div> -->
               </div>
@@ -646,11 +686,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_23.svg" class="img-fluid img-rounded">
+                <img src="Artboard_23.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;We encourage all our students to run 25 miles at school between Sept-Nov and then a final 1.2 miles on the Seattle Marathon Course. We provide tracking and incentives to students as well as running support at recess and before school.&quot;
+                  &quot;We encourage all our students to run 25 miles at school between Sept-Nov and then a final 1.2 miles on the Seattle Marathon Course. We provide tracking and incentives to students as well as running support at recess and before school.&quot; <br>
+                  &ndash; 
                 </div>
               </div>
             </div>
@@ -658,11 +699,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_24.svg" class="img-fluid img-rounded">
+                <img src="Artboard_24.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;I conduct an after school running club in the fall.  I have offered this opportunity to all students for the last four years.  Our numbers have steadily grown over this time from 28 the first year to over 90 this year.  I have tied our culminating event in with the Calumet City Park District's annual 5K Race.&quot;
+                  &quot;I conduct an after school running club in the fall.  I have offered this opportunity to all students for the last four years.  Our numbers have steadily grown over this time from 28 the first year to over 90 this year.  I have tied our culminating event in with the Calumet City Park District's annual 5K Race.&quot; <br>
+                  &ndash; 
                 </div>
               </div>
             </div>
@@ -704,11 +746,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_25.svg" class="img-fluid img-rounded">
+                <img src="Artboard_25.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;In our run club students run and walk as many laps as they desire during lunch recess twice a week. Each lap is 1/4 mile. We challenge all students to run 105 laps (equal to a marathon) over the course of the year. At the end of the year we have a party and assembly for all students who completed 26.2 miles. The top students are acknowledged on stage.&quot;
+                  &quot;In our run club students run and walk as many laps as they desire during lunch recess twice a week. Each lap is 1/4 mile. We challenge all students to run 105 laps (equal to a marathon) over the course of the year. At the end of the year we have a party and assembly for all students who completed 26.2 miles. The top students are acknowledged on stage.&quot; <br>
+                  &ndash; 
                 </div>
               </div>
             </div>
@@ -716,11 +759,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_26.svg" class="img-fluid img-rounded">
+                <img src="Artboard_26.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;On all of our early release days we host a "Walk and Talk".  We play music and all 800 of our students walk around the school, walking, talking and singing.&quot;
+                  &quot;On all of our early release days we host a "Walk and Talk".  We play music and all 800 of our students walk around the school, walking, talking and singing.&quot; <br>
+                  &ndash; 
                 </div>
               </div>
             </div>
@@ -728,11 +772,12 @@
           <div class="col-xs-4">
             <div class="tile">
               <div class="front">
-                <img src="http://bl.ocks.org/adam-garcia/raw/afa09ad71db0bf2c0e57ae31458dd852/Artboard_27.svg" class="img-fluid img-rounded">
+                <img src="Artboard_27.svg" class="img-fluid img-rounded">
               </div>
               <div class="back">
                 <div class="card card-block card-inverse card-success">
-                  &quot;In our run club students run laps during PE and also run laps as brain breaks in their classroom.  Students earn prizes for each 10 miles they complete.  Class challenges occur every month for the class with the most miles and they get extra recess time.&quot;
+                  &quot;In our run club students run laps during PE and also run laps as brain breaks in their classroom.  Students earn prizes for each 10 miles they complete.  Class challenges occur every month for the class with the most miles and they get extra recess time.&quot; <br>
+                  &ndash; 
                 </div>
               </div>
             </div>
@@ -786,7 +831,7 @@
   </div>
 
 <!-- Response Page Output - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-<div style="visibility: hidden">
+<div style="display: none">
   <div id="responses">
   <div id="printresponses" style="position: absolute; top: 0; right: 0; margin-right: 1em;">
     <a href="javascript:window.print();" class="hideprint">Print this Page</a>
