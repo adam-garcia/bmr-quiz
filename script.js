@@ -10,16 +10,16 @@ var curr;
 var prev;
 
 $('.deck-item').first().fadeIn();
-
+$("#go-back")
+            .click(function(){
+                getPrevSlide();
+            });
 
 $('#init')
     .click(function(){
         $(window).bind('beforeunload', function(){ /* return null;*/ });
         $("#go-back")
-            .attr('disabled', false)
-            .click(function(){
-                getPrevSlide();
-            });
+            .attr('disabled', false);
         getNextSlide($(this));
 });
 
@@ -87,10 +87,10 @@ function sendMessage(ans) {
     var img = "";
     switch (ans.id) {
         case 'role-pe':
-            msg = "You’re in great company! Did you know over 65% of Billion Mile Race run clubs are led by PE teachers? Welcome to the team.";
+            msg = "You’re in great company! Did you know that most Billion Mile Race run clubs are led by PE teachers? Welcome to the team.";
             break;
         case 'role-class':
-            msg = "Nice! When kids are more active at school, classroom teachers get to see the benefits firsthand – better focus, better attention, and better academic performance.";
+            msg = "Nice! When kids are more active at school, classroom teachers get to see the benefits firsthand – better academic performance, enhanced attention, and improved brain health.";
             break;
         case 'role-nurse':
             msg = "Awesome! Nurses make everything better, including run clubs.";
@@ -99,7 +99,7 @@ function sendMessage(ans) {
             msg = "Cool! Moms and dads just like you are organizing run clubs at their children’s schools all across the country.";
             break;
         case 'role-admin':
-            msg = "We tip our hats to you! No run club is possible without the support and buy-in of a school’s administration. You rock!";
+            msg = "Fantastic! The support and buy-in of a school’s administration can really help make your run club a success! You rock!";
             break;
         case 'role-other':
             msg = "";
@@ -134,9 +134,18 @@ $(".tile")
     .flip({
         trigger: 'hover',
         speed: 500
+        // ,axis: 'x'
     })
-    .children("div").addClass("w-100");
+    .on('flip:done', function() {
+        $(this).delay(200);
+    });
 
+    // .children("div")
+    //     .addClass("w-100");
+
+// $(".back")
+//     .mCustomScrollbar()
+//     .css('z-inxex', '0');
 
 $.fn.extend({
     setPOTitle: function() {
@@ -257,19 +266,19 @@ $("#view-summary").click(function() {
     WinPrint.focus();
 });
 
-$("#facebook").click(function() {
-    FB.ui({
-    method: 'feed',
-    caption: 'popup',
-    link: null,
-  }, function(response){});
-});
+// $("#facebook").click(function() {
+//     FB.ui({
+//     method: 'feed',
+//     caption: 'popup',
+//     link: null,
+//   }, function(response){});
+// });
 
-var twt = "http://twitter.com/intent/tweet?"+
-          "text=Hooray for the @BillionMileRace";
-$("#twitter").attr('href', twt);
+// var twt = "http://twitter.com/intent/tweet?"+
+//           "text=Hooray for the @BillionMileRace";
+// $("#twitter").attr('href', twt);
 
-$("#email").attr('href', 'http://billionmilerace.org/tellafriend');
+// $("#email").attr('href', 'http://billionmilerace.org/tellafriend');
 
 
 // TODO
