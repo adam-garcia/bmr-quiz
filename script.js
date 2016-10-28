@@ -122,13 +122,13 @@ function sendMessage(ans) {
         case 'where-gym':
         case 'where-hall':
         case 'where-idk':
-            msg = "Great! Remember your go-to location doesn’t need to be your only location. Mixing up where you run club takes place is a great way to introduce variety into your routine. <em>Sarah</em>, Billion Mile Race Team"
+            msg = "Great! Remember your go-to location doesn’t need to be your only location. Mixing up where you run club takes place is a great way to introduce variety into your routine. <br> <em>Sarah</em>, Billion Mile Race Team"
             break;
         case 'lead-2'   :
         case 'lead-3'   :
         case 'lead-4'   :
         case 'lead-idk' :
-            msg = "It’s important to partner up with at least one other leader at your school to make sure your run club is sustainable!";
+            msg = "Great! Including multiple adult leaders can really help spread the workload and make your run club a true community affair! <br> <em>Lauren</em>, Billion Mile Race Team";
             break;
     }
     $(ans).parents('.deck-item')
