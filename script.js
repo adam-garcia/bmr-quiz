@@ -300,9 +300,12 @@ $("#view-summary").click(function() {
 
 // TODO
 // ----------------------------------------------------------------------------
-// Multiple Choice
-// Store user input
-// Back functionality
+// Multiple Choice -- DONE
+// Store user input -- DONE
+// Back functionality -- DONE
+// Post form data
+//     see: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Sending_forms_through_JavaScript
+//          #Using_XMLHttpRequest_and_the_FormData_object
 
 
 // Thoughts
@@ -310,7 +313,6 @@ $("#view-summary").click(function() {
 // "other" field woes:      http://jsfiddle.net/raKbZ/1/
 
 }); // *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
-
 
 
 
