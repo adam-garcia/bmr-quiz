@@ -10,17 +10,16 @@ var curr;
 var prev;
 
 $('.deck-item').first().fadeIn();
-$("#go-back")
-            .click(function(){
-                getPrevSlide();
-            });
 
-$('#init')
-    .click(function(){
-        $(window).bind('beforeunload', function(){ /* return null;*/ });
-        $("#go-back")
-            .attr('disabled', false);
-        getNextSlide($(this));
+$("#go-back").click(function(){
+    getPrevSlide();
+});
+
+$('#init').click(function(){
+    $(window).bind('beforeunload', function(){ /* return null;*/ });
+    $("#go-back")
+        .attr('disabled', false);
+    getNextSlide($(this));
 });
 
 
@@ -262,7 +261,7 @@ function setResult(q) {
             case 'role-other':
             case 'when-other':
             case 'motiv-other':
-                response.push($(this).val());
+                response.push("__other__" + $(this).val());
                 break;
             default:
                 response.push(this.id);
@@ -283,21 +282,6 @@ $("#view-summary").click(function() {
     WinPrint.focus();
 });
 
-// $("#facebook").click(function() {
-//     FB.ui({
-//     method: 'feed',
-//     caption: 'popup',
-//     link: null,
-//   }, function(response){});
-// });
-
-// var twt = "http://twitter.com/intent/tweet?"+
-//           "text=Hooray for the @BillionMileRace";
-// $("#twitter").attr('href', twt);
-
-// $("#email").attr('href', 'http://billionmilerace.org/tellafriend');
-
-
 // TODO
 // ----------------------------------------------------------------------------
 // Multiple Choice -- DONE
@@ -306,7 +290,7 @@ $("#view-summary").click(function() {
 // Post form data
 //     see: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Sending_forms_through_JavaScript
 //          #Using_XMLHttpRequest_and_the_FormData_object
-
+//    also: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 
 // Thoughts
 // ----------------------------------------------------------------------------
