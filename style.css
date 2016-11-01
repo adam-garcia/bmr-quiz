@@ -182,7 +182,9 @@ blockquote > div {
 }
 
 .sources {
-    padding-top: 300px;
+    position: absolute;
+    bottom: 50px;
+    left: 8px;
 }
 
 .card-success {
