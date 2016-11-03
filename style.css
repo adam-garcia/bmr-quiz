@@ -185,9 +185,10 @@ blockquote > div {
     position: absolute;
     bottom: 50px;
     left: 8px;
-    z-index: -1;
+    z-index: 0;
     font-size: 0.7rem;
 }
+
 .sources ul {
     list-style: none;
 }
