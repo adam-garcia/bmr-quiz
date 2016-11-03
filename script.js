@@ -289,7 +289,7 @@ $("#submit-response").click(function() {
         "entry.1494732110": formData["q-lead"].toString(),
         "entry.910226216": formData["q-kids"].toString(),
         "entry.1029622032": formData["q-fun"].toString(),
-        "entry.1114501558": "True"
+        "entry.1114501558": "False" // change to "True" at time of production
     },
     type: "POST",
     dataType: "xml",
