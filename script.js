@@ -8,6 +8,7 @@ var totalN = 10;
 var slides = [];
 var curr;
 var prev;
+var formData = {};
 
 $('.deck-item').first().fadeIn();
 
@@ -251,26 +252,58 @@ function updateProgress(n) {
 
 
 function setResult(q) {
-    var question = "#"+curr.attr('id');
-    var response = [];
-    var role_other = "";
-    var when_other = "";
-    var motiv_other = "";
-    curr.find('.selected').not('.next').each(function() {
-        switch (this.id) {
-            case 'role-other':
-            case 'when-other':
-            case 'motiv-other':
-                response.push("__other__" + $(this).val());
-                break;
-            default:
-                response.push(this.id);
-        };
-    });
-    $(question).data('response', response);
-    var answer = question.replace('q-', 'a-');
-    $(answer).find('span').text(response);
+    if (curr.attr('id')!='intro') {
+        var question = "#"+curr.attr('id');
+        var response = [];
+        var role_other = "";
+        var when_other = "";
+        var motiv_other = "";
+        curr.find('.selected').not('.next').each(function() {
+            switch (this.id) {
+                case 'role-other':
+                case 'when-other':
+                case 'motiv-other':
+                    response.push("__other{" + $(this).val() + "}other__");
+                    break;
+                default:
+                    response.push(this.id);
+            };
+        });
+        $(question).data('response', response);
+        var answer = question.replace('q-', 'a-');
+        $(answer).find('span').text(response);
+        formData[curr.attr('id')] = response;
+    }
 };
+
+$("#submit-response").click(function() {
+   $.ajax({
+    url: "https://docs.google.com/forms/d/17cj1-BNgZafFSseDGzXxoOmp-YPJBIvnsrgYqcgOpLQ/formResponse",
+    data: {
+        "entry.562670068": formData["q-role"].toString(),
+        "entry.1754370414": formData["q-year"].toString(),
+        "entry.2083609488": formData["q-when"].toString(),
+        "entry.2104531982": formData["q-freq"].toString(),
+        "entry.1637119840": formData["q-dur"].toString(),
+        "entry.972820970": formData["q-track"].toString(),
+        "entry.1494732110": formData["q-lead"].toString(),
+        "entry.910226216": formData["q-kids"].toString(),
+        "entry.1029622032": formData["q-fun"].toString(),
+        "entry.1114501558": "True"
+    },
+    type: "POST",
+    dataType: "xml",
+    statusCode: {
+        0: function() {
+            //Success message
+        },
+        200: function() {
+            //Success Message
+        }
+    }
+});
+})
+
 
 $("#view-summary").click(function() {
     var prtContent = document.getElementById("responses");
@@ -287,10 +320,8 @@ $("#view-summary").click(function() {
 // Multiple Choice -- DONE
 // Store user input -- DONE
 // Back functionality -- DONE
-// Post form data
-//     see: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Sending_forms_through_JavaScript
-//          #Using_XMLHttpRequest_and_the_FormData_object
-//    also: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+// Post form data -- DONE
+
 
 // Thoughts
 // ----------------------------------------------------------------------------
