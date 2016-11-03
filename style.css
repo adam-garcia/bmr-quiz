@@ -185,6 +185,15 @@ blockquote > div {
     position: absolute;
     bottom: 50px;
     left: 8px;
+    z-index: -1;
+    font-size: 0.7rem;
+}
+.sources ul {
+    list-style: none;
+}
+
+.card {
+    padding: 0.75rem;
 }
 
 .card-success {
