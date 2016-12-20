@@ -1,0 +1,146 @@
+body {
+    background-color: #525659;
+}
+
+#responses {
+    width: 8.5in;
+    margin-top: 0em;
+}
+
+@media (print) {
+    #responses {
+        margin-top: 0px !important;
+    }
+}
+
+img.logo {
+    width: 500px;
+    background: white;
+}
+.row {
+    position: relative;
+}
+.content-row {
+    width: 100%;
+}
+
+.img-bg {
+    width: 100%;
+    /*height: 300px;*/
+}
+.foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+h3 {
+    color: #d30d2b;
+    padding-bottom: 4px;
+}
+
+h3.dots {
+    content: '......................................................................................................';
+    position: absolute;
+    top: 1.7rem;
+    left: 0;
+    width: 100%;
+    color: #808285 !important;
+    padding-left: 2rem;
+    overflow: hidden;
+}
+
+
+
+h5 {
+    color: #11a9de;
+    font-weight: bold;
+}
+
+.rounded {
+    border-radius: 7px;
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+.half {
+    width: 45%;
+}
+
+.output-answer {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    border: 1px solid #d1d2d4;
+}
+
+.protip {
+    color: white;
+    left: 0.5em;
+    font-size: 0.8rem;
+}
+
+
+/*#a-year {
+    height: 3rem;
+}
+
+#a-when {
+    height: 1rem;
+}
+#a-freq {
+    height: 80px;
+}
+#a-dur {
+    height: 1rem;
+}
+#a-where {
+    height: 1rem;
+}
+#a-track {
+    height: 1rem;
+}
+#a-lead {
+    height: 1rem;
+}
+#a-kids {
+    height: 1rem;
+}
+#a-fun {
+    height: 1rem;
+}
+*/
+#output-header {
+    height: 230px;
+    color: rgba(255, 255, 255, 1);
+     -webkit-print-color-adjust: exact;
+    text-align: center;
+}
+#output-year   {
+}
+#output-year .output-answer   {
+    height: 2rem !important;
+}
+#output-when   {
+    height: 120px;
+}
+#output-freq   {
+    height: 180px;
+}
+#output-dur    {
+
+}
+#output-where  {
+
+}
+#output-track  {
+
+}
+#output-lead   {
+
+}
+#output-kids   {
+
+}
+#output-fun    {
+
+}

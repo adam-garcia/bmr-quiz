@@ -854,42 +854,125 @@
 
 <!-- Response Page Output - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <div style="display: none">
-  <div id="responses">
-  <!-- <div id="printresponses" style="position: absolute; top: 0; right: 0; margin-right: 1em;">
-    <a id="printOutput" href="#" class="hideprint">Print this Page</a>
-  </div> -->
-  <h1>Awesome!</h1>
-  <p>Here's a summary of your respsonses:</p>
-  <p id="a-role">
-    Role: <span></span>
-  </p>
-  <p id="a-year">
-    Time of year: <span></span>
-  </p>
-  <p id="a-when">
-    When club is held: <span></span>.
-  </p>
-  <p id="a-freq">
-    How often held: <span></span>
-  </p>
-  <p id="a-dur">
-    Duration of club meetings: <span></span>
-  </p>
-  <p id="a-where">
-    Where club meets: <span></span>
-  </p>
-  <p id="a-track">
-    How to track: <span></span>
-  </p>
-  <p id="a-lead">
-    How many champions: <span></span>
-  </p>
-  <p id="a-kids">
-    How many students: <span></span>
-  </p>
-  <p id="a-fun">
-    How to make fun for students: <span></span>
-  </p>
+  <div id="responses" class="container row">
+  <div class="row" id="output-header">
+    <div class="content-row">
+      <img src="/bmr-blue.png" height="230px;" class="img-bg">
+      <div class="foreground m-x-3 m-t-2" align="center">
+        <img src="//billionmilerace.org/sites/all/themes/BMRTheme/ui/images/logo-bmr.png" class="logo m-b-1" style="border-radius: 17px;">
+        <h2 class="text-uppercase">Run Club Planning Quiz Answer Summary</h2>
+        <p class="p-x-3">Use this summary as a checklist for planning a new run club <br> and to guide conversations with colleagues and administators</p>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-year">
+    <div class="content-row">
+      <img src="/bmr-white.png" style="height: 200px" class="img-bg">
+      <div class="foreground p-x-3 p-t-1 w-100">
+        <h3 class="text-uppercase">scheduling your run club</h3>
+        <h3 class="dots">
+......................................................................................................
+        </h3>
+          <h5 class="m-t-1">Schools can implement run clubs all year long or for shorter durations.
+          <br>What do you think would work best for your school?</h5>
+          <div class="rounded output-answer" id="a-year"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-when">
+    <div class="content-row">
+      <img src="/bmr-grey.png" style="height: 120px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+        <h5 class="m-t-1">When will your run club take place?</h5>
+        <div class="rounded output-answer" id="a-when">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-freq">
+    <div class="content-row">
+      <img src="/bmr-white.png" style="height: 190px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+        <h5 class="m-t-1">How many days a week will your run club take place?</h5>
+        <div class="rounded output-answer half" id="a-freq">
+        </div>
+        <div style="display: inline-block; position: relative; width: 50%;">
+          <img src="/bmr-red.png"  class="m-l-3 img-bg rounded" style="height: 80px; border-radius: 7px">
+          <div class="foreground m-l-3 protip" >
+            It’s recommended that kids get 30 minutes of physical activity a day at school. When designing your schedule, consider all the opportunities your students have to be active and how adding a run club can help your school meet this target.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-dur">
+    <div class="content-row">
+      <img src="/bmr-grey.png" style="height: 200px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+        <h5 class="m-t-1">How long will your run club sessions be?</h5>
+        <div class="rounded output-answer" id="a-dur">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row"  id="output-where" style="page-break-after: always">
+    <div class="content-row">
+      <img src="/bmr-white.png" style="height: 200px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+        <h5 class="m-t-1">Where will students walk &amp; run?</h5>
+        <div class="rounded output-answer" id="a-where">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-track">
+    <div class="content-row">
+      <img src="/bmr-white.png" style="height: 200px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+        <h5 class="m-t-1">The most successful run clubs have several leaders at the helm.
+        <br>Teachers, nurses, parents, administrators, school sta and volunteers can all play this role. How many adults do you anticipate getting involved?</h5>
+        <div class="rounded output-answer" id="a-lead">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-lead">
+    <div class="content-row">
+      <img src="/bmr-grey.png" style="height: 200px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+        <h5 class="m-t-1"></h5>
+        <div class="rounded output-answer" id="a-track">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-kids">
+    <div class="content-row">
+      <img src="/bmr-grey.png" style="height: 200px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+        <h5 class="m-t-1"></h5>
+        <div class="rounded output-answer" id="a-kids">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-fun">
+    <div class="content-row">
+      <img src="/bmr-white.png" style="height: 200px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+        <h5 class="m-t-1"></h5>
+        <div class="rounded output-answer" id="a-fun">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-foot">
+    <div class="content-row">
+      <img src="/bmr-white.png" style="height: 200px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+      </div>
+    </div>
+  </div>
   </div>
 </div>
   <script src="//d3js.org/d3.v4.min.js"></script>

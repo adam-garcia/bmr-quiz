@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BMR Quizzard</title>
+  <meta name="description" content="">
+  <meta name="author" content="Adam Garcia">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="http://billionmilerace.org/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/output.css">
+</head>
+<body>
+
+<!-- <div style="display: none"> -->
+  <div id="responses" class="container row">
+  <div class="row" id="output-header">
+    <div class="content-row">
+      <img src="/bmr-blue.png" height="230px;" class="img-bg">
+      <div class="foreground m-x-3 m-t-2" align="center">
+        <img src="//billionmilerace.org/sites/all/themes/BMRTheme/ui/images/logo-bmr.png" class="logo m-b-1" style="border-radius: 17px;">
+        <h2 class="text-uppercase">Run Club Planning Quiz Answer Summary</h2>
+        <p class="p-x-3">Use this summary as a checklist for planning a new run club <br> and to guide conversations with colleagues and administators</p>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-year">
+    <div class="content-row">
+      <img src="/bmr-white.png" style="height: 200px" class="img-bg">
+      <div class="foreground p-x-3 p-t-1 w-100">
+        <h3 class="text-uppercase">scheduling your run club</h3>
+        <h3 class="dots">
+......................................................................................................
+        </h3>
+          <h5 class="m-t-1">Schools can implement run clubs all year long or for shorter durations.
+          <br>What do you think would work best for your school?</h5>
+          <div class="rounded output-answer" id="a-year"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-when">
+    <div class="content-row">
+      <img src="/bmr-grey.png" style="height: 120px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+        <h5 class="m-t-1">When will your run club take place?</h5>
+        <div class="rounded output-answer" id="a-when">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-freq">
+    <div class="content-row">
+      <img src="/bmr-white.png" style="height: 190px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+        <h5 class="m-t-1">How many days a week will your run club take place?</h5>
+        <div class="rounded output-answer half" id="a-freq">
+        </div>
+        <div style="display: inline-block; position: relative; width: 50%;">
+          <img src="/bmr-red.png"  class="m-l-3 img-bg rounded" style="height: 80px; border-radius: 7px">
+          <div class="foreground m-l-3 protip" >
+            It’s recommended that kids get 30 minutes of physical activity a day at school. When designing your schedule, consider all the opportunities your students have to be active and how adding a run club can help your school meet this target.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-dur">
+    <div class="content-row">
+      <img src="/bmr-grey.png" style="height: 200px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+        <h5 class="m-t-1">How long will your run club sessions be?</h5>
+        <div class="rounded output-answer" id="a-dur">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row"  id="output-where" style="page-break-after: always">
+    <div class="content-row">
+      <img src="/bmr-white.png" style="height: 200px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+        <h5 class="m-t-1">Where will students walk &amp; run?</h5>
+        <div class="rounded output-answer" id="a-where">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-track">
+    <div class="content-row">
+      <img src="/bmr-white.png" style="height: 200px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+        <h5 class="m-t-1">The most successful run clubs have several leaders at the helm.
+        <br>Teachers, nurses, parents, administrators, school sta and volunteers can all play this role. How many adults do you anticipate getting involved?</h5>
+        <div class="rounded output-answer" id="a-lead">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-lead">
+    <div class="content-row">
+      <img src="/bmr-grey.png" style="height: 200px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+        <h5 class="m-t-1"></h5>
+        <div class="rounded output-answer" id="a-track">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-kids">
+    <div class="content-row">
+      <img src="/bmr-grey.png" style="height: 200px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+        <h5 class="m-t-1"></h5>
+        <div class="rounded output-answer" id="a-kids">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-fun">
+    <div class="content-row">
+      <img src="/bmr-white.png" style="height: 200px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+        <h5 class="m-t-1"></h5>
+        <div class="rounded output-answer" id="a-fun">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="output-foot">
+    <div class="content-row">
+      <img src="/bmr-white.png" style="height: 200px" class="img-bg">
+      <div class="foreground p-x-3 w-100">
+      </div>
+    </div>
+  </div>
+  </div>
+<!-- </div> -->
+  <script src="//d3js.org/d3.v4.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+  <script src="//cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js" type="text/javascript"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+  <!-- <script src="./flip.js"></script> -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+  <script src="./script.js"></script>
+
+</body>
+</html>

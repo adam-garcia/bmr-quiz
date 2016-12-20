@@ -250,7 +250,6 @@ function updateProgress(n) {
 // Check if any value in array is in another array
 // [1, 2, 7, 8, 10].forEach(function(el){if ([1, 2, 3].includes(el)) {window.foo = true;}})
 
-
 function setResult(q) {
     if (curr.attr('id')!='intro') {
         var question = "#"+curr.attr('id');
@@ -271,7 +270,7 @@ function setResult(q) {
         });
         $(question).data('response', response);
         var answer = question.replace('q-', 'a-');
-        $(answer).find('span').text(response);
+        $(answer).text(response);
         formData[curr.attr('id')] = response;
     }
 };
@@ -308,8 +307,11 @@ $("#submit-response").click(function() {
 $("#view-summary").click(function() {
     var prtContent = document.getElementById("responses");
     var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
-    WinPrint.document.write('<link rel="stylesheet" href="/style.css">');
+  
     WinPrint.document.write('<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">');
+    WinPrint.document.write('<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">');
+    WinPrint.document.write('<link rel="stylesheet" href="/style.css">');
+    WinPrint.document.write('<link rel="stylesheet" href="/output.css">');
     // https://defuse.ca/force-print-background.htm
     WinPrint.document.write(prtContent.innerHTML);
     WinPrint.document.close();
