@@ -1,4 +1,4 @@
-$(function() {
+﻿$(function() {
 
 var q_ids = $('.deck-item').map(function() { return this.id; }).get();
 // var q_help_ids = q_slide_ids[]
@@ -310,8 +310,8 @@ $("#view-summary").click(function() {
   
     WinPrint.document.write('<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">');
     WinPrint.document.write('<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">');
-    WinPrint.document.write('<link rel="stylesheet" href="/style.css">');
-    WinPrint.document.write('<link rel="stylesheet" href="/output.css">');
+    WinPrint.document.write('<link rel="stylesheet" href="./style.css">');
+    WinPrint.document.write('<link rel="stylesheet" href="./output.css">');
     // https://defuse.ca/force-print-background.htm
     WinPrint.document.write(prtContent.innerHTML);
     WinPrint.document.close();
