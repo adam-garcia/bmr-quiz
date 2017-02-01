@@ -306,15 +306,40 @@ $("#submit-response").click(function() {
 
 $("#view-summary").click(function() {
     var prtContent = document.getElementById("responses");
-    var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
-  
-    WinPrint.document.write('<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">');
-    WinPrint.document.write('<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">');
-    WinPrint.document.write('<link rel="stylesheet" href="./style.css">');
-    WinPrint.document.write('<link rel="stylesheet" href="./output.css">');
-    // https://defuse.ca/force-print-background.htm
+    var head = [
+        '<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">',
+        '<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Oswald" rel="stylesheet" type="text/css">',
+        '<link rel="stylesheet" href="./output.css">',
+        '<script src="https://use.typekit.net/gst0xpt.js"></script>',
+        '<script>try{Typekit.load({ async: true });}catch(e){}</script>'
+    ];
+    var foot = [
+        '<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>',
+        '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>',
+        '<script>$(function(){',
+        '$("#output-freq  .half").matchHeight();',
+        '$("#output-dur   .half").matchHeight();',
+        '$("#output-where .half").matchHeight();',
+        '$("#output-track .half").matchHeight();',
+        '$("#output-kids  .half").matchHeight();',
+        '$("#output-fun   .half").matchHeight();',
+        '});</script>'
+    ];
+    var out = 'data:application/octet-stream,' + head.join('') + prtContent.innerHTML + foot.join('') + '");';
+    save = [
+        '<script>$(function(){',
+        '$("#save-doc").attr("download", "foo.html");',
+        '$("#save-doc").attr("href", "data:application/octet-stream,',
+        out,
+        '});</script>'
+    ];
+    var WinPrint = window.open('', '', 'left=0,top=0,width=850,height=900,toolbar=0,scrollbars=0,status=0');
+    WinPrint.document.write(head.join(''))
     WinPrint.document.write(prtContent.innerHTML);
+    WinPrint.document.write(foot.join(''));
+    // WinPrint.document.write(save.join(''));
     WinPrint.document.close();
+    window.WinPrint = WinPrint;
     WinPrint.focus();
 });
 
