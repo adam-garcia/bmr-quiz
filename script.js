@@ -304,6 +304,10 @@ $("#submit-response").click(function() {
 })
 
 
+/**
+ * End Page UX
+ */
+
 $("#view-summary").click(function() {
     var prtContent = document.getElementById("responses");
     var head = [
@@ -343,6 +347,20 @@ $("#view-summary").click(function() {
     WinPrint.focus();
 });
 
+$("#explore-programs").click(function() {
+    window.open("http://www.billionmilerace.org/explore-programs", "_blank");
+});
+$("#visit-library").click(function() {
+    window.open("http://www.billionmilerace.org/tools", "_blank");
+});
+
+/**
+ * End Page UI
+ */
+
+$(".action i").matchHeight();
+$(".action p").matchHeight();
+// $("")
 
 // TODO
 // ----------------------------------------------------------------------------
