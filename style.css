@@ -106,10 +106,6 @@ div.btn-group {
     border: 2px solid #12a8dd;
 }
 
-.btn-primary:hover i {
-    color: #fff;
-}
-
 .next,
 .next:disabled:hover {
     color: #fff;
@@ -130,12 +126,20 @@ hr.sep {
 }
 
 
-
-button > i {
-    padding-top: 3px;
+button {
+    position: relative;
 }
-button img {
-    max-height: 1.2rem;
+button > i {
+    position: absolute;
+    right: 3px;
+    top: 7px;
+    z-index: 999999;
+}
+button:hover > i {
+    color: #fff;
+}
+i:hover {
+    color: #f00;
 }
 
 /*.tooltip {

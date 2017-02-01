@@ -188,16 +188,19 @@ $.fn.extend({
     }
 });
 
-$('[data-toggle="tooltip"]')
-    .tooltip({
-        trigger: 'hover',
-        container: 'body',
-        placement: 'right',
-        offset: '0 -8px',
-        delay: 200,
-        html: true
-    })
-;
+// $("button")
+//     .filter(function() {
+//         return $(this).find("i").length != 0
+//     })
+//     .tooltip({
+//         trigger: 'click',
+//         container: 'body',
+//         placement: 'right',
+//         offset: '0 -8px',
+//         delay: 200,
+//         html: true
+//     });
+
 
 
 
@@ -225,6 +228,17 @@ function getNextSlide(t) {
     if (next.find('div.team-quote').length != 0) {
         next.find('div.team-quote').animateCss('bounceInRight');
     }
+    $('button [data-toggle="tooltip"]')
+        .tooltip({
+            trigger: 'hover',
+            container: 'body',
+            placement: 'right',
+            offset: '0 -8px',
+            delay: 200,
+            html: true
+        })
+    ;
+
 };
 
 function getPrevSlide() {
