@@ -328,6 +328,7 @@ $("#view-summary").click(function() {
         '<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">',
         '<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Oswald" rel="stylesheet" type="text/css">',
         '<link rel="stylesheet" href="./output.css">',
+        "<style>",outputcss,"</style>",
         '<script src="https://use.typekit.net/gst0xpt.js"></script>',
         '<script>try{Typekit.load({ async: true });}catch(e){}</script>'
     ];
@@ -343,19 +344,25 @@ $("#view-summary").click(function() {
         '$("#output-fun   .half").matchHeight();',
         '});</script>'
     ];
-    var out = 'data:application/octet-stream,' + head.join('') + prtContent.innerHTML + foot.join('') + '");';
-    save = [
+    var out = head.join('') + prtContent.innerHTML + foot.join('');
+    out = out
+        .replace('<a class="btn btn-primary" id="save-doc">Save Me</a>', '')
+        .replace('<a class="btn btn-primary" id="print-doc">Print Me</a>', '');
+    var out64 = btoa(unescape(encodeURIComponent(out)));
+    var data = "data:text/html;base64," + out64;
+    window.data = data;
+    window.save = [
         '<script>$(function(){',
         '$("#save-doc").attr("download", "foo.html");',
-        '$("#save-doc").attr("href", "data:application/octet-stream,',
-        out,
+        '$("#save-doc").attr("href","', data, '");',
+        '$("#save-doc").click(function() {window.print();});',
         '});</script>'
     ];
     var WinPrint = window.open('', '', 'left=0,top=0,width=850,height=900,toolbar=0,scrollbars=0,status=0');
     WinPrint.document.write(head.join(''))
     WinPrint.document.write(prtContent.innerHTML);
     WinPrint.document.write(foot.join(''));
-    // WinPrint.document.write(save.join(''));
+    WinPrint.document.write(save.join(''));
     WinPrint.document.close();
     window.WinPrint = WinPrint;
     WinPrint.focus();
@@ -374,6 +381,8 @@ $("#visit-library").click(function() {
 
 $(".action i").matchHeight();
 $(".action p").matchHeight();
+
+var outputcss = "body{width:100%}#page-1{z-index:999;margin-bottom:30px;box-shadow:0 1px 5px #e4e4e4}#page-2{z-index:999;margin-top:30px;box-shadow:0 -1px 5px #e4e4e4}img.logo{width:500px;background:#fff}.content-row,hr.dots{width:100%}.row{margin:0;min-height:8rem}.bg-blue{background-color:#11a9de}.bg-grey{background-color:#f2f3f4}.bg-red{background-color:#d30d2b}.bg-green{background-color:#85c340}h3{color:#d30d2b;font-family:league-gothic,Oswald,sans-serif}hr.dots{border-width:0 0 8px;border-style:dotted;border-image-source:url(dots.svg);border-color:#808285;border-image-slice:33% 33%;border-image-repeat:round;margin-top:0}h5{color:#11a9de;font-weight:700;font-family:proxima-nova,sans-serif}.rounded{border-radius:7px;display:inline-block;vertical-align:text-top}.output-answer{width:100%;height:2rem;padding:.5rem;font-size:.9rem;display:inline-block;background-color:#fff;border:1px solid #d1d2d4}.half{width:45%}.protip{color:#fff;font-size:.8rem;padding:.5rem;float:right}div.separator{background:#f5f5f5;width:100%;height:20px}#output-header{color:rgba(255,255,255,1);-webkit-print-color-adjust:exact;text-align:center}@media (print){#responses{margin-top:0!important;width:8.5in}#output-header{height:230px;color:rgba(255,255,255,1);-webkit-print-color-adjust:exact;text-align:center}#output-year .output-answer{height:2rem!important}#output-when{height:120px}#output-freq{height:180px}}";
 // $("")
 
 // TODO

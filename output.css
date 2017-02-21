@@ -39,7 +39,6 @@ img.logo {
 
 h3 {
     color: #d30d2b;
-    /*padding-bottom: 4px;*/
     font-family: "league-gothic", "Oswald", sans-serif;
 }
 
@@ -97,34 +96,6 @@ div.separator {
     -webkit-print-color-adjust: exact;
     text-align: center;
 }
-#output-year   {
-}
-#output-year   {
-}
-#output-when   {
-}
-#output-freq   {
-}
-#output-dur    {
-
-}
-#output-where  {
-
-}
-#output-track  {
-
-}
-#output-lead   {
-
-}
-#output-kids   {
-
-}
-#output-fun    {
-
-}
-
-
 @media (print) {
     #responses {
         margin-top: 0px !important;
@@ -147,23 +118,5 @@ div.separator {
     }
     #output-freq   {
         height: 180px;
-    }
-    #output-dur    {
-
-    }
-    #output-where  {
-
-    }
-    #output-track  {
-
-    }
-    #output-lead   {
-
-    }
-    #output-kids   {
-
-    }
-    #output-fun    {
-
     }
 }
