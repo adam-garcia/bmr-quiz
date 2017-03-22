@@ -138,9 +138,7 @@ button > i {
 button:hover > i {
     color: #fff;
 }
-i:hover {
-    color: #f00;
-}
+
 
 /*.tooltip {
     max-width: 500px;
